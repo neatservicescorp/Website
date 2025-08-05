@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Cocogoose";
+  src: url("/fonts/Cocogoose.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exotc350";
+  src: url("/fonts/Exot.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,6 +26,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-cocogoose: "Cocogoose", sans-serif;
+  --font-exotc350: "Exotc350", sans-serif;
+  --color-red-neat: #ff8475;
 }
 
 @media (prefers-color-scheme: dark) {
