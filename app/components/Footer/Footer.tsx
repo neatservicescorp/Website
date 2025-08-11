@@ -1,14 +1,28 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import NavigationSocial from "../NavBar/NavigationSocial";
 import FooterLinks from "./FooterLinks";
+import { useGlobalStore } from "@/app/context/global";
 
 export default function Footer() {
+  const { pageTheme } = useGlobalStore();
+
   return (
-    <footer className="h-72 bg-[#D9D9D9] flex justify-center">
-      <div className="w-full max-w-[1400px] flex flex-row items-center justify-between">
-        <Image src="neat_logo.svg" alt="neat_logo" width={230} height={250} />
-        <div className="flex flex-col font-exotc350 gap-5 text-black">
+    <footer
+      className={`h-44 lg:h-72 ${
+        pageTheme === "light" ? "bg-[#8A8A8A]" : "bg-[#D9D9D9]"
+      } flex justify-center`}
+    >
+      <div className="w-full max-w-[1500px] flex flex-row items-center justify-between">
+        <Image
+          src="neat_logo.svg"
+          alt="neat_logo"
+          width={230}
+          height={250}
+          className="w-48 lg:w-60"
+        />
+        <div className="flex-col font-exotc350 gap-5 text-black hidden lg:flex">
           <div className="flex flex-col text-xl">
             <p className="h-5">Office Hours</p>
             <p>Mon Fri | 7am to 5pm</p>

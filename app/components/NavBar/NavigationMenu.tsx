@@ -6,7 +6,7 @@ export default function NavigationMenu() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-row gap-10 font-cocogoose text-black">
+    <div className="flex-row gap-10 font-cocogoose text-black hidden lg:flex">
       {sections.map((section) => {
         if (section.title === "Home") {
           return;

@@ -3,7 +3,7 @@ import FooterLink from "./FooterLink";
 
 export default function FooterLinks() {
   return (
-    <div className="flex flex-row font-exotc350 text-black gap-9">
+    <div className="flex-row font-exotc350 text-black gap-8 xl:gap-12 hidden lg:flex">
       <FooterLink
         title="Home"
         redirectionLink={[{ title: "About us", redirect: "/blog" }]}

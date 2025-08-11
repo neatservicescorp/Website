@@ -9,7 +9,7 @@ export default function NavigationSocial({
   gap = "gap-2",
 }: NavigationSocialProps) {
   return (
-    <div className={`flex flex-row ${gap}`}>
+    <div className={`flex-row ${gap} hidden lg:flex pr-5`}>
       <Image
         src="/icons/facebook.svg"
         alt="facebook_icon"

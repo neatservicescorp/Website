@@ -20,18 +20,18 @@ export default function FooterLink({
   const router = useRouter();
   return (
     <div className="flex flex-col gap-1">
-      <h6 className="text-2xl">{title}</h6>
+      <h6 className="text-xl xl:text-2xl">{title}</h6>
       <div className="flex flex-col text-xl">
         {texts
           ? texts.map((text, idx) => (
-              <p key={idx} className="h-5">
+              <p key={idx} className="text-medium xl:text-lg">
                 {text}
               </p>
             ))
           : redirectionLink.map((link, idx) => (
               <p
                 key={idx}
-                className="hover:cursor-pointer hover:opacity-70 h-5"
+                className="hover:cursor-pointer hover:opacity-70 h-5 text-lg"
                 onClick={() => router.push(link.redirect)}
               >
                 {link.title}
