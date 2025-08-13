@@ -3,7 +3,7 @@ import React from "react";
 
 export default function RoofingMethod() {
   return (
-    <div className="relative w-full min-h-[350px] p-5 flex items-center justify-center px-10">
+    <div className="relative w-full min-h-[300px] p-5 flex items-center justify-center px-10">
       <div className="absolute top-1/2 h-1 bg-[#D9D9D9] w-full max-w-[90%] z-0"></div>
       <div className="flex flex-row justify-between w-full">
         <div className="relative rounded-full h-50 w-50 bg-[#D9D9D9] z-10 flex flex-col items-center justify-center gap-3">

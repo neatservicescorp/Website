@@ -15,7 +15,7 @@ export default function MainForm() {
   return (
     <Card
       classNames={{ base: "rounded-[35px]" }}
-      className="w-full h-full bg-[#F0F0F0] max-h-[560px]"
+      className="w-full h-full bg-[#F0F0F0] lg:max-h-[550px] 2xl:max-h-[560px]"
     >
       <CardHeader className="pb-1">
         <div className="font-cocogoose text-xl 2xl:text-2xl text-black pt-6 w-full text-center">
@@ -28,30 +28,30 @@ export default function MainForm() {
             size="lg"
             label="Name*"
             classNames={{
-              inputWrapper: ["h-[50px]", "xl:h-[55px]", "bg-[#D9D4D4]"],
-              label: "text-sm xl:text-base",
+              inputWrapper: ["h-[50px]", "2xl:h-[55px]", "bg-[#D9D4D4]"],
+              label: "text-sm 2xl:text-base",
             }}
           />
           <Input
             size="lg"
             label="Phone*"
             classNames={{
-              inputWrapper: ["h-[50px]", "xl:h-[55px]", "bg-[#D9D4D4]"],
-              label: "text-sm xl:text-base",
+              inputWrapper: ["h-[50px]", "2xl:h-[55px]", "bg-[#D9D4D4]"],
+              label: "text-sm 2xl:text-base",
             }}
           />
           <Input
             size="lg"
             label="Email*"
             classNames={{
-              inputWrapper: ["h-[50px]", "xl:h-[55px]", "bg-[#D9D4D4]"],
-              label: "text-sm xl:text-base",
+              inputWrapper: ["h-[50px]", "2xl:h-[55px]", "bg-[#D9D4D4]"],
+              label: "text-sm 2xl:text-base",
             }}
           />
           <Select
             label="Service"
             classNames={{
-              label: "text-sm xl:text-base",
+              label: "text-sm 2xl:text-base",
               trigger: "bg-[#D9D4D4]",
 
               listbox: "text-black font-cocogoose",

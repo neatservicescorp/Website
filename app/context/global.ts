@@ -9,7 +9,6 @@ export type GlobalState = {
 
 // Server-side function to get theme from pathname (no hooks needed)
 export const getThemeFromPath = (pathname: string): Theme => {
-  console.log(pathname);
   const themeMap: Record<string, Theme> = {
     "/": "dark",
     "/services": "light",

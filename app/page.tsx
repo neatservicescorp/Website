@@ -4,6 +4,8 @@ import Certifications from "./components/Certifications";
 import RoofingMethod from "./components/RoofingMethod";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { getThemeFromPath } from "./context/global";
+import MainServices from "./sections/MainServices";
+import MainFinalSection from "./sections/MainFinalSection";
 
 export default function Home() {
   const initialTheme = getThemeFromPath("/");
@@ -56,7 +58,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="relative flex justify-center min-h-[500px] items-center">
+        <div className="relative flex justify-center py-12 items-center">
           <div className="absolute inset-0 bg-gradient-to-b from-[#4C4B4B] to-[#313131]"></div>
           <div className="w-full max-w-[1400px] flex flex-col items-center z-10 gap-3">
             <div className="flex flex-col gap-1 text-white text-center">
@@ -70,8 +72,13 @@ export default function Home() {
             <RoofingMethod />
           </div>
         </div>
-        <div className="relative flex justify-center min-h-[1400px]">
-          <div className="absolute inset-0 bg-[#313131]"></div>
+        <div className="relative flex justify-center min-h-[700px]">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#313131] to-[#828282] from-50%"></div>
+          <MainServices />
+        </div>
+        <div className="relative flex justify-center">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#828282] to-white"></div>
+          <MainFinalSection />
         </div>
       </main>
     </ThemeProvider>
