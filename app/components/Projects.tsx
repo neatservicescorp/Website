@@ -2,7 +2,7 @@
 import { Divider, Select, SelectItem } from "@heroui/react";
 import React, { useEffect, useRef, useState } from "react";
 import ProjectCard from "./ProjectCard";
-import { div } from "framer-motion/client";
+import Image from "next/image";
 
 export type ProjectType = "Roofing" | "Siding" | "Kitchen" | "Bathroom";
 export type ProjectLocation = "New York" | "New Jersey";
@@ -23,53 +23,59 @@ type ProjectsProps = {
 };
 
 export default function ProjectsComponent({ projects }: ProjectsProps) {
-  const allProjects = useRef(projects); // This stores all the projects
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
 
   const [visibleProjects, setVisibleProjects] = useState<Project[]>(
-    allProjects.current.slice(0, 9)
+    filteredProjects.slice(0, 9)
   );
+
   const [filters, setFilters] = useState<ProjectFilter>({
     type: null,
     location: null,
   });
+  const totalPages = Math.ceil(filteredProjects.length / 9);
 
-  const [totalPages, setTotalPages] = useState<number>(
-    Math.floor(visibleProjects.length / 9)
-  );
+  console.log(filters);
   const [currentPage, setCurrentPage] = useState<number>(1);
 
-  const filterProjects = (filters: ProjectFilter): Project[] => {
-    if (!filters.type && !filters.location) {
-      return projects;
+  const handleFilter = (e: React.ChangeEvent<HTMLSelectElement>): void => {
+    const newFilters = {
+      ...filters,
+      [e.target.name]: e.target.value.length ? e.target.value : null,
+    };
+    setFilters(newFilters);
+    if (!newFilters.type && !newFilters.location) {
+      setFilteredProjects(projects);
+      return;
     }
+    setFilteredProjects(
+      projects.filter((proj) => {
+        if (newFilters.type && newFilters.location) {
+          return (
+            proj.type === newFilters.type &&
+            proj.location === newFilters.location
+          );
+        }
 
-    return projects.filter((proj) => {
-      let isValid = false;
-      if (filters.type) {
-        if (proj.type === filters.type) {
-          isValid = true;
+        if (newFilters.type) {
+          return proj.type === newFilters.type;
         }
-      } else if (filters.location) {
-        if (proj.location === filters.location) {
-          isValid = true;
-        }
-      }
-      return isValid;
-    });
+
+        return proj.location === newFilters.location;
+      })
+    );
   };
 
   useEffect(() => {
-    setTotalPages(Math.ceil(visibleProjects.length / 9));
-  }, [visibleProjects]);
-
-  useEffect(() => {
     setVisibleProjects(
-      allProjects.current.slice((currentPage - 1) * 9, currentPage * 9)
+      filteredProjects.slice((currentPage - 1) * 9, currentPage * 9)
     );
   }, [currentPage]);
 
   useEffect(() => {
-    setVisibleProjects(filterProjects(filters));
+    setVisibleProjects(
+      filteredProjects.slice((currentPage - 1) * 9, currentPage * 9)
+    );
   }, [filters]);
 
   return (
@@ -78,18 +84,14 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
         <h3 className="font-exotc350 text-6xl">Filter by:</h3>
         <div className="flex flex-row gap-5">
           <Select
+            name="type"
             size="lg"
             classNames={{
               label: "text-black",
               trigger: "border-black rounded-md border-1",
               listbox: "font-cocogoose text-black",
             }}
-            onSelectionChange={(value) =>
-              setFilters((prev) => ({
-                ...prev,
-                type: value.currentKey as ProjectType,
-              }))
-            }
+            onChange={handleFilter}
             fullWidth
             label="Product"
             className="font-cocogoose w-[270px]"
@@ -101,6 +103,7 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
             <SelectItem key="Bathroom">Bathroom</SelectItem>
           </Select>
           <Select
+            name="location"
             size="lg"
             variant="bordered"
             classNames={{
@@ -108,12 +111,7 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
               trigger: "border-black rounded-md border-1",
               listbox: "font-cocogoose text-black",
             }}
-            onSelectionChange={(value) =>
-              setFilters((prev) => ({
-                ...prev,
-                location: value.currentKey as ProjectLocation,
-              }))
-            }
+            onChange={handleFilter}
             label="Location"
             fullWidth
             className="font-cocogoose w-[270px]"
@@ -123,9 +121,9 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
           </Select>
         </div>
       </div>
-      <div className="flex flex-wrap z-10 py-12 gap-y-12 min-h-[400px]">
+      <div className="flex flex-wrap z-10 py-12 gap-y-16 min-h-[400px]">
         {visibleProjects.map((project, index) => (
-          <div className="w-1/3 flex justify-center" key={index}>
+          <div className="w-1/3 min-w-[350px] flex justify-center" key={index}>
             <ProjectCard project={project} />
           </div>
         ))}
@@ -134,7 +132,21 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
       <div className="flex w-full justify-end">
         <div className="flex flex-row w-full items-center max-w-[400px] py-4 text-black gap-3 font-cocogoose text-sm">
           <p>Explore the full gallery</p>
-          <div className="flex flex-row min-w-[120px] font-exotc350 gap-1.5">
+          <div className="flex flex-row min-w-[120px] font-cocogoose-number text-lg gap-1.5 items-center">
+            <Image
+              src="/icons/pagination_dec.svg"
+              alt="page_button"
+              width={50}
+              height={50}
+              className={`w-4 h-4 ${
+                currentPage === 1 ? "opacity-50" : "hover:cursor-pointer"
+              }`}
+              onClick={() => {
+                if (currentPage > 1) {
+                  setCurrentPage(currentPage - 1);
+                }
+              }}
+            />
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
               <p
                 key={page}
@@ -146,6 +158,22 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
                 {page}
               </p>
             ))}
+            <Image
+              src="/icons/pagination_dec.svg"
+              alt="page_button"
+              width={50}
+              height={50}
+              className={`w-4 h-4 rotate-180 ${
+                currentPage === totalPages
+                  ? "opacity-50"
+                  : "hover:cursor-pointer"
+              }`}
+              onClick={() => {
+                if (currentPage !== totalPages) {
+                  setCurrentPage(currentPage + 1);
+                }
+              }}
+            />
           </div>
         </div>
       </div>

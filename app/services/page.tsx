@@ -53,7 +53,7 @@ export default function Services() {
                 >
                   <CardBody className="p-0">
                     <Image
-                      src="/images/home_bg.png"
+                      src="/api/image?key=home_bg.png"
                       alt="exterior_1"
                       width={800}
                       height={800}
@@ -77,7 +77,7 @@ export default function Services() {
                 >
                   <CardBody className="p-0">
                     <Image
-                      src="/images/home_bg.png"
+                      src="/api/image?key=home_bg.png"
                       alt="exterior_1"
                       width={800}
                       height={800}
@@ -101,7 +101,7 @@ export default function Services() {
                 >
                   <CardBody className="p-0">
                     <Image
-                      src="/images/home_bg.png"
+                      src="/api/image?key=home_bg.png"
                       alt="exterior_1"
                       width={800}
                       height={800}
@@ -131,7 +131,7 @@ export default function Services() {
                 >
                   <CardBody className="p-0">
                     <Image
-                      src="/images/home_bg.png"
+                      src="/api/image?key=home_bg.png"
                       alt="interior_item"
                       width={800}
                       height={800}
@@ -155,7 +155,7 @@ export default function Services() {
                 >
                   <CardBody className="p-0">
                     <Image
-                      src="/images/home_bg.png"
+                      src="/api/image?key=home_bg.png"
                       alt="interior_item"
                       width={800}
                       height={800}
@@ -179,7 +179,7 @@ export default function Services() {
                 >
                   <CardBody className="p-0">
                     <Image
-                      src="/images/home_bg.png"
+                      src="/api/image?key=home_bg.png"
                       alt="interior_item"
                       width={800}
                       height={800}
@@ -203,7 +203,7 @@ export default function Services() {
                 >
                   <CardBody className="p-0">
                     <Image
-                      src="/images/home_bg.png"
+                      src="/api/image?key=home_bg.png"
                       alt="interior_item"
                       width={800}
                       height={800}
@@ -241,7 +241,7 @@ export default function Services() {
                         </h5>
                       </div>
                       <Image
-                        src="/images/home_bg.png"
+                        src="/api/image?key=home_bg.png"
                         alt="before_img"
                         className="w-full h-full object-cover grayscale"
                         width={500}
@@ -255,7 +255,7 @@ export default function Services() {
                         </h5>
                       </div>
                       <Image
-                        src="/images/home_bg.png"
+                        src="/api/image?key=home_bg.png"
                         alt="before_img"
                         className="w-full h-full object-cover"
                         width={500}
@@ -276,7 +276,7 @@ export default function Services() {
                         </h5>
                       </div>
                       <Image
-                        src="/images/home_bg.png"
+                        src="/api/image?key=home_bg.png"
                         alt="before_img"
                         className="w-full h-full object-cover grayscale"
                         width={500}
@@ -290,7 +290,7 @@ export default function Services() {
                         </h5>
                       </div>
                       <Image
-                        src="/images/home_bg.png"
+                        src="/api/image?key=home_bg.png"
                         alt="before_img"
                         className="w-full h-full object-cover"
                         width={500}
@@ -315,7 +315,7 @@ export default function Services() {
             <div className="flex flex-col">
               <div className="flex flex-col text-black text-center">
                 <h3 className="font-exotc350 text-7xl">Where we are</h3>
-                <p className="">
+                <p className="font-cocogoose-number font-thin">
                   2807 Jackson Ave Fl 5 Long Island City, NY 11101
                 </p>
               </div>

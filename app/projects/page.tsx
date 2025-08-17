@@ -2,6 +2,8 @@ import Image from "next/image";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { getThemeFromPath } from "../context/global";
 import ProjectsComponent from "../components/Projects";
+import { projectData } from "./data";
+import BlogPreview from "../components/BlogPreview";
 
 export default async function Projects() {
   const initialTheme = getThemeFromPath("/projects");
@@ -11,7 +13,7 @@ export default async function Projects() {
       <main className="pt-32">
         <div className="w-full h-[600px] 2xl:h-[800px] relative z-10 flex justify-center">
           <Image
-            src="/images/home_bg.png"
+            src="/api/image?key=home_bg.png"
             alt="page_main"
             width={2000}
             height={2000}
@@ -31,37 +33,16 @@ export default async function Projects() {
             </div>
           </div>
         </div>
-        <div className="bg-[#D9D9D9] min-h-screen flex justify-center w-full">
+        <div className="bg-[#D9D9D9] min-h-screen flex flex-col items-center w-full">
           <div className="w-full max-w-[1400px] p-10">
-            <ProjectsComponent
-              projects={[
-                {
-                  image: "/images/home_bg.png",
-                  location: "New York",
-                  type: "Bathroom",
-                },
-                {
-                  image: "/images/home_bg.png",
-                  location: "New York",
-                  type: "Bathroom",
-                },
-                {
-                  image: "/images/home_bg.png",
-                  location: "New York",
-                  type: "Bathroom",
-                },
-                {
-                  image: "/images/home_bg.png",
-                  location: "New York",
-                  type: "Bathroom",
-                },
-                {
-                  image: "/images/home_bg.png",
-                  location: "New York",
-                  type: "Bathroom",
-                },
-              ]}
-            />
+            <ProjectsComponent projects={projectData} />
+          </div>
+          <div className="w-full max-w-[1400px] p-10 mb-16 gap-10 flex flex-col">
+            <div className="flex flex-col text-black w-full">
+              <h2 className="font-exotc350 text-6xl">Our blog</h2>
+              <p className="font-cocogoose text-lg">Recent articles</p>
+            </div>
+            <BlogPreview />
           </div>
         </div>
       </main>

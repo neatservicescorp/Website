@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.864.0",
     "@heroui/react": "^2.8.2",
     "@types/mapbox-gl": "^3.4.1",
     "framer-motion": "^12.23.12",

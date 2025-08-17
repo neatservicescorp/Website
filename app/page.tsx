@@ -15,7 +15,7 @@ export default function Home() {
       <main className="min-h-screen">
         <div className="relative flex justify-center top-0 w-full z-0 h-[900px]">
           <Image
-            src="/images/home_bg.png"
+            src="/api/image?key=home_bg.png"
             alt="home_background"
             width={2000}
             height={2000}
