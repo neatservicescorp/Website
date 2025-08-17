@@ -1,5 +1,5 @@
 export const dynamic = "force-dynamic";
-export const revalidate = 3600 * 24 * 30;
+export const revalidate = 2592000;
 
 import { NextRequest, NextResponse } from "next/server";
 import { S3Client, GetObjectCommand } from "@aws-sdk/client-s3";

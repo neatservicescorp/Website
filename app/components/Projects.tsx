@@ -1,6 +1,6 @@
 "use client";
 import { Divider, Select, SelectItem } from "@heroui/react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import Image from "next/image";
 
