@@ -2,11 +2,21 @@
 import { Card, CardBody } from "@heroui/react";
 import Image from "next/image";
 
-export default function Certifications() {
+export type CertificationsProps = {
+  background?: string;
+  shadow?: boolean;
+};
+
+export default function Certifications({
+  background = "#f0f0f0",
+  shadow = true,
+}: CertificationsProps) {
   return (
     <Card
       className="self=center p-5 pb-0"
-      classNames={{ base: "rounded-[35px] bg-[#F0F0F0]" }}
+      shadow={shadow ? "md" : "none"}
+      style={{ backgroundColor: background }}
+      classNames={{ base: `rounded-[35px]` }}
     >
       <CardBody>
         <div className="flex flex-col items-center gap-3">

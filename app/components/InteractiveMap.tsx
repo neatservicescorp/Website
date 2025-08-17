@@ -17,15 +17,11 @@ export default function InteractiveMap({
 }: Props) {
   const [showPopup, setShowPopup] = useState(true);
 
-  // Debug log to check if token is provided
-  console.log("Mapbox token:", mapToken ? "Provided" : "Missing");
-  console.log("Coordinates:", { latitude, longitude });
-
   if (!mapToken) {
     return (
-      <Card>
+      <Card className="h-full w-full">
         <CardBody>
-          <div className="w-[500px] h-[300px] flex items-center justify-center bg-gray-100">
+          <div className="w-full h-full flex items-center justify-center bg-gray-100">
             <p>Mapbox token is required</p>
           </div>
         </CardBody>
@@ -43,7 +39,7 @@ export default function InteractiveMap({
             latitude: latitude,
             zoom: 14,
           }}
-          style={{ width: "710px", height: "450px" }}
+          style={{ width: "100%", height: "100%" }}
           mapStyle="mapbox://styles/mapbox/streets-v9"
         >
           <Marker
@@ -57,8 +53,7 @@ export default function InteractiveMap({
             <Popup
               latitude={latitude}
               longitude={longitude}
-              onClose={() => setShowPopup(false)}
-              closeButton={true}
+              closeButton={false}
               closeOnClick={false}
               offset={10}
             >

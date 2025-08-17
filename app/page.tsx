@@ -6,6 +6,7 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import { getThemeFromPath } from "./context/global";
 import MainServices from "./sections/MainServices";
 import MainFinalSection from "./sections/MainFinalSection";
+import Reviews from "./components/Reviews";
 
 export default function Home() {
   const initialTheme = getThemeFromPath("/");
@@ -47,15 +48,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black to-85% to-[#4C4B4B]"></div>
           <div className="w-full max-w-[1400px] px-12 flex flex-col items-center gap-20">
             <Certifications />
-            <div className="flex flex-col items-center text-center z-16 mb-10 gap-16 w-full">
-              <div className="flex flex-col">
-                <p className="font-cocogoose text-lg h-6">
-                  {"We don't say we're the best"}
-                </p>
-                <h4 className="font-exotc350 text-5xl">Our customers do</h4>
-              </div>
-              <div className="w-full min-h-[400px] rounded-[35px] border-white border-1"></div>
-            </div>
+            <Reviews />
           </div>
         </div>
         <div className="relative flex justify-center py-12 items-center">
