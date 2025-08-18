@@ -4,8 +4,20 @@ import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import Image from "next/image";
 
-export type ProjectType = "Roofing" | "Siding" | "Kitchen" | "Bathroom";
-export type ProjectLocation = "New York" | "New Jersey";
+export type ProjectType =
+  | "Roofing"
+  | "Siding"
+  | "Windows"
+  | "Kitchen"
+  | "Bathroom";
+export type ProjectLocation =
+  | "Yonkers"
+  | "Staten Island"
+  | "Queens"
+  | "Long Island"
+  | "New Jersey"
+  | "Brooklyn"
+  | "Bronx";
 
 export type Project = {
   image: string;
@@ -14,13 +26,33 @@ export type Project = {
 };
 
 export type ProjectFilter = {
-  type: ProjectType | null;
+  type: ProjectFilterType | null;
   location?: ProjectLocation | null;
 };
+
+type ProjectFilterType = "Roofing" | "Siding" | "Windows" | "Other";
 
 type ProjectsProps = {
   projects: Project[];
 };
+
+function handleTypeFilter(
+  type: ProjectFilterType | null,
+  project: Project
+): boolean {
+  switch (type) {
+    case "Other":
+      return project.type === "Kitchen" || project.type === "Bathroom";
+    case "Roofing":
+      return project.type === "Roofing";
+    case "Siding":
+      return project.type === "Siding";
+    case "Windows":
+      return project.type === "Windows";
+    default:
+      return true; // If no filter is applied, show all projects
+  }
+}
 
 export default function ProjectsComponent({ projects }: ProjectsProps) {
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
@@ -52,13 +84,13 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
       projects.filter((proj) => {
         if (newFilters.type && newFilters.location) {
           return (
-            proj.type === newFilters.type &&
+            handleTypeFilter(newFilters.type, proj) &&
             proj.location === newFilters.location
           );
         }
 
         if (newFilters.type) {
-          return proj.type === newFilters.type;
+          return handleTypeFilter(newFilters.type, proj);
         }
 
         return proj.location === newFilters.location;
@@ -99,8 +131,8 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
           >
             <SelectItem key="Roofing">Roofing</SelectItem>
             <SelectItem key="Siding">Siding</SelectItem>
-            <SelectItem key="Kitchen">Kitchen</SelectItem>
-            <SelectItem key="Bathroom">Bathroom</SelectItem>
+            <SelectItem key="Windows">Windows</SelectItem>
+            <SelectItem key="Other">Other</SelectItem>
           </Select>
           <Select
             name="location"
@@ -116,8 +148,12 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
             fullWidth
             className="font-cocogoose w-[270px]"
           >
-            <SelectItem key="New York">New York</SelectItem>
-            <SelectItem key="New Jersey">New Jersey</SelectItem>
+            <SelectItem key="Brooklyn">Brooklyn</SelectItem>
+            <SelectItem key="Staten Island">Staten Island</SelectItem>
+            <SelectItem key="Long Island">Long Island</SelectItem>
+            <SelectItem key="Bronx">Bronx</SelectItem>
+            <SelectItem key="Queens">Queens</SelectItem>
+            <SelectItem key="Yonkers">Yonkers</SelectItem>
           </Select>
         </div>
       </div>

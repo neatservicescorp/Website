@@ -20,7 +20,7 @@ export default function ProjectCard({ project }: Props) {
             alt={`project_${project.type}_image`}
             width={600}
             height={600}
-            className="w-full h-full"
+            className="w-full h-full object-cover"
           />
           <div className="absolute font-cocogoose text-sm bottom-0 w-full h-[20%] bg-gradient-to-t from-[#F64631] to-transparent flex items-center p-5 gap-8">
             <div className="flex flex-row gap-1">

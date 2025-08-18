@@ -15,11 +15,17 @@ export default function MainFinalSection() {
           classNames={{ base: "rounded-[35px]" }}
         >
           <Image
+            onClick={() =>
+              window.open(
+                "https://retailservices.wellsfargo.com/ahapp/init-app?m=0024344285&l=en_US",
+                "_blank"
+              )
+            }
             src="/images/finance.jpeg"
             alt="financing_disclaimer"
             width={800}
             height={800}
-            className="absolute w-full h-full p-7 bg-white"
+            className="absolute w-full h-full p-7 bg-white hover:cursor-pointer"
           />
         </Card>
       </div>

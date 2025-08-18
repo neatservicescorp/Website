@@ -1,7 +1,20 @@
 "use client";
 
-import { HeroUIProvider } from "@heroui/react";
+import { HeroUIProvider, ToastProvider } from "@heroui/react";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
-  return <HeroUIProvider>{children}</HeroUIProvider>;
+  return (
+    <HeroUIProvider>
+      <ToastProvider
+        placement="top-right"
+        toastProps={{
+          classNames: {
+            base: "font-cocogoose",
+            description: "text-black",
+          },
+        }}
+      />
+      {children}
+    </HeroUIProvider>
+  );
 }

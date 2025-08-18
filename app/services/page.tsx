@@ -16,16 +16,18 @@ export default function Services() {
       <main className="min-h-screen pt-32">
         <div className="w-full h-[800px] 2xl:h-[900px] justify-center relative flex items-center">
           <Image
-            src="/images/services_main.jpeg"
+            src="/api/image?key=services_bg.jpg"
             alt="services_background"
             width={1500}
             height={1500}
-            className="w-full h-full object-cover absolute"
+            className="w-full h-full object-cover absolute contrast-[60%]"
           />
           <div className="flex w-full h-full max-w-[1400px]">
             <div className="flex flex-col lg:w-[50%] text-white justify-center z-10 ml-20">
-              <h2 className="font-exotc350 text-7xl">Services</h2>
-              <p className="font-cocogoose max-w-[80%]">
+              <h2 className="font-exotc350 text-7xl text-shadow-lg">
+                Services
+              </h2>
+              <p className="font-cocogoose max-w-[80%] text-shadow-md">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis.

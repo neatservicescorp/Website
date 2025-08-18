@@ -4,7 +4,7 @@ import { getThemeFromPath } from "../context/global";
 import MainForm from "../components/MainForm";
 import InteractiveMap from "../components/InteractiveMap";
 
-export default async function Contact() {
+export default function Contact() {
   const initialTheme = getThemeFromPath("/contact");
 
   const mapToken = process.env.NEXT_PUBLIC_MAP_TOKEN;
