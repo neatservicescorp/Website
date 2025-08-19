@@ -1,6 +1,14 @@
 "use client";
 
-import { Popover, PopoverContent, PopoverTrigger } from "@heroui/react";
+import {
+  Button,
+  Divider,
+  Input,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+  Textarea,
+} from "@heroui/react";
 import Image from "next/image";
 
 export default function Messages() {
@@ -18,14 +26,20 @@ export default function Messages() {
             />
           </div>
         </PopoverTrigger>
-        <PopoverContent>
-          <div className="w-full max-w-[300px]">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ut
-              doloremque accusantium earum delectus beatae illo accusamus id
-              repudiandae modi perferendis eum, dignissimos incidunt dolorum
-              libero fuga laudantium praesentium facilis!
-            </p>
+        <PopoverContent className="w-[350px]">
+          <div className="w-full max-w-[500px] p-3">
+            <form className="flex flex-col gap-5 font-cocogoose text-black">
+              <p className="font-black">Send us a message!</p>
+              <Divider />
+              <Input label="Email address" />
+              <Textarea label="Message" />
+              <p className="text-xs">
+                {
+                  "We’ll be in touch with you shortly! For estimates, please fill out our main form."
+                }
+              </p>
+              <Button>Send</Button>
+            </form>
           </div>
         </PopoverContent>
       </Popover>

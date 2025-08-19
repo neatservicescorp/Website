@@ -1,7 +1,7 @@
-import Image from "next/image";
 import MainForm from "./components/MainForm";
 import Certifications from "./components/Certifications";
 import RoofingMethod from "./components/RoofingMethod";
+import ImageSlideshow from "./components/ImageSlideshow";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { getThemeFromPath } from "./context/global";
 import MainServices from "./sections/MainServices";
@@ -10,16 +10,25 @@ import Reviews from "./components/Reviews";
 
 export default function Home() {
   const initialTheme = getThemeFromPath("/");
+
+  // Define your background images
+  const backgroundImages = [
+    "/api/image?key=slide_2.jpg",
+    "/api/image?key=home_bg.png",
+    "/api/image?key=slide_5.PNG",
+    "/api/image?key=slide_6.jpg",
+    "/api/image?key=slide_8.PNG",
+  ];
+
   return (
     <ThemeProvider initialTheme={initialTheme}>
       <main className="min-h-screen">
         <div className="relative flex justify-center top-0 w-full z-0 h-[900px]">
-          <Image
-            src="/api/image?key=home_bg.png"
+          <ImageSlideshow
+            images={backgroundImages}
+            interval={8000} // 8 seconds between transitions
+            className="w-full h-full"
             alt="home_background"
-            width={2000}
-            height={2000}
-            className="object-cover w-full h-full object-[center_20%]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black from-[5%] to-transparent"></div>
           <div className="absolute top-0 z-10 h-full w-full flex flex-row p-5 pt-36 max-w-[1400px]">

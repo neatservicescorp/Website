@@ -2,8 +2,10 @@
 import { Button, Card } from "@heroui/react";
 import Image from "next/image";
 import FAQItem from "../components/FAQItem";
+import { useRouter } from "next/navigation";
 
 export default function MainFinalSection() {
+  const router = useRouter();
   return (
     <section className="w-full max-w-[1400px] p-6 lg:px-10 z-10 flex flex-col gap-20">
       <div className="w-full h-full min-h-[400px] rounded-[35px] border-black border-1 flex flex-row p-10 items-center justify-between">
@@ -36,23 +38,26 @@ export default function MainFinalSection() {
         </div>
         <div className="grid grid-cols-2 grid-rows-2 gap-5">
           <FAQItem
-            title="What services do you offer?"
-            content="We offer a wide range of services including roofing, siding, windows, bathrooms, kitchens, and general painting."
-          />
-          <FAQItem
-            title="Do you offer financing?"
-            content="Yes, we offer financing options to help you manage the cost of your home improvement projects."
+            title="Can I finance my roofing or siding project?"
+            content="Yes, we offer financing options for qualified customers. Ask us during your estimate, we’ll walk you through it"
           />
           <FAQItem
             title="What areas do you serve?"
-            content="We serve Queens, Yonkers, Brooklyn, and the Bronx."
+            content="We proudly serve Queens, Brooklyn, Long Island, and the surrounding NYC areas. If you’re located nearby and need roofing or siding work, don’t hesitate to reach out!"
           />
           <FAQItem
-            title="Do you offer insurance claims assistance?"
-            content="Yes, we assist with insurance claims to help you navigate the process smoothly."
+            title="Do you offer free estimates for roofing or siding work?"
+            content="Yes, Neat Services Inc. offers free, no-obligation estimates for all roofing and siding projects. We’ll visit your property, assess your needs, and give you a detailed quote with no hidden costs."
+          />
+          <FAQItem
+            title="Do you offer siding installation or replacement services?"
+            content="Yes, we absolutely offer siding installation and replacement services in Jackson Heights and the surrounding communities. We work with various siding materials, including vinyl, fiber cement, and wood, and can help you choose the best option to enhance your home's curb appeal and energy efficiency."
           />
         </div>
-        <Button className="self-center bg-black font-cocogoose text-sm text-white p-9 w-full max-w-[349px]">
+        <Button
+          className="self-center bg-black font-cocogoose text-sm text-white p-9 w-full max-w-[349px]"
+          onPress={() => router.push("/services#FAQS")}
+        >
           Read all questions
         </Button>
       </div>

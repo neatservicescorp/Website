@@ -2,7 +2,14 @@
 import Image from "next/image";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { getThemeFromPath } from "../context/global";
-import { Button, Card, CardBody, Divider } from "@heroui/react";
+import {
+  Accordion,
+  AccordionItem,
+  Button,
+  Card,
+  CardBody,
+  Divider,
+} from "@heroui/react";
 import RoofingMethod from "../components/RoofingMethod";
 import FAQItem from "../components/FAQItem";
 import InteractiveMap from "../components/InteractiveMap";
@@ -171,54 +178,6 @@ export default function Services() {
                   </p>
                 </div>
               </div>
-              {/* <div className="flex flex-row gap-10 ">
-                <Card
-                  classNames={{ base: "rounded-[35px]" }}
-                  className="aspect-square w-full min-w-[280px]"
-                >
-                  <CardBody className="p-0">
-                    <Image
-                      src="/api/image?key=home_bg.png"
-                      alt="interior_item"
-                      width={800}
-                      height={800}
-                      className="w-full h-full object-cover"
-                    />
-                  </CardBody>
-                </Card>
-                <div className="flex flex-col gap-3 text-white justify-center">
-                  <h4 className="text-5xl font-exotc350">Roof</h4>
-                  <p className="font-cocogoose text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-              </div> */}
-              {/* <div className="flex flex-row gap-10 ">
-                <Card
-                  classNames={{ base: "rounded-[35px]" }}
-                  className="aspect-square w-full min-w-[280px]"
-                >
-                  <CardBody className="p-0">
-                    <Image
-                      src="/api/image?key=home_bg.png"
-                      alt="interior_item"
-                      width={800}
-                      height={800}
-                      className="w-full h-full object-cover"
-                    />
-                  </CardBody>
-                </Card>
-                <div className="flex flex-col gap-3 text-white justify-center">
-                  <h4 className="text-5xl font-exotc350">Roof</h4>
-                  <p className="font-cocogoose text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-              </div> */}
             </div>
             <div className="text-black w-full flex flex-col justify-center py-16 gap-12">
               <div className="flex flex-col items-center gap-1">
@@ -322,35 +281,137 @@ export default function Services() {
                 <InteractiveMap mapToken={mapToken} />
               </div>
             </div>
-            <div className="flex flex-col justify-center gap-8 mb-12">
+            <section
+              id="FAQS"
+              className="flex flex-col justify-center gap-8 mb-12"
+            >
               <div className="flex flex-col text-black text-center">
                 <h3 className="font-exotc350 text-6xl">FAQS</h3>
                 <p className="font-cocogoose text-medium">
                   Your questions, answered
                 </p>
               </div>
-              <div className="grid grid-cols-2 grid-rows-2 gap-5">
-                <FAQItem
-                  title="What services do you offer?"
-                  content="We offer a wide range of services including roofing, siding, windows, bathrooms, kitchens, and general painting."
-                />
-                <FAQItem
-                  title="Do you offer financing?"
-                  content="Yes, we offer financing options to help you manage the cost of your home improvement projects."
-                />
-                <FAQItem
-                  title="What areas do you serve?"
-                  content="We serve Queens, Yonkers, Brooklyn, and the Bronx."
-                />
-                <FAQItem
-                  title="Do you offer insurance claims assistance?"
-                  content="Yes, we assist with insurance claims to help you navigate the process smoothly."
-                />
+              <div className="flex flex-col text-black py-5 px-12">
+                <Accordion>
+                  <AccordionItem
+                    classNames={{
+                      title: "text-black font-cocogoose font-black text-lg",
+                      content: "text-black font-cocogoose",
+                      indicator: "text-black",
+                    }}
+                    key="faq_1"
+                    aria-label="FAQs Accordion 1"
+                    title="Can I finance my roofing or siding project?"
+                  >
+                    Yes, we offer financing options for qualified customers. Ask
+                    us during your estimate and we’ll walk you through it
+                  </AccordionItem>
+                  <AccordionItem
+                    classNames={{
+                      title: "text-black font-cocogoose font-black text-lg",
+                      content: "text-black font-cocogoose",
+                      indicator: "text-black",
+                    }}
+                    key="faq_2"
+                    aria-label="FAQs Accordion 2"
+                    title="What areas do you serve?"
+                  >
+                    We proudly serve Queens, Brooklyn, Long Island, and the
+                    surrounding NYC areas. If you’re located nearby and need
+                    roofing or siding work, don’t hesitate to reach out!
+                  </AccordionItem>
+                  <AccordionItem
+                    classNames={{
+                      title: "text-black font-cocogoose font-black text-lg",
+                      content: "text-black font-cocogoose",
+                      indicator: "text-black",
+                    }}
+                    key="faq_3"
+                    aria-label="FAQs Accordion 3"
+                    title="Do you offer free estimates for roofing or siding work?"
+                  >
+                    Yes, Neat Services Inc. offers free, no-obligation estimates
+                    for all roofing and siding projects. We’ll visit your
+                    property, assess your needs, and give you a detailed quote
+                    with no hidden costs.
+                  </AccordionItem>
+                  <AccordionItem
+                    classNames={{
+                      title: "text-black font-cocogoose font-black text-lg",
+                      content: "text-black font-cocogoose",
+                      indicator: "text-black",
+                    }}
+                    key="faq_4"
+                    aria-label="FAQs Accordion 4"
+                    title="I'm in Jackson Heights and want to revamp my home's exterior with new siding but feel overwhelmed by the choices. How can you help me choose the right siding for my home?"
+                  >
+                    At Neat Services Inc., we understand that selecting new
+                    siding can be daunting. For our Jackson Heights customers,
+                    we offer personalized consultations where we discuss your
+                    aesthetic preferences, budget, and the specific needs of
+                    your home. We will guide you through our wide selection of
+                    materials, including stone veneer, shake, board and batten,
+                    and explain the benefits of each to help you make an
+                    informed decision that enhances your home`s curb appeal and
+                    provides lasting value. We can also use our virtual design
+                    tools to help you visualize the final results.
+                  </AccordionItem>
+                  <AccordionItem
+                    classNames={{
+                      title: "text-black font-cocogoose font-black text-lg",
+                      content: "text-black font-cocogoose",
+                      indicator: "text-black",
+                    }}
+                    key="faq_5"
+                    aria-label="FAQs Accordion 5"
+                    title="I'm interested in a new roof for my home, but I'm concerned about the disruption. How do you minimize inconvenience to homeowners during a roof replacement project?"
+                  >
+                    At Neat Services Inc., we understand that a roof replacement
+                    can be disruptive. For our Jackson Heights clients, we
+                    strive to minimize inconvenience by carefully scheduling the
+                    project, efficiently managing debris removal, and
+                    maintaining clear communication throughout the process. We
+                    protect your landscaping and property, and work diligently
+                    to complete the project as quickly and smoothly as possible
+                    while adhering to our high-quality standards.
+                  </AccordionItem>
+                  <AccordionItem
+                    classNames={{
+                      title: "text-black font-cocogoose font-black text-lg",
+                      content: "text-black font-cocogoose",
+                      indicator: "text-black",
+                    }}
+                    key="faq_6"
+                    aria-label="FAQs Accordion 6"
+                    title="I'm in Jackson Heights and need a new roof. What is the typical process like for a roof replacement with you?"
+                  >
+                    For Jackson Heights roof replacements, our process starts
+                    with a consultation where we assess your needs and discuss
+                    material options. During the replacement, we prioritize
+                    protecting your property and ensuring efficient
+                    installation. Finally, we conduct a thorough cleanup and
+                    final inspection to ensure your complete satisfaction with
+                    your new roof.
+                  </AccordionItem>
+                  <AccordionItem
+                    classNames={{
+                      title: "text-black font-cocogoose font-black text-lg",
+                      content: "text-black font-cocogoose",
+                      indicator: "text-black",
+                    }}
+                    key="faq_7"
+                    aria-label="FAQs Accordion 7"
+                    title="I live near Jackson Heights, and I'm worried about the upcoming winter. Do you offer roof inspections to identify potential problems before the bad weather hits?"
+                  >
+                    Yes, we offer comprehensive roof inspections in the Jackson
+                    Heights area and nearby communities. We can check for
+                    vulnerabilities like damaged shingles, leaks, and poor
+                    insulation, and provide recommendations to prepare your roof
+                    for the winter months ahead.
+                  </AccordionItem>
+                </Accordion>
               </div>
-              <Button className="self-center bg-black font-cocogoose text-sm text-white p-9 w-full max-w-[349px]">
-                Read all questions
-              </Button>
-            </div>
+            </section>
           </div>
         </div>
       </main>
