@@ -71,16 +71,17 @@ export default function MainFinalSection() {
             width={800}
             height={800}
           />
-          <div className="flex flex-col text-black gap-2 px-10 justify-center w-[50%]">
+          <div className="flex flex-col text-black gap-4 px-10 justify-center w-[50%]">
             <h3 className="font-exotc350 text-6xl leading-12">
               More than a slogan, it’s our commitment
             </h3>
             <p className="font-cocogoose text-sm">
-              At Neat Services, we believe homeowners deserve more than just a
-              roof. They deserve peace of mind. That’s why we deliver expert
-              craftsmanship, clear communication, and dependable service every
-              step of the way. Because for us, being neat isn’t just about clean
-              work. It’s about doing things right.
+              At Neat Services, we believe that being neat is more than clean
+              job sites. {"It's"} about doing things right. We are a
+              family-oriented, solution-driven team committed to transparency,
+              customer satisfaction, and delivering results that exceed
+              expectations. From Queens rooftops to Brooklyn brownstones, we
+              build more than homes, we build relationships.
             </p>
           </div>
         </div>

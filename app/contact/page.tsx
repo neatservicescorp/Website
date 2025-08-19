@@ -34,10 +34,10 @@ export default function Contact() {
                 Where we are
               </h3>
               <p className="font-cocogoose text-lg">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
-                atque debitis distinctio blanditiis magni, temporibus dolor
-                dolorem delectus amet possimus illo, voluptates, recusandae
-                maiores! Iste doloremque cupiditate delectus excepturi non?
+                You can reach us anytime at 718-880-4080 or by email at
+                neatservicescorp@gmail.com . Our office is located at 8211 37th
+                St., Ste 404, Jackson Heights, NY 11372, and we are available
+                24/7 to assist you with your needs.
               </p>
             </div>
             <div className="w-[50%] h-[450px] flex-shrink-0">

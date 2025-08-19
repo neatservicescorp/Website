@@ -25,7 +25,7 @@ export default function MainMenuCard({
         alt={`${image}_background`}
         width={800}
         height={800}
-        className="absolute w-full h-full"
+        className="absolute w-full h-full object-cover"
       />
       <div className="absolute w-full bottom-0 h-1/2 bg-gradient-to-t from-[#F64631]/40 to-transparent"></div>
       <CardBody className="justify-end p-7">

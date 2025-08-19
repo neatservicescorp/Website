@@ -14,7 +14,7 @@ export default function Footer() {
         pageTheme === "light" ? "bg-[#8A8A8A]" : "bg-[#D9D9D9]"
       } flex justify-center`}
     >
-      <div className="w-full max-w-[1500px] flex flex-row items-center justify-between">
+      <div className="w-full max-w-[1500px] flex flex-row items-center justify-between relative">
         <Image
           src="neat_logo.svg"
           alt="neat_logo"
@@ -33,6 +33,9 @@ export default function Footer() {
           </div>
         </div>
         <FooterLinks />
+        <div className="absolute font-cocogoose text-xs bottom-5 right-0 w-full text-center text-black">
+          <p>© 2025 Neat Services Corp. Todos los derechos reservados</p>
+        </div>
       </div>
     </footer>
   );

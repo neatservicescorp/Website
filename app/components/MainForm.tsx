@@ -147,7 +147,7 @@ export default function MainForm() {
             </p>
           </div>
           <Button
-            className="bg-[#F64631] text-white w-full max-w-[30%] self-end text-[15px] h-12"
+            className="bg-[#F64631] text-white w-full max-w-[40%] self-end text-[15px] h-12"
             isDisabled={
               !opted ||
               !formData.name ||
@@ -157,7 +157,7 @@ export default function MainForm() {
             }
             onPress={handleSubmit}
           >
-            Submit
+            Get In Touch
           </Button>
         </div>
       </CardBody>

@@ -28,9 +28,11 @@ export default function Services() {
                 Services
               </h2>
               <p className="font-cocogoose max-w-[80%] text-shadow-md">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis.
+                Built for New York homeowners who expect quality, transparency,
+                and craftsmanship. Neat Services Inc. specializes in exterior
+                home improvement solutions that stand the test of time. From
+                precision roofing to custom siding installations. Serving
+                Queens, Brooklyn, and Yonkers since 2019.
               </p>
             </div>
           </div>
@@ -51,11 +53,11 @@ export default function Services() {
               <div className="flex flex-row p-5">
                 <Card
                   classNames={{ base: "rounded-[35px]" }}
-                  className="max-h-[350px]"
+                  className="max-h-[350px] w-[50%]"
                 >
                   <CardBody className="p-0">
                     <Image
-                      src="/api/image?key=home_bg.png"
+                      src="/api/image?key=services_siding.jpg"
                       alt="exterior_1"
                       width={800}
                       height={800}
@@ -63,23 +65,22 @@ export default function Services() {
                     />
                   </CardBody>
                 </Card>
-                <div className="flex flex-col text-white max-w-[50%] p-10 gap-2 justify-center">
+                <div className="flex flex-col text-white w-[50%] p-10 gap-2 justify-center">
                   <h3 className="font-exotc350 text-4xl">Siding</h3>
                   <p className="font-cocogoose text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis.
+                    Custom siding replacement to improve aesthetics and energy
+                    efficiency.
                   </p>
                 </div>
               </div>
               <div className="flex flex-row-reverse p-5">
                 <Card
                   classNames={{ base: "rounded-[35px]" }}
-                  className="max-h-[350px]"
+                  className="max-h-[350px] w-[50%]"
                 >
                   <CardBody className="p-0">
                     <Image
-                      src="/api/image?key=home_bg.png"
+                      src="/api/image?key=services_roofing.PNG"
                       alt="exterior_1"
                       width={800}
                       height={800}
@@ -90,16 +91,15 @@ export default function Services() {
                 <div className="flex flex-col text-white max-w-[50%] p-10 gap-2 justify-center">
                   <h3 className="font-exotc350 text-4xl">Roof</h3>
                   <p className="font-cocogoose text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis.
+                    Roof installation and replacement with warranty, durable
+                    materials, and maximum protection.
                   </p>
                 </div>
               </div>
               <div className="flex flex-row p-5">
                 <Card
                   classNames={{ base: "rounded-[35px]" }}
-                  className="max-h-[350px]"
+                  className="max-h-[350px] w-[50%]"
                 >
                   <CardBody className="p-0">
                     <Image
@@ -114,9 +114,8 @@ export default function Services() {
                 <div className="flex flex-col text-white max-w-[50%] p-10 gap-2 justify-center">
                   <h3 className="font-exotc350 text-4xl">Window</h3>
                   <p className="font-cocogoose text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis.
+                    Installation of modern, secure, and energy-efficient
+                    windows.
                   </p>
                 </div>
               </div>
@@ -125,7 +124,7 @@ export default function Services() {
               <h5 className="font-exotc350 text-4xl">Interior</h5>
               <Divider className="dark h-[1px] bg-white" />
             </div>
-            <div className="grid grid-cols-2 grid-rows-2 gap-y-16 gap-8 px-5">
+            <div className="grid grid-cols-2 grid-rows-1 gap-y-16 gap-8 px-5">
               <div className="flex flex-row gap-10">
                 <Card
                   classNames={{ base: "rounded-[35px]" }}
@@ -133,7 +132,7 @@ export default function Services() {
                 >
                   <CardBody className="p-0">
                     <Image
-                      src="/api/image?key=home_bg.png"
+                      src="/api/image?key=services_kitchen.jpg"
                       alt="interior_item"
                       width={800}
                       height={800}
@@ -142,11 +141,10 @@ export default function Services() {
                   </CardBody>
                 </Card>
                 <div className="flex flex-col gap-3 text-white justify-center">
-                  <h4 className="text-5xl font-exotc350">Roof</h4>
+                  <h4 className="text-5xl font-exotc350">Kitchen</h4>
                   <p className="font-cocogoose text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    Custom kitchen design and installation with high-end
+                    finishes.{" "}
                   </p>
                 </div>
               </div>
@@ -157,7 +155,7 @@ export default function Services() {
                 >
                   <CardBody className="p-0">
                     <Image
-                      src="/api/image?key=home_bg.png"
+                      src="/api/image?key=general_bathroom.jpg"
                       alt="interior_item"
                       width={800}
                       height={800}
@@ -166,15 +164,14 @@ export default function Services() {
                   </CardBody>
                 </Card>
                 <div className="flex flex-col gap-3 text-white justify-center">
-                  <h4 className="text-5xl font-exotc350">Roof</h4>
+                  <h4 className="text-5xl font-exotc350">Bathrooms</h4>
                   <p className="font-cocogoose text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    Functional and elegant bathroom renovations tailored to each
+                    client.
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row gap-10 ">
+              {/* <div className="flex flex-row gap-10 ">
                 <Card
                   classNames={{ base: "rounded-[35px]" }}
                   className="aspect-square w-full min-w-[280px]"
@@ -197,8 +194,8 @@ export default function Services() {
                     aliqua.
                   </p>
                 </div>
-              </div>
-              <div className="flex flex-row gap-10 ">
+              </div> */}
+              {/* <div className="flex flex-row gap-10 ">
                 <Card
                   classNames={{ base: "rounded-[35px]" }}
                   className="aspect-square w-full min-w-[280px]"
@@ -221,9 +218,9 @@ export default function Services() {
                     aliqua.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
-            <div className="text-black w-full flex flex-col justify-center py-12 gap-12">
+            <div className="text-black w-full flex flex-col justify-center py-16 gap-12">
               <div className="flex flex-col items-center gap-1">
                 <h2 className="font-exotc350 text-6xl">Before and After</h2>
                 <p className="font-cocogoose text-sm">

@@ -25,17 +25,15 @@ export default function Home() {
           <div className="absolute top-0 z-10 h-full w-full flex flex-row p-5 pt-36 max-w-[1400px]">
             <div className="w-1/2 flex flex-col justify-center gap-3 ml-10">
               <div className="flex flex-col font-exotc350 text-5xl 2xl:text-7xl">
-                <h1 className="h-10 2xl:h-14">New York</h1>
-                <h1 className="">city contractors</h1>
+                <h1>Top-Rated</h1>
+                <h1>Roofing & Siding Experts</h1>
               </div>
               <div className="max-w-[70%] font-cocogoose text-medium 2xl:text-lg flex flex-col gap-0">
                 <p>
-                  Over four years serving Queens Yonkers Brooklyn and the Bronx
-                  with expert care.h
-                </p>
-                <p>
-                  GAF and CertainTeed certified focused on excellence and trust
-                  in every project.
+                  Neat Services Inc. has brought expert craftsmanship and
+                  personalized care to homeowners across NYC. Certified by GAF
+                  and CertainTeed, we specialize in shingle roofing and premium
+                  siding solutions with a human touch.
                 </p>
               </div>
             </div>
@@ -55,11 +53,9 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#4C4B4B] to-[#313131]"></div>
           <div className="w-full max-w-[1400px] flex flex-col items-center z-10 gap-3">
             <div className="flex flex-col gap-1 text-white text-center">
-              <h2 className="font-exotc350 text-6xl">
-                Our trusted roofing method
-              </h2>
+              <h2 className="font-exotc350 text-6xl">The Neat Process</h2>
               <p className="font-cocogoose text-medium">
-                A process that works for every home improvement project.
+                A Step-by-Step Approach You Can Rely On
               </p>
             </div>
             <RoofingMethod />

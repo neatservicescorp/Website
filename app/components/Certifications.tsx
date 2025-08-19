@@ -24,8 +24,8 @@ export default function Certifications({
             Certified to serve you better
           </h2>
           <p className="font-cocogoose text-black text-center text-sm max-w-[70%]">
-            At Neat Services, our industry certifications prove our commitment
-            to quality, trust, and top-tier service.
+            At Neat Services, we are proud to hold certifications that guarantee
+            our commitment to quality, reliability, and safety
           </p>
           <div className="flex flex-row gap-8 items-center">
             <Image
