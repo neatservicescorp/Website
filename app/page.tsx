@@ -7,6 +7,7 @@ import { getThemeFromPath } from "./context/global";
 import MainServices from "./sections/MainServices";
 import MainFinalSection from "./sections/MainFinalSection";
 import Reviews from "./components/Reviews";
+import FinancingOpts from "./components/FinancingOpts";
 
 export default function Home() {
   const initialTheme = getThemeFromPath("/");
@@ -32,7 +33,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black from-[5%] to-transparent"></div>
           <div className="absolute top-0 z-10 h-full w-full flex flex-row p-5 pt-36 max-w-[1400px]">
-            <div className="w-1/2 flex flex-col justify-center gap-3 ml-10">
+            <div className="w-1/2 flex flex-col justify-center gap-3 ml-10 text-white">
               <div className="flex flex-col font-exotc350 text-5xl 2xl:text-7xl">
                 <h1>Top-Rated</h1>
                 <h1>Roofing & Siding Experts</h1>
@@ -68,10 +69,11 @@ export default function Home() {
               </p>
             </div>
             <RoofingMethod />
+            <FinancingOpts />
           </div>
         </div>
         <div className="relative flex justify-center min-h-[700px]">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#313131] to-[#828282] from-50%"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#313131] to-[#828282] from-20%"></div>
           <MainServices />
         </div>
         <div className="relative flex justify-center">

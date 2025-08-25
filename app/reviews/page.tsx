@@ -20,8 +20,8 @@ export default async function ReviewsPage() {
         </div>
         <div className="bg-[#8B8B8B] flex justify-center w-full">
           <div className="w-full max-w-[1400px] p-12 py-16 flex flex-col items-center gap-20">
-            <Reviews border={false} textColor="black" />
-            <Certifications background="#8B8B8B" shadow={false} />
+            <Reviews textColor="black" />
+            <Certifications shadow={false} />
           </div>
         </div>
       </main>

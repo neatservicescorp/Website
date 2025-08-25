@@ -29,16 +29,18 @@ export default function Messages() {
         <PopoverContent className="w-[350px]">
           <div className="w-full max-w-[500px] p-3">
             <form className="flex flex-col gap-5 font-cocogoose text-black">
-              <p className="font-black">Send us a message!</p>
+              <p className="font-black text-lg">Chat with us now!</p>
               <Divider />
               <Input label="Email address" />
-              <Textarea label="Message" />
-              <p className="text-xs">
+              <Textarea label="Message" maxRows={5} />
+              <p className="text-sm">
                 {
-                  "We’ll be in touch with you shortly! For estimates, please fill out our main form."
+                  "Our team actively monitors messages to ensure you receive a timely reply"
                 }
               </p>
-              <Button>Send</Button>
+              <Button className="bg-red-neat text-white font-black">
+                Contact
+              </Button>
             </form>
           </div>
         </PopoverContent>

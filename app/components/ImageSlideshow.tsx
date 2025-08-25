@@ -7,6 +7,7 @@ type ImageSlideshowProps = {
   interval?: number;
   className?: string;
   alt?: string;
+  absolute?: boolean;
 };
 
 export default function ImageSlideshow({
@@ -14,6 +15,7 @@ export default function ImageSlideshow({
   interval = 6000,
   className = "",
   alt = "background_image",
+  absolute = true,
 }: ImageSlideshowProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -43,7 +45,9 @@ export default function ImageSlideshow({
           width={2000}
           height={2000}
           className={`
-            absolute inset-0 object-cover w-full h-full object-[center_20%]
+            ${
+              absolute ? "absolute" : ""
+            } inset-0 object-cover w-full h-full object-[center_20%]
             transition-opacity duration-2000 ease-in-out
             ${index === currentIndex ? "opacity-100" : "opacity-0"}
           `}

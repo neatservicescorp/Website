@@ -13,7 +13,7 @@ export default function Certifications({
 }: CertificationsProps) {
   return (
     <Card
-      className="self=center p-5 pb-0"
+      className="self-center p-5 pb-0 w-[85%]"
       shadow={shadow ? "md" : "none"}
       style={{ backgroundColor: background }}
       classNames={{ base: `rounded-[35px]` }}
@@ -30,6 +30,13 @@ export default function Certifications({
           <div className="flex flex-row gap-8 items-center">
             <Image
               src="/images/cert_certainteed.png"
+              alt="cert_1"
+              width={200}
+              height={500}
+              className="w-52"
+            />
+            <Image
+              src="/images/google_guaraanteed.png"
               alt="cert_1"
               width={200}
               height={500}

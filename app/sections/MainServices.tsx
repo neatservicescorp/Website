@@ -6,13 +6,6 @@ export default function MainServices() {
     <section className="flex flex-col items-center p-6 lg:pb-16 gap-6 lg:px-12 h-full w-full max-w-[1400px] z-10">
       <div className="flex flex-col font-white text-center gap-2">
         <h3 className="font-exotc350 text-6xl pb-4">Our services</h3>
-        <div className="flex flex-col font-cocogoose">
-          <p className="font-cocogoose-number">Core Benefits</p>
-          <p>✔️ 20-Year Material & Labor Warranty</p>
-          <p>✔️ Response Within 24 Hours</p>
-          <p>✔️ Licensed & Insured NYC Contractor</p>
-          <p>✔️ 5-Star Rated Customer Experience </p>
-        </div>
       </div>
       <div className="flex flex-col gap-5 w-full">
         <div className="flex flex-row items-center gap-5">

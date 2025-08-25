@@ -1,36 +1,14 @@
 "use client";
-import { Button, Card } from "@heroui/react";
+import { Button, Card, CardBody } from "@heroui/react";
 import Image from "next/image";
 import FAQItem from "../components/FAQItem";
 import { useRouter } from "next/navigation";
+import ImageSlideshow from "../components/ImageSlideshow";
 
 export default function MainFinalSection() {
   const router = useRouter();
   return (
     <section className="w-full max-w-[1400px] p-6 lg:px-10 z-10 flex flex-col gap-20">
-      <div className="w-full h-full min-h-[400px] rounded-[35px] border-black border-1 flex flex-row p-10 items-center justify-between">
-        <h3 className="text-black font-exotc350 text-6xl max-w-[420px]">
-          Gain peace of mind with our financing options!
-        </h3>
-        <Card
-          className="w-full h-full bg-black max-w-[580px] relative"
-          classNames={{ base: "rounded-[35px]" }}
-        >
-          <Image
-            onClick={() =>
-              window.open(
-                "https://retailservices.wellsfargo.com/ahapp/init-app?m=0024344285&l=en_US",
-                "_blank"
-              )
-            }
-            src="/images/finance.jpeg"
-            alt="financing_disclaimer"
-            width={800}
-            height={800}
-            className="absolute w-full h-full p-7 bg-white hover:cursor-pointer"
-          />
-        </Card>
-      </div>
       <div className="flex flex-col justify-center gap-8">
         <div className="flex flex-col text-black text-center">
           <h3 className="font-exotc350 text-6xl">FAQS</h3>
@@ -69,13 +47,24 @@ export default function MainFinalSection() {
           </p>
         </div>
         <div className="flex flex-row">
-          <Image
+          {/* <Image
             className="rounded-[45px] p-5 max-h-[450px] max-w-[60%] object-cover object-[center_10%]"
             src="/images/team.jpeg"
             alt="team_photo"
             width={800}
             height={800}
-          />
+          /> */}
+          <Card
+            classNames={{ base: "rounded-[35px]" }}
+            className="w-[60%] h-[450px]"
+          >
+            <CardBody className="p-0">
+              <ImageSlideshow
+                images={["/api/image?key=team.jpeg"]}
+                className="w-full h-full"
+              />
+            </CardBody>
+          </Card>
           <div className="flex flex-col text-black gap-4 px-10 justify-center w-[50%]">
             <h3 className="font-exotc350 text-6xl leading-12">
               More than a slogan, it’s our commitment

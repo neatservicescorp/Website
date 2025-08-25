@@ -5,13 +5,11 @@ import { getThemeFromPath } from "../context/global";
 import {
   Accordion,
   AccordionItem,
-  Button,
   Card,
   CardBody,
   Divider,
 } from "@heroui/react";
 import RoofingMethod from "../components/RoofingMethod";
-import FAQItem from "../components/FAQItem";
 import InteractiveMap from "../components/InteractiveMap";
 
 export default function Services() {
@@ -298,6 +296,7 @@ export default function Services() {
                       title: "text-black font-cocogoose font-black text-lg",
                       content: "text-black font-cocogoose",
                       indicator: "text-black",
+                      trigger: "hover:cursor-pointer",
                     }}
                     key="faq_1"
                     aria-label="FAQs Accordion 1"
@@ -311,6 +310,7 @@ export default function Services() {
                       title: "text-black font-cocogoose font-black text-lg",
                       content: "text-black font-cocogoose",
                       indicator: "text-black",
+                      trigger: "hover:cursor-pointer",
                     }}
                     key="faq_2"
                     aria-label="FAQs Accordion 2"
@@ -325,6 +325,7 @@ export default function Services() {
                       title: "text-black font-cocogoose font-black text-lg",
                       content: "text-black font-cocogoose",
                       indicator: "text-black",
+                      trigger: "hover:cursor-pointer",
                     }}
                     key="faq_3"
                     aria-label="FAQs Accordion 3"
@@ -340,6 +341,7 @@ export default function Services() {
                       title: "text-black font-cocogoose font-black text-lg",
                       content: "text-black font-cocogoose",
                       indicator: "text-black",
+                      trigger: "hover:cursor-pointer",
                     }}
                     key="faq_4"
                     aria-label="FAQs Accordion 4"
@@ -361,6 +363,7 @@ export default function Services() {
                       title: "text-black font-cocogoose font-black text-lg",
                       content: "text-black font-cocogoose",
                       indicator: "text-black",
+                      trigger: "hover:cursor-pointer",
                     }}
                     key="faq_5"
                     aria-label="FAQs Accordion 5"
@@ -380,6 +383,7 @@ export default function Services() {
                       title: "text-black font-cocogoose font-black text-lg",
                       content: "text-black font-cocogoose",
                       indicator: "text-black",
+                      trigger: "hover:cursor-pointer",
                     }}
                     key="faq_6"
                     aria-label="FAQs Accordion 6"
@@ -398,6 +402,7 @@ export default function Services() {
                       title: "text-black font-cocogoose font-black text-lg",
                       content: "text-black font-cocogoose",
                       indicator: "text-black",
+                      trigger: "hover:cursor-pointer",
                     }}
                     key="faq_7"
                     aria-label="FAQs Accordion 7"
