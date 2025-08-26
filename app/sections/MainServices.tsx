@@ -13,9 +13,15 @@ export default function MainServices() {
           <div className="h-[1px] bg-white w-full"></div>
         </div>
         <div className="grid grid-cols-3 grid-rows-1 gap-7">
-          <MainMenuCard title="Roof" image="/api/image?key=main_roofing.jpg" />
-          <MainMenuCard title="Siding" image="/api/image?key=main_siding.jpg" />
-          <MainMenuCard title="Window" image="/api/image?key=home_bg.png" />
+          <MainMenuCard
+            title="Roof"
+            image="/api/image?key=main_roofing_2.PNG"
+          />
+          <MainMenuCard
+            title="Siding"
+            image="/api/image?key=main_siding_2.png"
+          />
+          <MainMenuCard title="Window" image="/api/image?key=window.jpg" />
         </div>
       </div>
       <div className="flex flex-col gap-5 w-full">

@@ -11,6 +11,7 @@ import {
 } from "@heroui/react";
 import RoofingMethod from "../components/RoofingMethod";
 import InteractiveMap from "../components/InteractiveMap";
+import MainForm from "../components/MainForm";
 
 export default function Services() {
   const initialTheme = getThemeFromPath("/services");
@@ -39,6 +40,9 @@ export default function Services() {
                 precision roofing to custom siding installations. Serving
                 Queens, Brooklyn, and Yonkers since 2019.
               </p>
+            </div>
+            <div className="w-[50%] p-16 content-center">
+              <MainForm />
             </div>
           </div>
         </div>
@@ -108,7 +112,7 @@ export default function Services() {
                 >
                   <CardBody className="p-0">
                     <Image
-                      src="/api/image?key=home_bg.png"
+                      src="/api/image?key=window.jpg"
                       alt="exterior_1"
                       width={800}
                       height={800}
@@ -187,17 +191,17 @@ export default function Services() {
               <div className="flex flex-row gap-20 w-full justify-center">
                 <Card
                   classNames={{ base: "rounded-[35px]" }}
-                  className="aspect-square"
+                  className="aspect-auto"
                 >
-                  <CardBody className="p-0 w-[400px] flex flex-row">
+                  <CardBody className="p-0 w-full max-w-[500px] flex flex-row">
                     <div className="w-[50%] h-full relative">
                       <div className="absolute w-full items-center top-5 z-10">
-                        <h5 className="font-exotc350 text-4xl text-center">
+                        <h5 className="font-exotc350 text-4xl text-center text-black">
                           Before
                         </h5>
                       </div>
                       <Image
-                        src="/api/image?key=home_bg.png"
+                        src="/api/image?key=before_2.jpg"
                         alt="before_img"
                         className="w-full h-full object-cover grayscale"
                         width={500}
@@ -206,12 +210,12 @@ export default function Services() {
                     </div>
                     <div className="w-[50%] h-full relative">
                       <div className="absolute w-full items-center top-5">
-                        <h5 className="font-exotc350 text-4xl text-center">
+                        <h5 className="font-exotc350 text-4xl text-center text-black">
                           After
                         </h5>
                       </div>
                       <Image
-                        src="/api/image?key=home_bg.png"
+                        src="/api/image?key=after_2.png"
                         alt="before_img"
                         className="w-full h-full object-cover"
                         width={500}
@@ -222,33 +226,33 @@ export default function Services() {
                 </Card>
                 <Card
                   classNames={{ base: "rounded-[35px]" }}
-                  className="aspect-square"
+                  className="aspect-auto"
                 >
-                  <CardBody className="p-0 w-[400px] flex flex-row">
+                  <CardBody className="p-0 w-full max-w-[500px] flex flex-row">
                     <div className="w-[50%] h-full relative">
                       <div className="absolute w-full items-center top-5 z-10">
-                        <h5 className="font-exotc350 text-4xl text-center">
+                        <h5 className="font-exotc350 text-4xl text-center text-black">
                           Before
                         </h5>
                       </div>
                       <Image
-                        src="/api/image?key=home_bg.png"
+                        src="/api/image?key=before_3.PNG"
                         alt="before_img"
                         className="w-full h-full object-cover grayscale"
                         width={500}
                         height={500}
                       />
                     </div>
-                    <div className="w-[50%] h-full relative">
-                      <div className="absolute w-full items-center top-5">
-                        <h5 className="font-exotc350 text-4xl text-center">
+                    <div className="w-[50%] max-h-[450px] h-full relative overflow-hidden">
+                      <div className="absolute w-full items-center top-5 z-10">
+                        <h5 className="font-exotc350 text-4xl text-center text-black">
                           After
                         </h5>
                       </div>
                       <Image
-                        src="/api/image?key=home_bg.png"
+                        src="/api/image?key=before_3.1.PNG"
                         alt="before_img"
-                        className="w-full h-full object-cover"
+                        className="w-full object-cover h-[550px] -translate-y-[15%]"
                         width={500}
                         height={500}
                       />

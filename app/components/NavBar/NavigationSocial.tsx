@@ -24,13 +24,13 @@ export default function NavigationSocial({
         height={32}
         className="hover:cursor-pointer hover:opacity-80 transition-opacity"
       />
-      <Image
+      {/* <Image
         src="/icons/tiktok.svg"
         alt="tiktok_icon"
         width={28}
         height={28}
         className="hover:cursor-pointer hover:opacity-80 transition-opacity"
-      />
+      /> */}
     </div>
   );
 }

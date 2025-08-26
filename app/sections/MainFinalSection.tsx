@@ -1,12 +1,22 @@
 "use client";
 import { Button, Card, CardBody } from "@heroui/react";
-import Image from "next/image";
 import FAQItem from "../components/FAQItem";
 import { useRouter } from "next/navigation";
 import ImageSlideshow from "../components/ImageSlideshow";
 
 export default function MainFinalSection() {
   const router = useRouter();
+
+  const slideImages = [
+    "/api/image?key=team.jpeg",
+    "/api/image?key=team_1.png",
+    "/api/image?key=team_3.png",
+    "/api/image?key=team_4.png",
+    "/api/image?key=team_5.png",
+    "/api/image?key=team_2.png",
+    "/api/image?key=team_6.png",
+    "/api/image?key=team_7.png",
+  ];
   return (
     <section className="w-full max-w-[1400px] p-6 lg:px-10 z-10 flex flex-col gap-20">
       <div className="flex flex-col justify-center gap-8">
@@ -47,21 +57,15 @@ export default function MainFinalSection() {
           </p>
         </div>
         <div className="flex flex-row">
-          {/* <Image
-            className="rounded-[45px] p-5 max-h-[450px] max-w-[60%] object-cover object-[center_10%]"
-            src="/images/team.jpeg"
-            alt="team_photo"
-            width={800}
-            height={800}
-          /> */}
           <Card
             classNames={{ base: "rounded-[35px]" }}
             className="w-[60%] h-[450px]"
           >
             <CardBody className="p-0">
               <ImageSlideshow
-                images={["/api/image?key=team.jpeg"]}
+                images={slideImages}
                 className="w-full h-full"
+                interval={5000}
               />
             </CardBody>
           </Card>

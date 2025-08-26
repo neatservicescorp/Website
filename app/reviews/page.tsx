@@ -10,12 +10,14 @@ export default async function ReviewsPage() {
   return (
     <ThemeProvider initialTheme={initialTheme}>
       <main className="pt-32 flex flex-col items-center">
-        <div className="max-w-[1500px]">
+        <div className="overflow-hidden w-full flex justify-center">
           <Image
-            src="/images/reviews_main.jpeg"
+            src="/api/image?key=reviews_main.png"
             alt="reviews_main"
-            width={1500}
-            height={1500}
+            width={3000}
+            height={1600}
+            className="object-cover"
+            style={{ width: "2600px", minWidth: "2600px", flexShrink: 0 }}
           />
         </div>
         <div className="bg-[#8B8B8B] flex justify-center w-full">
