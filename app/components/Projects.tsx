@@ -168,7 +168,7 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
       <div className="flex w-full justify-end">
         <div className="flex flex-row w-full items-center max-w-[400px] py-4 text-black gap-3 font-cocogoose text-sm">
           <p>Explore the full gallery</p>
-          <div className="flex flex-row min-w-[120px] font-cocogoose-number text-lg gap-1.5 items-center">
+          <div className="flex flex-row min-w-[120px] font-cocogoose text-lg gap-1.5 items-center">
             <Image
               src="/icons/pagination_dec.svg"
               alt="page_button"

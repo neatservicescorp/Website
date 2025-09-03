@@ -25,7 +25,7 @@ export default function BlogPreview() {
               adipisci illo dignissimos.
             </p>
             <div className="absolute w-full h-[15px] bottom-0 flex items-end justify-end px-5 hover:cursor-pointer">
-              <p className="font-cocogoose-number text-lg hover:underline">
+              <p className="font-cocogoose text-lg hover:underline">
                 Read more ➤
               </p>
             </div>
@@ -53,7 +53,7 @@ export default function BlogPreview() {
                   deleniti nemo adipisci illo dignissimos.
                 </p>
                 <div className="absolute w-full h-[15px] bottom-0 flex items-end justify-end px-5 hover:cursor-pointer">
-                  <p className="font-cocogoose-number text-lg hover:underline">
+                  <p className="font-cocogoose text-lg hover:underline">
                     Read more ➤
                   </p>
                 </div>
@@ -81,7 +81,7 @@ export default function BlogPreview() {
                   deleniti nemo adipisci illo dignissimos.
                 </p>
                 <div className="absolute w-full h-[15px] bottom-0 flex items-end justify-end px-5 hover:cursor-pointer">
-                  <p className="font-cocogoose-number text-lg hover:underline">
+                  <p className="font-cocogoose text-lg hover:underline">
                     Read more ➤
                   </p>
                 </div>

@@ -16,7 +16,7 @@ export default function Messages() {
     <div className="fixed bottom-5 right-5 z-50">
       <Popover placement="top-end">
         <PopoverTrigger>
-          <div className="w-24 h-24 rounded-full bg-white p-4 flex items-center justify-center hover:cursor-pointer">
+          <div className="w-18 h-18 md:w-24 md:h-24 rounded-full bg-white p-4 flex items-center justify-center hover:cursor-pointer">
             <Image
               src="/icons/message.svg"
               alt="message_icon"
@@ -31,8 +31,15 @@ export default function Messages() {
             <form className="flex flex-col gap-5 font-cocogoose text-black">
               <p className="font-black text-lg">Chat with us now!</p>
               <Divider />
-              <Input label="Email address" />
-              <Textarea label="Message" maxRows={5} />
+              <Input
+                label="Email address"
+                classNames={{ input: "text-base" }}
+              />
+              <Textarea
+                label="Message"
+                maxRows={5}
+                classNames={{ input: "text-base" }}
+              />
               <p className="text-sm">
                 {
                   "Our team actively monitors messages to ensure you receive a timely reply"

@@ -18,13 +18,13 @@ export default function MainFinalSection() {
     "/api/image?key=team_7.png",
   ];
   return (
-    <section className="w-full max-w-[1400px] p-6 lg:px-10 z-10 flex flex-col gap-20">
+    <section className="w-full max-w-[1400px] p-6 lg:px-10 z-10 flex flex-col gap-20 overflow-x-hidden">
       <div className="flex flex-col justify-center gap-8">
         <div className="flex flex-col text-black text-center">
           <h3 className="font-exotc350 text-6xl">FAQS</h3>
           <p className="font-cocogoose text-medium">Your questions, answered</p>
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 gap-5">
+        <div className="flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 gap-2 md:gap-5">
           <FAQItem
             title="Can I finance my roofing or siding project?"
             content="Yes, we offer financing options for qualified customers. Ask us during your estimate, we’ll walk you through it"
@@ -56,10 +56,10 @@ export default function MainFinalSection() {
             Services that Help your some shine
           </p>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-0">
           <Card
             classNames={{ base: "rounded-[35px]" }}
-            className="w-[60%] h-[450px]"
+            className="w-full md:w-[60%] h-[450px]"
           >
             <CardBody className="p-0">
               <ImageSlideshow
@@ -69,11 +69,11 @@ export default function MainFinalSection() {
               />
             </CardBody>
           </Card>
-          <div className="flex flex-col text-black gap-4 px-10 justify-center w-[50%]">
-            <h3 className="font-exotc350 text-6xl leading-12">
+          <div className="flex flex-col text-black gap-4 px-5 md:px-10 justify-center md:w-[50%]">
+            <h3 className="font-exotc350 text-5xl leading-10 md:text-6xl md:leading-12">
               More than a slogan, it’s our commitment
             </h3>
-            <p className="font-cocogoose text-sm">
+            <p className="font-cocogoose text-sm text-justify">
               At Neat Services, we believe that being neat is more than clean
               job sites. {"It's"} about doing things right. We are a
               family-oriented, solution-driven team committed to transparency,

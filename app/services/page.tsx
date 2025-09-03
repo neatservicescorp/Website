@@ -19,8 +19,9 @@ export default function Services() {
 
   return (
     <ThemeProvider initialTheme={initialTheme}>
-      <main className="min-h-screen pt-32">
-        <div className="w-full h-[800px] 2xl:h-[900px] justify-center relative flex items-center">
+      <main className="min-h-screen pt-24 lg:pt-32">
+        <div className="w-full h-[960px] md:h-[850px] 2xl:h-[900px] justify-center relative flex items-center p-5">
+          <div className="absolute w-full h-full bg-black/20 z-10"></div>
           <Image
             src="/api/image?key=services_bg.jpg"
             alt="services_background"
@@ -28,12 +29,12 @@ export default function Services() {
             height={1500}
             className="w-full h-full object-cover absolute contrast-[60%]"
           />
-          <div className="flex w-full h-full max-w-[1400px]">
-            <div className="flex flex-col lg:w-[50%] text-white justify-center z-10 ml-20">
+          <div className="flex w-full h-full flex-col lg:flex-row max-w-[1400px] mt-5 lg:mt-0 gap-10 lg:gap-0">
+            <div className="flex flex-col lg:w-[50%] text-white justify-center z-10 md:ml-5 gap-5 lg:gap-2 lg:ml-20">
               <h2 className="font-exotc350 text-7xl text-shadow-lg">
                 Services
               </h2>
-              <p className="font-cocogoose max-w-[80%] text-shadow-md">
+              <p className="font-cocogoose lg:max-w-[80%] text-shadow-md">
                 Built for New York homeowners who expect quality, transparency,
                 and craftsmanship. Neat Services Inc. specializes in exterior
                 home improvement solutions that stand the test of time. From
@@ -41,28 +42,28 @@ export default function Services() {
                 Queens, Brooklyn, and Yonkers since 2019.
               </p>
             </div>
-            <div className="w-[50%] p-16 content-center">
+            <div className="w-full flex lg:w-[50%] lg:p-16 items-center justify-center z-20">
               <MainForm />
             </div>
           </div>
         </div>
         <div className="bg-gradient-to-b from-[#333333] from-30% via-[#424242] via-40% to-[#DBDBDB] to-70% flex justify-center">
-          <div className="w-full max-w-[1500px] p-10">
+          <div className="w-full max-w-[1500px] p-5 md:p-10">
             <div className="flex flex-col font-white text-center gap-2">
               <h1 className="text-6xl font-exotc350">Our services</h1>
               <p className="font-cocogoose">
                 Services That Help Your Home Shine
               </p>
             </div>
-            <div className="flex flex-row gap-10 text-whit items-center p-5 my-5 overflow-hidden">
+            <div className="flex flex-row gap-10 text-whit items-center py-5 my-2 md:my-5 overflow-hidden">
               <h5 className="font-exotc350 text-4xl">Exterior</h5>
               <Divider className="dark h-[1px] bg-white" />
             </div>
-            <div className="flex flex-col">
-              <div className="flex flex-row p-5">
+            <div className="flex flex-col gap-5 md:gap-0">
+              <div className="flex flex-col md:flex-row md:p-5">
                 <Card
                   classNames={{ base: "rounded-[35px]" }}
-                  className="max-h-[350px] w-[50%]"
+                  className="aspect-video md:aspect-auto md:max-h-[210px] lg:max-h-[380px] w-full md:w-[50%]"
                 >
                   <CardBody className="p-0">
                     <Image
@@ -74,7 +75,7 @@ export default function Services() {
                     />
                   </CardBody>
                 </Card>
-                <div className="flex flex-col text-white w-[50%] p-10 gap-2 justify-center">
+                <div className="flex flex-col text-white w-full md:max-w-[50%] py-5 md:p-10 gap-2 justify-center">
                   <h3 className="font-exotc350 text-4xl">Siding</h3>
                   <p className="font-cocogoose text-sm">
                     Custom siding replacement to improve aesthetics and energy
@@ -82,10 +83,10 @@ export default function Services() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row-reverse p-5">
+              <div className="flex flex-col md:flex-row-reverse md:p-5">
                 <Card
                   classNames={{ base: "rounded-[35px]" }}
-                  className="max-h-[350px] w-[50%]"
+                  className="aspect-video md:aspect-auto md:max-h-[210px] lg:max-h-[380px] w-full md:w-[50%]"
                 >
                   <CardBody className="p-0">
                     <Image
@@ -97,7 +98,7 @@ export default function Services() {
                     />
                   </CardBody>
                 </Card>
-                <div className="flex flex-col text-white max-w-[50%] p-10 gap-2 justify-center">
+                <div className="flex flex-col text-white w-full md:max-w-[50%] py-5 md:p-10 gap-2 justify-center">
                   <h3 className="font-exotc350 text-4xl">Roof</h3>
                   <p className="font-cocogoose text-sm">
                     Roof installation and replacement with warranty, durable
@@ -105,10 +106,10 @@ export default function Services() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row p-5">
+              <div className="flex flex-col md:flex-row md:p-5">
                 <Card
                   classNames={{ base: "rounded-[35px]" }}
-                  className="max-h-[350px] w-[50%]"
+                  className="aspect-video md:aspect-auto md:max-h-[210px] lg:max-h-[380px] w-full md:w-[50%]"
                 >
                   <CardBody className="p-0">
                     <Image
@@ -120,7 +121,7 @@ export default function Services() {
                     />
                   </CardBody>
                 </Card>
-                <div className="flex flex-col text-white max-w-[50%] p-10 gap-2 justify-center">
+                <div className="flex flex-col text-white w-full md:max-w-[50%] p-5 md:p-10 gap-2 justify-center">
                   <h3 className="font-exotc350 text-4xl">Window</h3>
                   <p className="font-cocogoose text-sm">
                     Installation of modern, secure, and energy-efficient
@@ -133,11 +134,11 @@ export default function Services() {
               <h5 className="font-exotc350 text-4xl">Interior</h5>
               <Divider className="dark h-[1px] bg-white" />
             </div>
-            <div className="grid grid-cols-2 grid-rows-1 gap-y-16 gap-8 px-5">
-              <div className="flex flex-row gap-10">
+            <div className="flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-y-16 gap-12 md:gap-8 px-5">
+              <div className="flex flex-col md:flex-row gap-4 md:gap-10">
                 <Card
                   classNames={{ base: "rounded-[35px]" }}
-                  className="aspect-square w-full min-w-[280px]"
+                  className="aspect-square w-full min-w-[280px] md:max-w-[50%]"
                 >
                   <CardBody className="p-0">
                     <Image
@@ -157,10 +158,10 @@ export default function Services() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row gap-10">
+              <div className="flex flex-col md:flex-row gap-5 md:gap-10">
                 <Card
                   classNames={{ base: "rounded-[35px]" }}
-                  className="aspect-square w-full min-w-[280px]"
+                  className="aspect-square w-full min-w-[280px] md:max-w-[50%]"
                 >
                   <CardBody className="p-0">
                     <Image
@@ -181,19 +182,19 @@ export default function Services() {
                 </div>
               </div>
             </div>
-            <div className="text-black w-full flex flex-col justify-center py-16 gap-12">
-              <div className="flex flex-col items-center gap-1">
+            <div className="text-white w-full flex flex-col justify-center py-16 gap-12">
+              <div className="flex flex-col items-center gap-2 text-center">
                 <h2 className="font-exotc350 text-6xl">Before and After</h2>
                 <p className="font-cocogoose text-sm">
                   Real transformations = real results
                 </p>
               </div>
-              <div className="flex flex-row gap-20 w-full justify-center">
+              <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 w-full justify-center">
                 <Card
                   classNames={{ base: "rounded-[35px]" }}
-                  className="aspect-auto"
+                  className="aspect-auto h-[300px] md:h-auto"
                 >
-                  <CardBody className="p-0 w-full max-w-[500px] flex flex-row">
+                  <CardBody className="p-0 w-full lg:max-w-[500px] flex flex-row">
                     <div className="w-[50%] h-full relative">
                       <div className="absolute w-full items-center top-5 z-10">
                         <h5 className="font-exotc350 text-4xl text-center text-black">
@@ -226,10 +227,10 @@ export default function Services() {
                 </Card>
                 <Card
                   classNames={{ base: "rounded-[35px]" }}
-                  className="aspect-auto"
+                  className="aspect-auto h-[300px] md:h-auto"
                 >
-                  <CardBody className="p-0 w-full max-w-[500px] flex flex-row">
-                    <div className="w-[50%] h-full relative">
+                  <CardBody className="p-0 w-full lg:max-w-[500px] flex flex-row">
+                    <div className="w-[50%] h-auto relative">
                       <div className="absolute w-full items-center top-5 z-10">
                         <h5 className="font-exotc350 text-4xl text-center text-black">
                           Before
@@ -275,7 +276,7 @@ export default function Services() {
             <div className="flex flex-col">
               <div className="flex flex-col text-black text-center">
                 <h3 className="font-exotc350 text-7xl">Where we are</h3>
-                <p className="font-cocogoose-number font-thin">
+                <p className="font-cocogoose font-thin">
                   2807 Jackson Ave Fl 5 Long Island City, NY 11101
                 </p>
               </div>
@@ -293,11 +294,12 @@ export default function Services() {
                   Your questions, answered
                 </p>
               </div>
-              <div className="flex flex-col text-black py-5 px-12">
+              <div className="flex flex-col text-black py-5 px-5 md:px-12">
                 <Accordion>
                   <AccordionItem
                     classNames={{
-                      title: "text-black font-cocogoose font-black text-lg",
+                      title:
+                        "text-black font-cocogoose font-black text-base md:text-lg",
                       content: "text-black font-cocogoose",
                       indicator: "text-black",
                       trigger: "hover:cursor-pointer",
@@ -311,7 +313,8 @@ export default function Services() {
                   </AccordionItem>
                   <AccordionItem
                     classNames={{
-                      title: "text-black font-cocogoose font-black text-lg",
+                      title:
+                        "text-black font-cocogoose font-black text-base md:text-lg",
                       content: "text-black font-cocogoose",
                       indicator: "text-black",
                       trigger: "hover:cursor-pointer",
@@ -326,7 +329,8 @@ export default function Services() {
                   </AccordionItem>
                   <AccordionItem
                     classNames={{
-                      title: "text-black font-cocogoose font-black text-lg",
+                      title:
+                        "text-black font-cocogoose font-black text-base md:text-lg",
                       content: "text-black font-cocogoose",
                       indicator: "text-black",
                       trigger: "hover:cursor-pointer",
@@ -342,7 +346,8 @@ export default function Services() {
                   </AccordionItem>
                   <AccordionItem
                     classNames={{
-                      title: "text-black font-cocogoose font-black text-lg",
+                      title:
+                        "text-black font-cocogoose font-black text-base md:text-lg",
                       content: "text-black font-cocogoose",
                       indicator: "text-black",
                       trigger: "hover:cursor-pointer",
@@ -364,7 +369,8 @@ export default function Services() {
                   </AccordionItem>
                   <AccordionItem
                     classNames={{
-                      title: "text-black font-cocogoose font-black text-lg",
+                      title:
+                        "text-black font-cocogoose font-black text-base md:text-lg",
                       content: "text-black font-cocogoose",
                       indicator: "text-black",
                       trigger: "hover:cursor-pointer",
@@ -384,7 +390,8 @@ export default function Services() {
                   </AccordionItem>
                   <AccordionItem
                     classNames={{
-                      title: "text-black font-cocogoose font-black text-lg",
+                      title:
+                        "text-black font-cocogoose font-black text-base md:text-lg",
                       content: "text-black font-cocogoose",
                       indicator: "text-black",
                       trigger: "hover:cursor-pointer",
@@ -403,7 +410,8 @@ export default function Services() {
                   </AccordionItem>
                   <AccordionItem
                     classNames={{
-                      title: "text-black font-cocogoose font-black text-lg",
+                      title:
+                        "text-black font-cocogoose font-black text-base md:text-lg",
                       content: "text-black font-cocogoose",
                       indicator: "text-black",
                       trigger: "hover:cursor-pointer",

@@ -12,7 +12,7 @@ export default function MainServices() {
           <p className="font-exotc350 text-4xl">Exterior</p>
           <div className="h-[1px] bg-white w-full"></div>
         </div>
-        <div className="grid grid-cols-3 grid-rows-1 gap-7">
+        <div className="flex flex-col md:grid md:grid-cols-3 md:grid-rows-1 gap-4 lg:gap-7">
           <MainMenuCard
             title="Roof"
             image="/api/image?key=main_roofing_2.PNG"
@@ -29,7 +29,7 @@ export default function MainServices() {
           <p className="font-exotc350 text-4xl my-4">Interior</p>
           <div className="h-[1px] bg-white w-full"></div>
         </div>
-        <div className="grid grid-cols-3 grid-rows-1 gap-7">
+        <div className="flex flex-col md:grid md:grid-cols-3 md:grid-rows-1 gap-4 lg:gap-7">
           <MainMenuCard
             title="Bathrooms"
             image="/api/image?key=general_bathroom.jpg"

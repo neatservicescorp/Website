@@ -26,9 +26,7 @@ export default function InitialBlogPrev({}: BlogPreviewProps) {
       <div className="w-1/2 flex flex-col p-4 pb-7 items-start justify-center gap-5 relative h-[524px]">
         <div className="flex flex-col gap-1">
           <h2 className="font-exotc350 text-5xl">Blog Title</h2>
-          <p className="text-black/40 font-cocogoose-number text-sm">
-            16 Ago. 2025
-          </p>
+          <p className="text-black/40 font-cocogoose text-sm">16 Ago. 2025</p>
         </div>
         <ScrollShadow className="flex flex-col gap-2 text-justify text-sm 2xl:text-medium overflow-hidden max-h-[75%]">
           <p className="font-cocogoose">
@@ -56,7 +54,7 @@ export default function InitialBlogPrev({}: BlogPreviewProps) {
             officia. Nostrum officiis rerum molestias.
           </p>
         </ScrollShadow>
-        <div className="absolute bottom-2 right-10 z-10 font-cocogoose-number hover:cursor-pointer hover:underline">
+        <div className="absolute bottom-2 right-10 z-10 font-cocogoose hover:cursor-pointer hover:underline">
           <p>Leer completo</p>
         </div>
       </div>

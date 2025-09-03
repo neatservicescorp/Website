@@ -25,7 +25,7 @@ export default function FAQItem({ title, content }: Props) {
         classNames={{
           base: "content-center",
           title: "text-black font-cocogoose",
-          trigger: "gap-7 flex-row-reverse hover:cursor-pointer",
+          trigger: "lg:gap-7 flex-row-reverse hover:cursor-pointer",
           indicator: "text-black w-7 h-7 data-[open=true]:-rotate-45",
           content: "px-5",
         }}

@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <ThemeProvider initialTheme={initialTheme}>
       <main className="min-h-screen">
-        <div className="relative flex justify-center top-0 w-full z-0 h-[900px]">
+        <div className="relative flex justify-center top-0 w-full z-0 h-[1100px] md:h-[1000px] lg:h-[900px]">
           <ImageSlideshow
             images={backgroundImages}
             interval={8000} // 8 seconds between transitions
@@ -32,13 +32,13 @@ export default function Home() {
             alt="home_background"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black from-[5%] to-transparent"></div>
-          <div className="absolute top-0 z-10 h-full w-full flex flex-row p-5 pt-36 max-w-[1400px]">
-            <div className="w-1/2 flex flex-col justify-center gap-3 ml-10 text-white">
+          <div className="absolute top-0 z-10 h-full w-full flex flex-col lg:flex-row p-5 pt-36 max-w-[1400px] gap-10 md:gap-0">
+            <div className="w-full lg:w-1/2 flex flex-col justify-center gap-3 md:ml-5 lg:ml-10 text-white">
               <div className="flex flex-col font-exotc350 text-5xl 2xl:text-7xl">
                 <h1>Top-Rated</h1>
                 <h1>Roofing & Siding Experts</h1>
               </div>
-              <div className="max-w-[70%] font-cocogoose text-medium 2xl:text-lg flex flex-col gap-0">
+              <div className="lg:max-w-[70%] w-full font-cocogoose text-medium 2xl:text-lg flex flex-col gap-0">
                 <p>
                   Neat Services Inc. has brought expert craftsmanship and
                   personalized care to homeowners across NYC. Certified by GAF
@@ -47,23 +47,25 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="w-1/2 flex items-center justify-center p-16 pr-8 pl-20">
+            <div className="lg:w-1/2 flex items-center justify-center md:p-10 lg:p-16 lg:pr-8 lg:pl-20">
               <MainForm />
             </div>
           </div>
         </div>
         <div className="relative flex justify-center">
           <div className="absolute inset-0 bg-gradient-to-b from-black to-85% to-[#4C4B4B]"></div>
-          <div className="w-full max-w-[1400px] px-12 flex flex-col items-center gap-20">
+          <div className="w-full max-w-[1400px] lg:px-12 flex flex-col items-center gap-20">
             <Certifications />
             <Reviews />
           </div>
         </div>
-        <div className="relative flex justify-center py-12 items-center">
+        <div className="relative flex justify-center py-6 md:pt-8 xl:py-12 items-center">
           <div className="absolute inset-0 bg-gradient-to-b from-[#4C4B4B] to-[#313131]"></div>
-          <div className="w-full max-w-[1400px] flex flex-col items-center z-10 gap-3">
-            <div className="flex flex-col gap-1 text-white text-center">
-              <h2 className="font-exotc350 text-6xl">The Neat Process</h2>
+          <div className="w-full max-w-[1400px] flex flex-col items-center z-10 gap-3 p-5 md:p-0">
+            <div className="flex flex-col gap-2 text-white text-center">
+              <h2 className="font-exotc350 text-5xl md:text-6xl">
+                The Neat Process
+              </h2>
               <p className="font-cocogoose text-medium">
                 A Step-by-Step Approach You Can Rely On
               </p>

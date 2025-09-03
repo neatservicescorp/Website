@@ -57,20 +57,20 @@ export default function MainForm() {
   return (
     <Card
       classNames={{ base: "rounded-[35px]" }}
-      className="w-full h-full bg-[#F0F0F0] lg:max-h-[550px] 2xl:max-h-[560px]"
+      className="w-full h-full bg-[#F0F0F0] max-w-[500px] lg:max-w-full lg:max-h-[550px] 2xl:max-h-[560px]"
     >
       <CardHeader className="pb-1">
         <div className="font-cocogoose text-xl 2xl:text-2xl text-black pt-6 w-full text-center">
           <h3>Ready to get started?</h3>
         </div>
       </CardHeader>
-      <CardBody className="px-8">
-        <div className="flex flex-col gap-4 font-cocogoose">
+      <CardBody className="px-8 overflow-y-hidden">
+        <div className="flex flex-col gap-4 font-cocogoose pb-4">
           <Input
             size="lg"
             label="Name*"
             classNames={{
-              inputWrapper: ["h-[50px]", "2xl:h-[55px]", "bg-[#D9D4D4]"],
+              inputWrapper: ["h-[50px]", "2xl:h-[55px]", "bg-[#D9D4D4] py-0.5"],
               label: "text-sm 2xl:text-base",
             }}
             value={formData.name}
@@ -84,7 +84,7 @@ export default function MainForm() {
               /^\+?[1-9]\d{1,14}$/.test(formData.phone) === false
             }
             classNames={{
-              inputWrapper: ["h-[50px]", "2xl:h-[55px]", "bg-[#D9D4D4]"],
+              inputWrapper: ["h-[50px]", "2xl:h-[55px]", "bg-[#D9D4D4] py-0.5"],
               label: "text-sm 2xl:text-base",
             }}
             value={formData.phone}
@@ -96,7 +96,7 @@ export default function MainForm() {
             size="lg"
             label="Email*"
             classNames={{
-              inputWrapper: ["h-[50px]", "2xl:h-[55px]", "bg-[#D9D4D4]"],
+              inputWrapper: ["h-[50px]", "2xl:h-[55px]", "bg-[#D9D4D4] py-0.5"],
               label: "text-sm 2xl:text-base",
             }}
             isInvalid={

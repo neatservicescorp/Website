@@ -24,7 +24,7 @@ export default function BlogCards({}: BlogCardsProps) {
           <div className="w-full h-full gap-5 text-black flex flex-col relative">
             <div className="flex flex-col gap-0">
               <h3 className="font-exotc350 text-4xl">Entry 1</h3>
-              <p className="text-black/40 font-cocogoose-number text-sm">
+              <p className="text-black/40 font-cocogoose text-sm">
                 16 Ago. 2025
               </p>
             </div>
@@ -48,7 +48,7 @@ export default function BlogCards({}: BlogCardsProps) {
                 sed veritatis ratione temporibus!
               </p>
             </ScrollShadow>
-            <div className="absolute bottom-2 right-5 z-10 font-cocogoose-number hover:cursor-pointer hover:underline">
+            <div className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline">
               <p>Leer completo</p>
             </div>
           </div>
@@ -68,7 +68,7 @@ export default function BlogCards({}: BlogCardsProps) {
           <div className="w-full h-full gap-5 text-black flex flex-col relative">
             <div className="flex flex-col gap-0">
               <h3 className="font-exotc350 text-4xl">Entry 1</h3>
-              <p className="text-black/40 font-cocogoose-number text-sm">
+              <p className="text-black/40 font-cocogoose text-sm">
                 16 Ago. 2025
               </p>
             </div>
@@ -92,7 +92,7 @@ export default function BlogCards({}: BlogCardsProps) {
                 sed veritatis ratione temporibus!
               </p>
             </ScrollShadow>
-            <div className="absolute bottom-2 right-5 z-10 font-cocogoose-number hover:cursor-pointer hover:underline">
+            <div className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline">
               <p>Leer completo</p>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function BlogCards({}: BlogCardsProps) {
           <div className="w-full h-full gap-5 text-black flex flex-col relative">
             <div className="flex flex-col gap-0">
               <h3 className="font-exotc350 text-4xl">Entry 1</h3>
-              <p className="text-black/40 font-cocogoose-number text-sm">
+              <p className="text-black/40 font-cocogoose text-sm">
                 16 Ago. 2025
               </p>
             </div>
@@ -136,7 +136,7 @@ export default function BlogCards({}: BlogCardsProps) {
                 sed veritatis ratione temporibus!
               </p>
             </ScrollShadow>
-            <div className="absolute bottom-2 right-5 z-10 font-cocogoose-number hover:cursor-pointer hover:underline">
+            <div className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline">
               <p>Leer completo</p>
             </div>
           </div>
