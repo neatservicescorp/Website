@@ -10,7 +10,7 @@ type Props = {
 export default function ProjectCard({ project }: Props) {
   return (
     <Card
-      classNames={{ base: "rounded-[35px]" }}
+      classNames={{ base: "rounded-xl md:rounded-[35px]" }}
       className="z-10 aspect-square w-[350px]"
     >
       <CardBody className="p-0">

@@ -34,7 +34,7 @@ export default function Footer() {
         </div>
         <FooterLinks />
         <div className="absolute font-cocogoose text-xs bottom-5 right-0 w-full text-center text-black">
-          <p>© 2025 Neat Services Corp. Todos los derechos reservados</p>
+          <p>© 2025 Neat Services Corp. All rights reserved</p>
         </div>
       </div>
     </footer>

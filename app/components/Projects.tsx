@@ -112,8 +112,8 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
 
   return (
     <div className="w-full p-5 flex flex-col">
-      <div className="flex flex-row text-black w-full gap-12">
-        <h3 className="font-exotc350 text-6xl">Filter by:</h3>
+      <div className="flex flex-col md:flex-row text-black w-full gap-5 lg:gap-12">
+        <h3 className="font-exotc350 text-4xl lg:text-6xl">Filter by:</h3>
         <div className="flex flex-row gap-5">
           <Select
             name="type"
@@ -157,9 +157,12 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
           </Select>
         </div>
       </div>
-      <div className="flex flex-wrap z-10 py-12 gap-y-16 min-h-[400px]">
+      <div className="flex flex-wrap z-10 lg:py-12 gap-2 md:gap-6 xl:gap-x-0 xl:gap-y-16 py-5 min-h-[400px] justify-center">
         {visibleProjects.map((project, index) => (
-          <div className="w-1/3 min-w-[350px] flex justify-center" key={index}>
+          <div
+            className="w-full aspect-video max-h-[180px] md:max-h-full md:aspect-auto md:w-[45%] lg:w-1/3 lg:min-w-[350px] flex justify-center"
+            key={index}
+          >
             <ProjectCard project={project} />
           </div>
         ))}
