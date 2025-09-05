@@ -14,13 +14,13 @@ export default function Footer() {
         pageTheme === "light" ? "bg-[#8A8A8A]" : "bg-[#D9D9D9]"
       } flex justify-center`}
     >
-      <div className="w-full max-w-[1500px] flex flex-row items-center justify-between relative">
+      <div className="w-full max-w-[1500px] flex flex-row items-center justify-center md:justify-between relative">
         <Image
           src="neat_logo.svg"
           alt="neat_logo"
           width={230}
           height={250}
-          className="w-48 lg:w-60"
+          className="w-60 md:w-48 lg:w-60"
         />
         <div className="flex-col font-exotc350 gap-5 text-black hidden lg:flex">
           <div className="flex flex-col text-xl">

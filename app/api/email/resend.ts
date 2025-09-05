@@ -14,7 +14,7 @@ export async function sendContactEmail({
   const resend = new Resend(process.env.RESEND_API_KEY);
   const { data, error } = await resend.emails.send({
     from: "Neat Services Website <noreply@neatservicescorp.com>",
-    to: ["admin@bravia-tech.com"],
+    to: ["neatservicescorp@gmail.com"],
     subject: `[WEBSITE] New contact received from ${name}`,
     text: `From: ${name}\nEmail: ${email}\nService required: ${service}\nPhone: ${phone}`,
   });

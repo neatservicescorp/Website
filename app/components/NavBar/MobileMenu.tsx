@@ -17,7 +17,7 @@ export default function MobileMenu() {
         <DropdownTrigger>
           <Image src="/icons/menu.svg" alt="menu_icon" width={40} height={40} />
         </DropdownTrigger>
-        <DropdownMenu>
+        <DropdownMenu className="text-white">
           {sections.map((section) => (
             <DropdownItem
               key={section.title}
