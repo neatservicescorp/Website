@@ -25,7 +25,7 @@ export default function Footer() {
         <div className="flex-col font-exotc350 gap-5 text-black hidden lg:flex">
           <div className="flex flex-col text-xl">
             <p className="h-5">Office Hours</p>
-            <p>Mon Fri | 7am to 5pm</p>
+            <p>Every day, any hour, 24/7 schedule</p>
           </div>
           <div className="flex flex-col text-xl">
             <p>Follow us on social media</p>
