@@ -47,8 +47,8 @@ export default function BlogCards({}: BlogCardsProps) {
                 today ensures peace of mind tomorrow.
               </p>
             </ScrollShadow>
-            <div className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline">
-              <p>Leer completo</p>
+            <div className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline font-semibold">
+              <p>Read article</p>
             </div>
           </div>
         </CardBody>
@@ -89,8 +89,8 @@ export default function BlogCards({}: BlogCardsProps) {
                 security, and long-term savings.
               </p>
             </ScrollShadow>
-            <div className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline">
-              <p>Leer completo</p>
+            <div className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline font-semibold">
+              <p>Read article</p>
             </div>
           </div>
         </CardBody>
@@ -129,8 +129,8 @@ export default function BlogCards({}: BlogCardsProps) {
                 looking sharp for years
               </p>
             </ScrollShadow>
-            <div className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline">
-              <p>Leer completo</p>
+            <div className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline font-semibold">
+              <p>Read article</p>
             </div>
           </div>
         </CardBody>

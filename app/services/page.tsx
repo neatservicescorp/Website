@@ -49,13 +49,13 @@ export default function Services() {
         </div>
         <div className="bg-gradient-to-b from-[#333333] from-30% via-[#424242] via-40% to-[#DBDBDB] to-70% flex justify-center">
           <div className="w-full max-w-[1500px] p-5 md:p-10">
-            <div className="flex flex-col font-white text-center gap-2">
+            <div className="flex flex-col text-white text-center gap-2">
               <h1 className="text-6xl font-exotc350">Our services</h1>
               <p className="font-cocogoose">
                 Services That Help Your Home Shine
               </p>
             </div>
-            <div className="flex flex-row gap-10 text-whit items-center py-5 my-2 md:my-5 overflow-hidden">
+            <div className="flex flex-row gap-10 text-white items-center py-5 my-2 md:my-5 overflow-hidden">
               <h5 className="font-exotc350 text-4xl">Exterior</h5>
               <Divider className="dark h-[1px] bg-white" />
             </div>
@@ -67,11 +67,11 @@ export default function Services() {
                 >
                   <CardBody className="p-0">
                     <Image
-                      src="/api/image?key=services_siding.jpg"
+                      src="/api/image?key=siding-services.jpg"
                       alt="exterior_1"
                       width={800}
                       height={800}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-[center_20%]"
                     />
                   </CardBody>
                 </Card>

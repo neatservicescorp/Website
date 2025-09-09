@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  addToast,
   Button,
   Divider,
   Input,
@@ -10,8 +11,62 @@ import {
   Textarea,
 } from "@heroui/react";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Messages() {
+  const [contactData, setContactData] = useState({
+    email: "",
+    message: "",
+  });
+
+  const handleFormChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setContactData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const isEmailValid = (email: string) => {
+    if (!email) return true;
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const handleChatSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    const request = await fetch("/api/email", {
+      method: "POST",
+      body: JSON.stringify(contactData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (request.ok) {
+      setContactData({ email: "", message: "" });
+      addToast({
+        title: "We received your message!",
+        description: "Our team will answer you in just a moment",
+        color: "success",
+        shouldShowTimeoutProgress: true,
+        timeout: 6000,
+        size: "lg",
+      });
+    } else {
+      addToast({
+        title: "Something went wrong",
+        description: "Please try again later",
+        color: "danger",
+        shouldShowTimeoutProgress: true,
+        timeout: 6000,
+        size: "lg",
+      });
+    }
+  };
+
   return (
     <div className="fixed bottom-5 right-5 z-50">
       <Popover placement="top-end">
@@ -28,14 +83,24 @@ export default function Messages() {
         </PopoverTrigger>
         <PopoverContent className="w-[350px]">
           <div className="w-full max-w-[500px] p-3">
-            <form className="flex flex-col gap-5 font-cocogoose text-black">
+            <form
+              onSubmit={handleChatSubmit}
+              className="flex flex-col gap-5 font-cocogoose text-black"
+            >
               <p className="font-black text-lg">Chat with us now!</p>
               <Divider />
               <Input
+                value={contactData.email}
+                name="email"
+                isInvalid={!isEmailValid(contactData.email)}
+                onChange={handleFormChange}
                 label="Email address"
                 classNames={{ input: "text-base" }}
               />
               <Textarea
+                value={contactData.message}
+                name="message"
+                onChange={handleFormChange}
                 label="Message"
                 maxRows={5}
                 classNames={{ input: "text-base" }}
@@ -45,7 +110,15 @@ export default function Messages() {
                   "Our team actively monitors messages to ensure you receive a timely reply"
                 }
               </p>
-              <Button className="bg-red-neat text-white font-black">
+              <Button
+                type="submit"
+                className="bg-red-neat text-white font-black"
+                isDisabled={
+                  contactData.email === "" ||
+                  contactData.message === "" ||
+                  !isEmailValid(contactData.email)
+                }
+              >
                 Contact
               </Button>
             </form>

@@ -30,7 +30,7 @@ export default function InitialBlogPrev({}: BlogPreviewProps) {
           </h2>
           <p className="text-black/40 font-cocogoose text-sm">31 Ago. 2025</p>
         </div>
-        <ScrollShadow className="flex flex-col gap-2 text-justify text-sm 2xl:text-medium overflow-hidden max-h-[75%]">
+        <ScrollShadow className="flex flex-col gap-2 text-justify text-sm 2xl:text-medium overflow-hidden h-[40%]">
           <p className="font-cocogoose">
             As summer winds down and the days grow shorter, September offers a
             golden opportunity to give your roof some much-needed attention
@@ -52,8 +52,8 @@ export default function InitialBlogPrev({}: BlogPreviewProps) {
             foundation issues
           </p>
         </ScrollShadow>
-        <div className="absolute bottom-2 right-10 z-10 font-cocogoose hover:cursor-pointer hover:underline">
-          <p>Leer completo</p>
+        <div className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline font-semibold">
+          <p>Read article</p>
         </div>
       </div>
     </div>
