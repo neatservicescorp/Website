@@ -34,11 +34,11 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-black from-[5%] to-transparent"></div>
           <div className="absolute top-0 z-10 h-full w-full flex flex-col lg:flex-row p-5 pt-36 max-w-[1400px] gap-10 md:gap-0">
             <div className="w-full lg:w-1/2 flex flex-col justify-center gap-3 md:ml-5 lg:ml-10 text-white">
-              <div className="flex flex-col font-exotc350 text-5xl 2xl:text-7xl">
+              <div className="flex flex-col font-exotc350 text-5xl 2xl:text-6xl">
                 <h1>Top-Rated</h1>
                 <h1>Roofing & Siding Experts</h1>
               </div>
-              <div className="lg:max-w-[70%] w-full font-cocogoose text-medium 2xl:text-lg flex flex-col gap-0">
+              <div className="lg:max-w-[70%] w-full font-cocogoose text-medium 2xl:text-base flex flex-col gap-0">
                 <p>
                   Neat Services Inc. has brought expert craftsmanship and
                   personalized care to homeowners across NYC. Certified by GAF
@@ -63,9 +63,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#4C4B4B] to-[#313131]"></div>
           <div className="w-full max-w-[1400px] flex flex-col items-center z-10 gap-3 p-5 md:p-0">
             <div className="flex flex-col gap-2 text-white text-center">
-              <h2 className="font-exotc350 text-5xl md:text-6xl">
-                The Neat Process
-              </h2>
+              <h2 className="font-exotc350 text-5xl">The Neat Process</h2>
               <p className="font-cocogoose text-medium">
                 A Step-by-Step Approach You Can Rely On
               </p>

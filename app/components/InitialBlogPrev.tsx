@@ -1,6 +1,7 @@
 "use client";
 import { Card, CardBody, ScrollShadow } from "@heroui/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 type BlogPreviewProps = {
@@ -8,6 +9,7 @@ type BlogPreviewProps = {
 };
 
 export default function InitialBlogPrev({}: BlogPreviewProps) {
+  const router = useRouter();
   return (
     <div className="flex flex-col md:flex-row p-2 md:p-5 lg:p-10 gap-5 md:gap-10">
       <div className="w-full md:w-1/2">
@@ -52,7 +54,12 @@ export default function InitialBlogPrev({}: BlogPreviewProps) {
             foundation issues
           </p>
         </ScrollShadow>
-        <div className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline font-semibold">
+        <div
+          onClick={() =>
+            router.push("/blog/why-september-is-best-time-08-2025")
+          }
+          className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline font-semibold"
+        >
           <p>Read article</p>
         </div>
       </div>

@@ -4,11 +4,11 @@ import MainMenuCard from "../components/MainMenuCard";
 export default function MainServices() {
   return (
     <section className="flex flex-col items-center p-6 lg:pb-16 gap-6 lg:px-12 h-full w-full max-w-[1400px] z-10">
-      <div className="flex flex-col font-white text-center gap-2">
+      <div className="flex flex-col font-white text-center gap-2 text-white">
         <h3 className="font-exotc350 text-6xl pb-4">Our services</h3>
       </div>
       <div className="flex flex-col gap-5 w-full">
-        <div className="flex flex-row items-center gap-5">
+        <div className="flex flex-row items-center gap-5 text-white">
           <p className="font-exotc350 text-4xl">Exterior</p>
           <div className="h-[1px] bg-white w-full"></div>
         </div>
@@ -25,7 +25,7 @@ export default function MainServices() {
         </div>
       </div>
       <div className="flex flex-col gap-5 w-full">
-        <div className="flex flex-row items-center gap-5">
+        <div className="flex flex-row items-center gap-5 text-white">
           <p className="font-exotc350 text-4xl my-4">Interior</p>
           <div className="h-[1px] bg-white w-full"></div>
         </div>

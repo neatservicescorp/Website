@@ -113,7 +113,7 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
   return (
     <div className="w-full p-5 flex flex-col">
       <div className="flex flex-col md:flex-row text-black w-full gap-5 lg:gap-12">
-        <h3 className="font-exotc350 text-4xl lg:text-6xl">Filter by:</h3>
+        <h3 className="font-exotc350 text-4xl lg:text-5xl">Filter by:</h3>
         <div className="flex flex-row gap-5">
           <Select
             name="type"

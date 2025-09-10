@@ -38,14 +38,14 @@ export default function Contact() {
         <div className="flex justify-center py-5 overflow-hidden">
           <div className="flex flex-col md:flex-row w-full max-w-[1500px] h-full p-10 items-center justify-between gap-8 md:gap-0">
             <div className="flex flex-col text-black w-full md:w-[40%] lg:gap-3 gap-5">
-              <h3 className="font-exotc350 text-7xl leading-12 lg:leading-tight">
+              <h3 className="font-exotc350 text-6xl leading-12 lg:leading-tight">
                 Where we are
               </h3>
               <p className="font-cocogoose text-l text-justify">
                 You can reach us anytime at 718-880-4080 or by email at
                 neatservicescorp@gmail.com . Our office is located at 8211 37th
-                St., Ste 404, Jackson Heights, NY 11372, and we are available
-                24/7 to assist you with your needs.
+                Ave. Ste 404. Queens, NY 11372. Jackson Heights, and we are
+                available 24/7 to assist you with your needs.
               </p>
             </div>
             <div className="w-full md:w-[50%] h-[450px] flex-shrink-0">

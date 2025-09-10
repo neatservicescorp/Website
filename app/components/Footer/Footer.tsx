@@ -16,7 +16,7 @@ export default function Footer() {
     >
       <div className="w-full max-w-[1500px] flex flex-row items-center justify-center md:justify-between relative">
         <Image
-          src="neat_logo.svg"
+          src="/neat_logo.svg"
           alt="neat_logo"
           width={230}
           height={250}

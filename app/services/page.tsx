@@ -31,7 +31,7 @@ export default function Services() {
           />
           <div className="flex w-full h-full flex-col lg:flex-row max-w-[1400px] mt-5 lg:mt-0 gap-10 lg:gap-0">
             <div className="flex flex-col lg:w-[50%] text-white justify-center z-10 md:ml-5 gap-5 lg:gap-2 lg:ml-20">
-              <h2 className="font-exotc350 text-7xl text-shadow-lg">
+              <h2 className="font-exotc350 text-6xl text-shadow-lg">
                 Services
               </h2>
               <p className="font-cocogoose lg:max-w-[80%] text-shadow-md">
@@ -275,7 +275,7 @@ export default function Services() {
             </div>
             <div className="flex flex-col">
               <div className="flex flex-col text-black text-center">
-                <h3 className="font-exotc350 text-7xl">Where we are</h3>
+                <h3 className="font-exotc350 text-6xl">Where we are</h3>
                 <p className="font-cocogoose font-thin">
                   2807 Jackson Ave Fl 5 Long Island City, NY 11101
                 </p>

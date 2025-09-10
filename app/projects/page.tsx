@@ -23,10 +23,10 @@ export default async function Projects() {
           <div className="absolute w-full h-full bg-gradient-to-tr from-black to-transparent"></div>
           <div className="w-full h-full flex flex-col lg:flex-row items-center max-w-[1400px] p-5 gap-8 lg:gap-0">
             <div className="flex flex-col lg:w-[50%] gap-3 text-white justify-center z-10 lg:ml-10 xl:ml-20 pt-8 lg:pt-0">
-              <h1 className="font-exotc350 text-6xl 2xl:text-7xl max-w-[360px] 2xl:max-w-[400px] leading-12 2xl:leading-15">
+              <h1 className="font-exotc350 text-5xl 2xl:text-6xl max-w-[360px] 2xl:max-w-[400px] leading-12 2xl:leading-15">
                 Neat Projects 5 Star results
               </h1>
-              <p className="font-cocogoose 2xl:text-lg max-w-[450px]">
+              <p className="font-cocogoose 2xl:text-base max-w-[450px]">
                 From roofing and siding to windows and kitchens, every Neat
                 project is built on quality craftsmanship and lasting results.
                 Discover why homeowners across New York trust us to protect and
