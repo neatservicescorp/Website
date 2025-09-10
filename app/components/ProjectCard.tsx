@@ -16,8 +16,18 @@ type Props = {
 
 export default function ProjectCard({ project }: Props) {
   const { onClose, isOpen, onOpen } = useDisclosure();
+
   return (
     <>
+     <Image
+        src={project.image}
+        alt=""
+        width={800}
+        height={800}
+        className="hidden"
+        priority
+      />
+      
       <Card
         classNames={{ base: "rounded-xl md:rounded-[35px]" }}
         className="z-10 aspect-square w-[350px]"
@@ -31,7 +41,7 @@ export default function ProjectCard({ project }: Props) {
               height={600}
               className="w-full h-full object-cover"
             />
-            <div className="absolute font-cocogoose text-sm bottom-0 w-full h-[20%] bg-gradient-to-t from-[#F64631] to-transparent flex items-center p-5 gap-8">
+            <div className="absolute font-cocogoose text-white text-sm bottom-0 w-full h-[20%] bg-gradient-to-t from-[#F64631] to-transparent flex items-center p-5 gap-8">
               <div className="flex flex-row gap-1">
                 <Image
                   src="/icons/tool_w.svg"
@@ -42,7 +52,7 @@ export default function ProjectCard({ project }: Props) {
                 />
                 <p>{project.type}</p>
               </div>
-              <div className="flex flex-row gap-1">
+              <div className="flex flex-row gap-1 text-white">
                 <Image
                   src="/icons/location.svg"
                   alt="location_icon"
@@ -64,7 +74,7 @@ export default function ProjectCard({ project }: Props) {
         placement="center"
       >
         <ModalContent>
-          <ModalBody className="p-0">
+          <ModalBody className="p-0 h-full max-h-[90vh] overflow-y-hidden" onClick={onClose}>
             <div className="w-full h-full relative">
               <Image
                 src={project.image}

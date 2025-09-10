@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 export const revalidate = 2592000;
 
 import { NextRequest, NextResponse } from "next/server";
@@ -19,6 +19,13 @@ export async function GET(request: NextRequest) {
 
     if (!key || typeof key !== "string") {
       return NextResponse.json({ error: "Missing key" }, { status: 400 });
+    }
+
+    const ifNoneMatch = request.headers.get('if-none-match');
+    const etag = `"${key}"`;
+
+    if (ifNoneMatch === etag) {
+      return new NextResponse(null, { status: 304 });
     }
 
     const command = new GetObjectCommand({
@@ -49,8 +56,10 @@ export async function GET(request: NextRequest) {
 
     return new NextResponse(buffer, {
       headers: {
-        "Content-Type": s3Response.ContentType || "image/jpeg",
+       "Content-Type": s3Response.ContentType || "image/jpeg",
         "Cache-Control": "public, max-age=31536000, immutable",
+        "ETag": etag,
+        "Last-Modified": s3Response.LastModified?.toUTCString() || new Date().toUTCString(),
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET",
         "Content-Length": buffer.length.toString(),
