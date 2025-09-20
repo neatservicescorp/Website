@@ -1,9 +1,9 @@
-import Image from "next/image";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { getThemeFromPath } from "../context/global";
 import MainForm from "../components/MainForm";
 import InteractiveMap from "../components/InteractiveMap";
 import ImageSlideshow from "../components/ImageSlideshow";
+import StoreLocator from "./locator";
 
 export default function Contact() {
   const initialTheme = getThemeFromPath("/contact");
@@ -47,6 +47,7 @@ export default function Contact() {
                 Ave. Ste 404. Queens, NY 11372. Jackson Heights, and we are
                 available 24/7 to assist you with your needs.
               </p>
+              {/* <StoreLocator /> */}
             </div>
             <div className="w-full md:w-[50%] h-[450px] flex-shrink-0">
               <InteractiveMap mapToken={mapToken} />

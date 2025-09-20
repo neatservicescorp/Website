@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.864.0",
+    "@googlemaps/extended-component-library": "^0.6.14",
     "@heroui/react": "^2.8.2",
     "@types/mapbox-gl": "^3.4.1",
+    "@vis.gl/react-google-maps": "^1.5.5",
     "framer-motion": "^12.23.12",
     "googleapis": "^156.0.0",
     "mapbox-gl": "^3.14.0",

@@ -2,7 +2,7 @@
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import { getThemeFromPath } from "@/app/context/global";
 import React, { useEffect } from "react";
-import { BlogEntriesData, BlogEntry } from "./components";
+import { BlogEntriesData } from "./components";
 import { useRouter } from "next/navigation";
 import { addToast } from "@heroui/react";
 import Image from "next/image";
@@ -43,7 +43,7 @@ export default function Page({ params }: Props) {
 
   return (
     <ThemeProvider initialTheme={initialTheme}>
-      <main className="pt-24 lg:pt-32 flex justify-center bg-gray-100">
+      <main className="pt-24 lg:pt-32 flex justify-center bg-gray-100 text-black">
         <div className="max-w-[1400px] gap-5 w-full min-h-screen flex flex-col p-5 py-10">
           <div className="flex flex-col gap-3 font-cocogoose">
             <h1 className="font-exotc350 text-4xl lg:text-6xl">
