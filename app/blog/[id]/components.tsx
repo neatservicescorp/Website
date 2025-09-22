@@ -32,7 +32,7 @@ export default function BlogEntryComponent({ entry }: { entry: BlogEntry }) {
       ))}
 
       <div className="w-full flex justify-center pt-5 py-10">
-        <div className="max-w-[650px] w-full">
+        <div className="max-w-[650px] w-full flex justify-center">
           <MainForm />
         </div>
       </div>

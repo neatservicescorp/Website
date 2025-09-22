@@ -121,4 +121,14 @@ export const projectData: Project[] = [
     location: "Bronx",
     type: "Roofing",
   },
+  {
+    image: "/api/image?key=roofing_bronx.jpg",
+    location: "Bronx",
+    type: "Roofing",
+  },
+  {
+    image: "/api/image?key=roofing_2_bronx.jpg",
+    location: "Bronx",
+    type: "Roofing",
+  },
 ];

@@ -19,7 +19,7 @@ export default function ProjectCard({ project }: Props) {
 
   return (
     <>
-     <Image
+      <Image
         src={project.image}
         alt=""
         width={800}
@@ -27,10 +27,10 @@ export default function ProjectCard({ project }: Props) {
         className="hidden"
         priority
       />
-      
+
       <Card
         classNames={{ base: "rounded-xl md:rounded-[35px]" }}
-        className="z-10 aspect-square w-[350px]"
+        className="z-10 aspect-square w-[250px] lg:w-[300px] 2xl:w-[350px]"
       >
         <CardBody className="p-0 cursor-pointer" onClick={onOpen}>
           <div className="w-full h-full relative">
@@ -74,7 +74,10 @@ export default function ProjectCard({ project }: Props) {
         placement="center"
       >
         <ModalContent>
-          <ModalBody className="p-0 h-full max-h-[90vh] overflow-y-hidden" onClick={onClose}>
+          <ModalBody
+            className="p-0 h-full max-h-[90vh] overflow-y-hidden"
+            onClick={onClose}
+          >
             <div className="w-full h-full relative">
               <Image
                 src={project.image}
