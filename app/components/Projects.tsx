@@ -67,7 +67,6 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
   });
   const totalPages = Math.ceil(filteredProjects.length / 9);
 
-  console.log(filters);
   const [currentPage, setCurrentPage] = useState<number>(1);
 
   const handleFilter = (e: React.ChangeEvent<HTMLSelectElement>): void => {
@@ -160,7 +159,7 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
       <div className="flex flex-wrap z-10 lg:py-12 gap-2 md:gap-6 xl:gap-x-0 xl:gap-y-16 py-5 min-h-[400px] justify-center">
         {visibleProjects.map((project, index) => (
           <div
-            className="w-full aspect-video max-h-[180px] md:max-h-full md:aspect-auto md:w-[45%] lg:w-1/3 lg:min-w-[350px] flex justify-center"
+            className="aspect-video max-h-[180px] md:max-h-full md:aspect-auto flex justify-center"
             key={index}
           >
             <ProjectCard project={project} />

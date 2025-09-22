@@ -1,9 +1,9 @@
-import Image from "next/image";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { getThemeFromPath } from "../context/global";
 import MainForm from "../components/MainForm";
 import InteractiveMap from "../components/InteractiveMap";
 import ImageSlideshow from "../components/ImageSlideshow";
+import Location from "./location";
 
 export default function Contact() {
   const initialTheme = getThemeFromPath("/contact");
@@ -51,6 +51,7 @@ export default function Contact() {
             <div className="w-full md:w-[50%] h-[450px] flex-shrink-0">
               <InteractiveMap mapToken={mapToken} />
             </div>
+            {/* <Location /> */}
           </div>
         </div>
       </main>

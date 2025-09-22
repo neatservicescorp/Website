@@ -18,7 +18,7 @@ export default function MainMenuCard({
   return (
     <Card
       classNames={{ base: "rounded-[35px]" }}
-      className="relative aspect-square"
+      className="relative aspect-video md:aspect-square"
     >
       <Image
         src={image}
