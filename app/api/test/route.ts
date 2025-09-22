@@ -3,13 +3,13 @@ import { google } from "googleapis";
 
 import { NextResponse } from "next/server";
 
-const KEYFILE = "./credentials.json";
-const credentials = JSON.parse(fs.readFileSync(KEYFILE, "utf-8"));
+// const KEYFILE = "./credentials.json";
+// const credentials = JSON.parse(fs.readFileSync(KEYFILE, "utf-8"));
 
-const auth = new google.auth.GoogleAuth({
-  credentials,
-  scopes: ["https://www.googleapis.com/auth/business.manage"],
-});
+// const auth = new google.auth.GoogleAuth({
+//   credentials,
+//   scopes: ["https://www.googleapis.com/auth/business.manage"],
+// });
 
 export async function GET() {
   return NextResponse.json({ message: "API is working" });
