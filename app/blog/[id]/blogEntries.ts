@@ -114,7 +114,53 @@ export const BlogEntriesData: Array<BlogEntry> = [
     imageUrl: "/images/blog_2.jpg",
     startContent:
       "A small leak or a missing shingle may not seem urgent, but postponing roof repairs can quickly lead to costly problems. Water infiltration can damage insulation, ceilings, and even structural beams, creating the perfect environment for mold growth. What starts as a minor issue could evolve into thousands of dollars in restoration. By addressing problems early, you extend the life of your roof and protect your home’s value.",
-    sections: [],
+    sections: [
+      {
+        title: "How small issues turn into big problems",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Roofs are your home’s first line of defense against the elements. When even a small section is compromised, it creates an entry point for water, pests, and further deterioration. A missing shingle can allow wind to peel away surrounding areas. A small leak can spread silently through insulation, weakening drywall, and encouraging mold colonies to thrive. Left unchecked, these issues can quickly snowball into full roof replacements, structural repairs, or health concerns from poor indoor air quality.",
+          },
+        ],
+      },
+      {
+        title: "The Financial Risks of Waiting",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Many homeowners underestimate how fast roof damage escalates. What might have been a simple repair under $500 can turn into thousands in water damage restoration, electrical work, or mold remediation. Insurance companies may also deny coverage if the damage is proven to be a result of negligence, leaving you to shoulder the full cost. Delays don’t just strain your wallet—they put your property’s safety and long-term value at risk.",
+          },
+        ],
+      },
+      {
+        title: "Proactive Maintenance Saves More Than Money",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Routine roof inspections and timely maintenance extend the life of your roof and provide peace of mind. Think of it as preventative healthcare for your home: by catching issues early, you prevent emergencies, safeguard your investment, and protect your family. The earlier repairs are made, the less intrusive and costly they become.",
+          },
+        ],
+      },
+      {
+        title: "Why Trust Neat Services Corp",
+        contents: [
+          {
+            type: "text",
+            content:
+              "At Neat Services Corp, we specialize in protecting homes across Queens, Yonkers, Brooklyn, and the Bronx with reliable roof inspections, expert repairs, and long-lasting solutions. Our certifications with GAF and CertainTeed mean we use only the highest-quality materials and follow proven standards for durability. Whether you’re dealing with a small leak or considering a full roof replacement, our team delivers transparency, craftsmanship, and trust.",
+          },
+          {
+            type: "text",
+            content:
+              "By choosing Neat Services Corp, you’re not just fixing today’s problem—you’re investing in your home’s future. Prompt repairs, done right the first time, save you from unexpected expenses and extend your roof’s life for years to come. Contact us today to schedule your inspection and experience the peace of mind that comes from knowing your roof is in expert hands.",
+          },
+        ],
+      },
+    ],
     previewTexts: [
       "A small leak or a missing shingle may not seem urgent, but postponing roof repairs can quickly lead to costly problems. Water infiltration can damage insulation, ceilings, and even structural beams, creating the perfect environment for mold growth.",
       "What starts as a minor issue could evolve into thousands of dollars in restoration. By addressing problems early, you extend the life of your roof and protect your home’s value. A timely inspection and quick repair not only prevent emergencies but also save you money in the long run. Investing in your roof today ensures peace of mind tomorrow.",
@@ -126,7 +172,85 @@ export const BlogEntriesData: Array<BlogEntry> = [
     date: "August 16, 2025",
     startContent:
       "Siding isn’t just about curb appeal, it’s a critical layer of protection against weather, moisture, and pests. Worn or damaged siding can lead to energy loss, higher bills, and hidden structural issues. Replacing it with modern, durable materials instantly refreshes the look of your home while boosting efficiency and resale value",
-    sections: [],
+    sections: [
+      {
+        title: "The Protective Role of Siding",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Your exterior cladding works like a weatherproof shell. When seams open or boards warp, wind-driven rain can get behind the surface, saturate sheathing, and compromise insulation. Over time, that hidden moisture invites rot and pests and can even ripple into interior drywall repairs. New siding—properly flashed and installed—re-establishes a continuous barrier, cutting off those pathways and preserving the frame.",
+          },
+        ],
+      },
+      {
+        title: "Energy Efficiency You Can Feel",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Drafty walls don’t just raise bills; they make rooms uneven and uncomfortable. Insulated siding systems add a continuous thermal layer that helps HVAC work less and maintain steadier temperatures. Homeowners across Queens, Brooklyn, the Bronx, and Yonkers often notice two wins right away: quieter interiors and lower monthly energy costs.",
+          },
+        ],
+      },
+      {
+        title: "Quick Wins With New Siding (At-a-Glance)",
+        contents: [
+          {
+            type: "list",
+            items: [
+              "Curb appeal, fast: Immediate visual refresh that photographs beautifully for listings.",
+              "Moisture control: Tighter building envelope reduces risk of rot and mold.",
+              "Lower maintenance: Modern vinyl, fiber cement, and engineered wood resist fading and pests.",
+              "Energy savings: Insulated options improve thermal performance and comfort.",
+              "Higher resale value: Buyers read new siding as “turn-key,” supporting stronger offers.",
+            ],
+          },
+          {
+            type: "text",
+            content:
+              "Today’s leading products deliver both style and longevity:",
+          },
+          {
+            type: "list",
+            items: [
+              "Fiber cement: Crisp, upscale look with excellent fire and pest resistance.",
+              "Premium vinyl: Cost-effective, color-stable, and low maintenance with lots of profiles.",
+              "Engineered wood: Warm, authentic grain with modern durability coatings.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "When to Consider a Siding Upgrade",
+        contents: [
+          {
+            type: "text",
+            content:
+              "If you see cracking, soft spots near corners, swelling around windows, or rising energy bills, it’s time to assess. A professional inspection can confirm whether targeted repairs will do—or if full replacement will deliver a better lifetime cost.",
+          },
+        ],
+      },
+      {
+        title: "Transform Your Home With Neat Services Corp",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Ready to elevate protection, efficiency, and curb appeal? Neat Services Corp provides expert siding installation in Queens, Brooklyn, the Bronx, and Yonkers. We help you choose the right material for your climate, style, and budget; handle precise, code-compliant installation; and stand behind the work with clear warranties. With Neat, you get:",
+          },
+          {
+            type: "list",
+            items: [
+              "Transparent assessments and itemized proposals",
+              "Top-tier materials from trusted manufacturers",
+              "Clean, efficient crews and on-time delivery",
+              "A home that looks new, feels tighter, and lists stronger",
+            ],
+          },
+        ],
+      },
+    ],
     author: "Neat Services Corp",
     imageUrl: "/images/blog_3.webp",
     previewTexts: [
@@ -140,7 +264,67 @@ export const BlogEntriesData: Array<BlogEntry> = [
     date: "August 10, 2025",
     startContent:
       "Old or poorly sealed windows can quietly drain your home’s energy, causing your HVAC system to work harder and increasing utility bills. Upgrading to energy-efficient windows not only improves insulation but also reduces outside noise and enhances security. Modern options offer UV protection that helps preserve furniture and flooring, while low-maintenance frames keep your home looking sharp for years",
-    sections: [],
+    sections: [
+      {
+        title: "Why Window Efficiency Pays Off",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Windows are one of the biggest energy gateways in any home. Tiny air leaks around sashes and frames add up, letting conditioned air escape and outdoor temperatures creep in. That means uneven rooms, higher bills, and extra strain on your heating and cooling equipment. Energy-efficient windows combat this on multiple fronts: better glazing, tighter seals, insulated frames, and advanced coatings that help regulate solar gain without sacrificing daylight.",
+          },
+          {
+            type: "text",
+            content:
+              "Today’s top-performing units combine improved materials with smart engineering. Double- or triple-pane glass creates insulating air (or inert gas) pockets; Low-E coatings reflect heat while letting in visible light; warm-edge spacers reduce condensation; and composite or fiberglass frames resist warping for a longer, tighter seal. Together, those upgrades translate into everyday comfort you can feel—and monthly savings you can measure.",
+          },
+        ],
+      },
+      {
+        title: "Quick Benefits at a Glance",
+        contents: [
+          {
+            type: "list",
+            items: [
+              "Lower energy bills: Reduce heating and cooling loss through better insulation.",
+              "Quieter interiors: Multi-pane glass helps block traffic and street noise.",
+              "UV protection: Low-E coatings help preserve floors, fabrics, and artwork.",
+              "Enhanced security: Stronger frames and modern hardware improve home safety.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Choosing the Right Windows for Your Home",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Climate and exposure matter. South- and west-facing elevations in the NYC area can benefit from specific Low-E ratings that cut summer heat gain while retaining winter warmth. Frame selection counts too: vinyl offers value and low maintenance, fiberglass delivers strength and stability, and wood-clad brings timeless curb appeal with protected exteriors. Look for ENERGY STAR® certification, study the NFRC label (U-Factor and Solar Heat Gain Coefficient), and don’t skip professional installation—precision air sealing is just as important as the product you buy.",
+          },
+          {
+            type: "text",
+            content:
+              "Replacing drafty windows is one of those upgrades you notice every day: fewer hot and cold spots, less outside noise, and a fresher look inside and out. For sellers, new energy-efficient windows signal a well-maintained home and can help listings stand out in competitive markets across Queens, Brooklyn, the Bronx, and Yonkers. For everyone else, they simply make living at home more comfortable and less expensive, year after year.",
+          },
+        ],
+      },
+      {
+        title: "Make It Easy With Neat Services Corp",
+        contents: [
+          {
+            type: "text",
+            content:
+              "If you’re ready to cut drafts, quiet your home, and lower monthly costs, Neat Services Corp can help. We provide expert window replacement and installation across Queens, Brooklyn, the Bronx, and Yonkers, guiding you to the best mix of Low-E glass, frame materials, and styles for your budget and architecture. Our team handles precise measurements, code-compliant installation, and clean job sites—backed by clear warranties and trusted brands.",
+          },
+          {
+            type: "text",
+            content:
+              "Upgrade once, enjoy for years. Schedule a consultation with Neat Services Corp to get tailored recommendations, transparent pricing, and a seamless installation that boosts comfort, security, and home value.",
+          },
+        ],
+      },
+    ],
     author: "Neat Services Corp",
     imageUrl: "/images/blog_4.webp",
     previewTexts: [
