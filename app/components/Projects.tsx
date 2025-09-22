@@ -67,7 +67,6 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
   });
   const totalPages = Math.ceil(filteredProjects.length / 9);
 
-  console.log(filters);
   const [currentPage, setCurrentPage] = useState<number>(1);
 
   const handleFilter = (e: React.ChangeEvent<HTMLSelectElement>): void => {

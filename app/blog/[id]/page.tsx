@@ -2,10 +2,11 @@
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import { getThemeFromPath } from "@/app/context/global";
 import React, { useEffect } from "react";
-import { BlogEntriesData } from "./components";
+import BlogEntryComponent from "./components";
 import { useRouter } from "next/navigation";
 import { addToast } from "@heroui/react";
 import Image from "next/image";
+import { BlogEntriesData } from "./blogEntries";
 
 type Props = {
   params: Promise<{
@@ -18,28 +19,26 @@ export default function Page({ params }: Props) {
   const router = useRouter();
 
   const { id } = React.use(params);
-  const entries = Object.keys(BlogEntriesData);
-  const isValidEntry = entries.includes(id);
+  const blogEntry = BlogEntriesData.find((entry) => entry.key === id)!;
 
   useEffect(() => {
-    if (!isValidEntry) {
+    if (!blogEntry) {
       addToast({
         title: "Error",
+        color: "danger",
         description: "Blog entry not found",
       });
       router.push("/blog");
     }
-  }, [isValidEntry, id]);
+  }, [blogEntry, id]);
 
-  if (!isValidEntry) {
+  if (!blogEntry) {
     return (
       <div className="pt-24 lg:pt-32 min-h-[80vh] w-full flex justify-center items-center">
         Blog entry not found. Redirecting to blog...
       </div>
     );
   }
-
-  const blogEntry = BlogEntriesData[id];
 
   return (
     <ThemeProvider initialTheme={initialTheme}>
@@ -63,7 +62,7 @@ export default function Page({ params }: Props) {
             height={1000}
             className="w-full h-full aspect-video rounded-[35px] lg:p-5"
           />
-          <blogEntry.Component />
+          <BlogEntryComponent entry={blogEntry} />
         </div>
       </main>
     </ThemeProvider>
