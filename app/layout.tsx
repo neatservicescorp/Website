@@ -46,9 +46,10 @@ export default function RootLayout({
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
         <Script
-          src="https://elfsightcdn.com/platform.js"
-          strategy="afterInteractive"
-        />
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="QmffzcFrxk7kZ16YR7Vpsw"
+          async
+        ></Script>
         <Providers>
           <Messages />
           <NavBar />
