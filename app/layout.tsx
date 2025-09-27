@@ -49,11 +49,11 @@ export default function RootLayout({
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
-        <Script
+        <script
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="QmffzcFrxk7kZ16YR7Vpsw"
           async
-        ></Script>
+        ></script>
         <Providers>
           <Messages />
           <NavBar />
