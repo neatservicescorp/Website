@@ -39,6 +39,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta
+        name="ahrefs-site-verification"
+        content="2acc26d9aa7b352de1586b358a776f2971d0327a63361c4be4cb52b45ccf6c08"
+      ></meta>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
