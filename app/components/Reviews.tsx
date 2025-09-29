@@ -41,7 +41,7 @@ function Slideshow({
   }
 
   return (
-    <div className="relative overflow-hidden m-6 w-full">
+    <div className="relative overflow-hidden m-4 md:m-6 w-full">
       {reviews.map((review, index) => (
         <div
           key={index}
@@ -54,7 +54,7 @@ function Slideshow({
             alt={review.reviewer.displayName}
             width={800}
             height={800}
-            className="w-36 h-36 rounded-full shadow-[0px_-1px_15px_-4px_rgba(0,_0,_0,_0.8)]"
+            className="w-36 h-36 rounded-full shadow-[0px_-1px_15px_-4px_rgba(0,_0,_0,_0.8)] hidden md:block"
           />
           <div className="flex flex-col font-cocogoose text-black justify-center items-start gap-1">
             <span className="font-bold text-lg xl:text-xl">
@@ -84,7 +84,12 @@ function Slideshow({
           </div>
         </div>
       ))}
-      <Modal isOpen={modalOpen} onOpenChange={setModalOpen} backdrop="blur">
+      <Modal
+        isOpen={modalOpen}
+        onOpenChange={setModalOpen}
+        backdrop="blur"
+        placement="center"
+      >
         <ModalContent className="max-h-[650px] overflow-y-auto">
           {activeReview && (
             <>
@@ -158,13 +163,14 @@ export default function Reviews({ textColor = "white" }: ReviewsProps) {
         </p>
         <h4 className="font-exotc350 text-5xl">Our customers do</h4>
       </div>
-      <div className="w-full h-[350px] overflow-hidden p-5">
+      <div className="w-full h-[450px] md:h-[350px] overflow-hidden p-5">
         <div className="flex flex-row border-1 border-white rounded-[35px] h-full justify-between items-center p-8 gap-8">
           <Image
             src="/images/google_reviews.png"
             alt="google_reviews"
             width={328}
             height={236}
+            className="hidden lg:block"
           />
           <div className="flex-1 flex flex-row bg-[#D7D7D7] rounded-[30px] h-full">
             {loading && <Spinner />}

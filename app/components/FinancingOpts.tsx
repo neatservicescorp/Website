@@ -26,7 +26,7 @@ export default function FinancingOpts() {
         <div className="flex justify-center gap-12 w-full px-12 font-cocogoose items-center">
           <p className="text-lg">Don’t Delay Your Dream Upgrade</p>
           <Button
-            className="rounded-full p-8 bg-[#0b9aeb] text-white font-semibold text-lg"
+            className="rounded-full p-8 bg-[#0b9aeb] text-white font-semibold text-sm lg:text-lg"
             onClick={() => {
               window.open(
                 `https://app.momnt.com/widgets/?merchantId=${process.env.NEXT_PUBLIC_MERCHANT_ID}&widget=ConsumerLoanApplicationWizard`,
