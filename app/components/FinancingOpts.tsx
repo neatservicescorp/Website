@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Card, CardBody } from "@heroui/react";
+import { Button } from "@heroui/react";
 import Image from "next/image";
 
 export default function FinancingOpts() {
@@ -9,7 +9,7 @@ export default function FinancingOpts() {
       <h2 className="font-exotc350 text-white text-center text-[40px] leading-10 lg:text-5xl pt-5">
         Finance your project
       </h2>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 w-full">
         <Image
           onClick={() =>
             window.open(
@@ -23,10 +23,10 @@ export default function FinancingOpts() {
           height={800}
           className="w-full hover:cursor-pointer py-7"
         />
-        <div className="flex justify-center gap-12 w-full px-12 font-cocogoose items-center">
-          <p className="text-lg">Don’t Delay Your Dream Upgrade</p>
+        <div className="flex justify-center gap-5 lg:gap-12 w-full px-5 lg:px-12 font-cocogoose items-center">
+          <p className="text-base lg:text-lg">Don’t Delay Your Dream Upgrade</p>
           <Button
-            className="rounded-full p-8 bg-[#0b9aeb] text-white font-semibold text-sm lg:text-lg"
+            className="rounded-full min-w-38 p-2 lg:p-8 bg-[#0b9aeb] text-white font-semibold text-xs md:text-sm lg:text-lg"
             onClick={() => {
               window.open(
                 `https://app.momnt.com/widgets/?merchantId=${process.env.NEXT_PUBLIC_MERCHANT_ID}&widget=ConsumerLoanApplicationWizard`,
