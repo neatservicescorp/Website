@@ -1,52 +1,43 @@
 "use client";
 
-import { Card, CardBody } from "@heroui/react";
+import { Button, Card, CardBody } from "@heroui/react";
 import Image from "next/image";
 
 export default function FinancingOpts() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-5 w-full md:p-10 py-0 md:py-5 lg:h-[510px]">
-      <Card
-        className="w-full md:w-1/2 h-full md:p-5 rounded-none bg-transparent"
-        isBlurred
-        shadow="none"
-        classNames={{ base: `rounded-[35px]` }}
-      >
-        <CardBody className="flex flex-col text-white gap-4 justify-center p-0 md:p-1">
-          <div className="flex flex-col font-exotc350 text-5xl gap-3">
-            <h3 className="text-5xl lg:text-6xl">Finance your project</h3>
-            <h3 className="text-4xl lg:text-5xl">
-              Don’t Delay Your Dream Upgrade
-            </h3>
-          </div>
-          <div className="flex flex-col gap-8 items-center">
-            <Image
-              src="/guaranteed.svg"
-              alt="google_guaranteed"
-              className="w-18 md:w-24 xl:w-32"
-              width={130}
-              height={130}
-            />
-          </div>
-        </CardBody>
-      </Card>
-      <Card className="w-full md:w-1/2" classNames={{ base: `rounded-[35px]` }}>
-        <CardBody className="p-0 py-2 md:py-5 lg:py-10">
-          <Image
-            onClick={() =>
+    <section className="flex flex-col items-center justify-center gap-10 md:gap-5 w-full md:p-10 py-0 md:py-5">
+      <h2 className="font-exotc350 text-white text-center text-[40px] leading-10 lg:text-5xl pt-5">
+        Finance your project
+      </h2>
+      <div className="flex flex-col gap-2">
+        <Image
+          onClick={() =>
+            window.open(
+              `https://app.momnt.com/widgets/?merchantId=${process.env.NEXT_PUBLIC_MERCHANT_ID}&widget=ConsumerLoanApplicationWizard`,
+              "_blank"
+            )
+          }
+          src="/images/financing.png"
+          alt="financing_disclaimer"
+          width={1500}
+          height={800}
+          className="w-full hover:cursor-pointer py-7"
+        />
+        <div className="flex justify-center gap-12 w-full px-12 font-cocogoose items-center">
+          <p className="text-lg">Don’t Delay Your Dream Upgrade</p>
+          <Button
+            className="rounded-full p-8 bg-[#0b9aeb] text-white font-semibold text-lg"
+            onClick={() => {
               window.open(
-                "https://retailservices.wellsfargo.com/ahapp/init-app?m=0024344285&l=en_US",
+                `https://app.momnt.com/widgets/?merchantId=${process.env.NEXT_PUBLIC_MERCHANT_ID}&widget=ConsumerLoanApplicationWizard`,
                 "_blank"
-              )
-            }
-            src="/images/finance.jpeg"
-            alt="financing_disclaimer"
-            width={800}
-            height={800}
-            className="w-full h-full p-7 bg-white hover:cursor-pointer"
-          />
-        </CardBody>
-      </Card>
+              );
+            }}
+          >
+            Get financing today
+          </Button>
+        </div>
+      </div>
     </section>
   );
 }

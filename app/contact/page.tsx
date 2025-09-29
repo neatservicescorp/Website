@@ -1,9 +1,8 @@
 import { ThemeProvider } from "../components/ThemeProvider";
 import { getThemeFromPath } from "../context/global";
 import MainForm from "../components/MainForm";
-import InteractiveMap from "../components/InteractiveMap";
 import ImageSlideshow from "../components/ImageSlideshow";
-import Location from "./location";
+import GoogleMap from "../components/GoogleMap";
 
 export default function Contact() {
   const initialTheme = getThemeFromPath("/contact");
@@ -48,8 +47,8 @@ export default function Contact() {
                 available 24/7 to assist you with your needs.
               </p>
             </div>
-            <div className="w-full md:w-[50%] h-[450px] flex-shrink-0">
-              <InteractiveMap mapToken={mapToken} />
+            <div className="w-full md:w-[50%] h-[450px] flex-shrink-0 overflow-hidden rounded-xl shadow-lg">
+              <GoogleMap width="100%" height="100%" />
             </div>
             {/* <Location /> */}
           </div>
