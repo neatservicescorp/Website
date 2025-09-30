@@ -131,4 +131,94 @@ export const projectData: Project[] = [
     location: "Bronx",
     type: "Roofing",
   },
+  {
+    image: "/api/image?key=projects/bh_brook_murray_1.jpeg",
+    location: "Brooklyn",
+    type: "Bathroom",
+  },
+  {
+    image: "/api/image?key=projects/bh_queens_margaret_1.jpg",
+    location: "Queens",
+    type: "Bathroom",
+  },
+  {
+    image: "/api/image?key=projects/bh_queens_nina_1.jpg",
+    location: "Queens",
+    type: "Bathroom",
+  },
+  {
+    image: "/api/image?key=projects/bh_queens_niu_1.jpg",
+    location: "Queens",
+    type: "Bathroom",
+  },
+  {
+    image: "/api/image?key=projects/kt_queens_steven_1.jpg",
+    location: "Queens",
+    type: "Kitchen",
+  },
+  {
+    image: "/api/image?key=projects/kt_queens_nina_1.jpg",
+    location: "Queens",
+    type: "Kitchen",
+  },
+  {
+    image: "/api/image?key=projects/kt_queens_marg_1.jpg",
+    location: "Queens",
+    type: "Kitchen",
+  },
+  {
+    image: "/api/image?key=projects/kt_brook_lily_1.jpg",
+    location: "Brooklyn",
+    type: "Kitchen",
+  },
+  {
+    image: "/api/image?key=projects/sd_brook_woj_1.jpeg",
+    location: "Brooklyn",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_brook_shirley_1.JPG",
+    location: "Brooklyn",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_brook_sasha_1.jpeg",
+    location: "Brooklyn",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_brook_naciem_1.jpeg",
+    location: "Brooklyn",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_brook_marva_1.jpeg",
+    location: "Brooklyn",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_brook_kate_1.jpg",
+    location: "Brooklyn",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_brook_karin_1.jpeg",
+    location: "Brooklyn",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_brook_karim_1.jpg",
+    location: "Brooklyn",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_brook_eliz_1.jpeg",
+    location: "Brooklyn",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_book_faith_1.jpeg",
+    location: "Brooklyn",
+    type: "Siding",
+  },
 ];
