@@ -121,7 +121,12 @@ export class ReviewsHandler {
 
   private loadSampleReviews(): GoogleReview[] {
     try {
-      const samplePath = join(process.cwd(), "app", "test", "samplereviews.json");
+      const samplePath = join(
+        process.cwd(),
+        "app",
+        "test",
+        "samplereviews.json"
+      );
       const sampleData = readFileSync(samplePath, "utf-8");
       const parsed = JSON.parse(sampleData);
       return parsed.reviews || [];
@@ -167,11 +172,14 @@ export class ReviewsHandler {
 
       return data.reviews;
     } catch (e) {
-      console.error("Google Reviews API failed, falling back to sample data:", (e as Error).message);
-      
+      console.error(
+        "Google Reviews API failed, falling back to sample data:",
+        (e as Error).message
+      );
+
       // Fallback to sample reviews when API fails
       const sampleReviews = this.loadSampleReviews();
-      
+
       // Apply the same limit as requested
       return sampleReviews.slice(0, limit);
     }

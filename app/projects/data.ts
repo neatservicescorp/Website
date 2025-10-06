@@ -221,4 +221,94 @@ export const projectData: Project[] = [
     location: "Brooklyn",
     type: "Siding",
   },
+  {
+    image: "/api/image?key=projects/sd_long_paul_1.jpg",
+    location: "Long Island",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_staten_maria_1.jpg",
+    location: "Staten Island",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_staten_sal_1.jpg",
+    location: "Staten Island",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_yonk_gilberto_1.jpg",
+    location: "Yonkers",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_yonk_angi_1.jpg",
+    location: "Yonkers",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_yonk_jtorres.jpg",
+    location: "Yonkers",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_yonk_leomary_1.jpg",
+    location: "Yonkers",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_queens_vargas_1.jpg",
+    location: "Queens",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_queens_manuel_1.jpg",
+    location: "Queens",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_queens_fernando_1.PNG",
+    location: "Queens",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_queens_amy_1.jpg",
+    location: "Queens",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_queens_billy_1.jpg",
+    location: "Queens",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_queens_tanzin_1.jpg",
+    location: "Queens",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_queens_corrine_1.jpg",
+    location: "Queens",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_queens_unknown_1.jpg",
+    location: "Queens",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_queens_tak_1.jpg",
+    location: "Queens",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_brook_sasha_1.jpeg",
+    location: "Bronx",
+    type: "Siding",
+  },
+  {
+    image: "/api/image?key=projects/sd_brook_mark_1.jpg",
+    location: "Bronx",
+    type: "Siding",
+  },
 ];

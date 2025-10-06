@@ -107,6 +107,7 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
     setVisibleProjects(
       filteredProjects.slice((currentPage - 1) * 9, currentPage * 9)
     );
+    setCurrentPage(1);
   }, [filters]);
 
   return (
