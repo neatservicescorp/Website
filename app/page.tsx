@@ -17,7 +17,7 @@ export default function Home() {
     "/api/image?key=slide_2.jpg",
     "/api/image?key=home_bg.png",
     "/api/image?key=slide_5.PNG",
-    "/api/image?key=slide_6.jpg",
+    "/api/image?key=projects/sd_book_faith_1.jpeg",
     "/api/image?key=slide_8.PNG",
   ];
 
