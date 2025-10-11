@@ -277,7 +277,7 @@ export default function Services() {
               <div className="flex flex-col text-black text-center">
                 <h3 className="font-exotc350 text-6xl">Where we are</h3>
                 <p className="font-cocogoose font-thin">
-                  2807 Jackson Ave Fl 5 Long Island City, NY 11101
+                  8211 37th Ave. Ste 404. Queens, NY 11372.
                 </p>
               </div>
               <div className="h-[600px] w-full my-10">
