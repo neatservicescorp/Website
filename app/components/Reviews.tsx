@@ -161,7 +161,7 @@ export default function Reviews({ textColor = "white" }: ReviewsProps) {
         <p className="font-cocogoose text-lg h-6">
           {"We don't say we're the best"}
         </p>
-        <h4 className="font-exotc350 text-5xl">Our customers do</h4>
+        <h3 className="font-exotc350 text-5xl">Our customers do</h3>
       </div>
       <div className="w-full h-[450px] md:h-[350px] overflow-hidden md:p-5">
         <div className="flex flex-row border-1 border-white rounded-[35px] h-full justify-between items-center p-4 md:p-6 lg:p-8 gap-8">

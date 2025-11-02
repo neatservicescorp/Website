@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <ThemeProvider initialTheme={initialTheme}>
-      <main className="min-h-screen">
+      <main id="main-content" className="min-h-screen">
         <div className="relative flex justify-center top-0 w-full z-0 h-[1100px] md:h-[1000px] lg:h-[900px]">
           <ImageSlideshow
             images={backgroundImages}
@@ -35,8 +35,7 @@ export default function Home() {
           <div className="absolute top-0 z-10 h-full w-full flex flex-col lg:flex-row p-5 pt-36 max-w-[1400px] gap-10 md:gap-0">
             <div className="w-full lg:w-1/2 flex flex-col justify-center gap-3 md:ml-5 lg:ml-10 text-white">
               <div className="flex flex-col font-exotc350 text-5xl 2xl:text-6xl">
-                <h1>Top-Rated</h1>
-                <h1>Roofing & Siding Experts</h1>
+                <h1>Top-Rated Roofing & Siding Experts</h1>
               </div>
               <div className="lg:max-w-[70%] w-full font-cocogoose text-medium 2xl:text-base flex flex-col gap-0">
                 <p>

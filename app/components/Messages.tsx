@@ -71,7 +71,13 @@ export default function Messages() {
     <div className="fixed bottom-5 right-5 z-50">
       <Popover placement="top-end">
         <PopoverTrigger>
-          <div className="w-18 h-18 md:w-24 md:h-24 rounded-full bg-white p-4 flex items-center justify-center hover:cursor-pointer">
+          <Button
+            isIconOnly
+            aria-label="Open chat messages"
+            className="w-18 h-18 md:w-24 md:h-24 rounded-full bg-white p-4 flex items-center justify-center hover:cursor-pointer min-w-0"
+            variant="flat"
+            size="lg"
+          >
             <Image
               src="/icons/message.svg"
               alt="message_icon"
@@ -79,7 +85,7 @@ export default function Messages() {
               height={150}
               className="translate-x-0.5 translate-y-1"
             />
-          </div>
+          </Button>
         </PopoverTrigger>
         <PopoverContent className="w-[350px]">
           <div className="w-full max-w-[500px] p-3">

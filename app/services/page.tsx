@@ -12,6 +12,7 @@ import {
 import RoofingMethod from "../components/RoofingMethod";
 import InteractiveMap from "../components/InteractiveMap";
 import MainForm from "../components/MainForm";
+import GoogleMap from "../components/GoogleMap";
 
 export default function Services() {
   const initialTheme = getThemeFromPath("/services");
@@ -281,7 +282,7 @@ export default function Services() {
                 </p>
               </div>
               <div className="h-[600px] w-full my-10">
-                <InteractiveMap mapToken={mapToken} />
+                <GoogleMap width="100%" height="100%" />
               </div>
             </div>
             <section

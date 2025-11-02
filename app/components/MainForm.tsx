@@ -61,7 +61,7 @@ export default function MainForm() {
     >
       <CardHeader className="pb-1">
         <div className="font-cocogoose text-xl 2xl:text-2xl text-black pt-6 w-full text-center">
-          <h3>Ready to get started?</h3>
+          <h2>Ready to get started?</h2>
         </div>
       </CardHeader>
       <CardBody className="px-8 overflow-y-hidden">
@@ -71,7 +71,7 @@ export default function MainForm() {
             label="Name*"
             classNames={{
               inputWrapper: ["h-[50px]", "2xl:h-[55px]", "bg-[#D9D4D4] py-0.5"],
-              label: "text-sm 2xl:text-base",
+              label: "text-sm 2xl:text-base text-gray-800",
             }}
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -85,7 +85,7 @@ export default function MainForm() {
             }
             classNames={{
               inputWrapper: ["h-[50px]", "2xl:h-[55px]", "bg-[#D9D4D4] py-0.5"],
-              label: "text-sm 2xl:text-base",
+              label: "text-sm 2xl:text-base text-gray-800",
             }}
             value={formData.phone}
             onChange={(e) =>
@@ -97,7 +97,7 @@ export default function MainForm() {
             label="Email*"
             classNames={{
               inputWrapper: ["h-[50px]", "2xl:h-[55px]", "bg-[#D9D4D4] py-0.5"],
-              label: "text-sm 2xl:text-base",
+              label: "text-sm 2xl:text-base text-gray-800",
             }}
             isInvalid={
               formData.email.length > 0 &&
@@ -111,7 +111,7 @@ export default function MainForm() {
           <Select
             label="Service"
             classNames={{
-              label: "text-sm 2xl:text-base",
+              label: "text-sm 2xl:text-base text-gray-800",
               trigger: "bg-[#D9D4D4]",
               listbox: "text-black font-cocogoose",
             }}
