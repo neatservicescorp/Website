@@ -32,19 +32,24 @@ export default function FinancingOpts() {
       </Card>
       <Card className="w-full md:w-1/2" classNames={{ base: `rounded-[35px]` }}>
         <CardBody className="p-0 py-2 md:py-5 lg:py-10">
-          <Image
+          <button
             onClick={() =>
               window.open(
                 "https://retailservices.wellsfargo.com/ahapp/init-app?m=0024344285&l=en_US",
                 "_blank"
               )
             }
-            src="/images/finance.jpeg"
-            alt="financing_disclaimer"
-            width={800}
-            height={800}
-            className="w-full h-full p-7 bg-white hover:cursor-pointer"
-          />
+            className="w-full h-full p-7 bg-white hover:cursor-pointer border-none"
+            aria-label="Apply for Wells Fargo financing - opens in new window"
+          >
+            <Image
+              src="/images/finance.jpeg"
+              alt="Wells Fargo financing application"
+              width={800}
+              height={800}
+              className="w-full h-full"
+            />
+          </button>
         </CardBody>
       </Card>
     </section>

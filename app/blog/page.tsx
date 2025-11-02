@@ -21,7 +21,10 @@ export default function Blog() {
 
   return (
     <ThemeProvider initialTheme={initialTheme}>
-      <main className="min-h-screen flex justify-center pt-24 lg:pt-32 bg-white">
+      <main
+        id="main-content"
+        className="min-h-screen flex justify-center pt-24 lg:pt-32 bg-white"
+      >
         <div className="w-full max-w-[1400px] p-5 z-10 flex flex-col text-black items-center">
           <h1 className="font-exotc350 text-4xl md:text-5xl xl:text-6xl py-10 text-center">
             Neat Services Blog

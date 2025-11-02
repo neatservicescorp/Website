@@ -110,6 +110,7 @@ export default function MainForm() {
           />
           <Select
             label="Service"
+            aria-label="Select a service type"
             classNames={{
               label: "text-sm 2xl:text-base text-gray-800",
               trigger: "bg-[#D9D4D4]",

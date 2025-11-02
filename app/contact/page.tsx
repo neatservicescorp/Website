@@ -20,7 +20,10 @@ export default function Contact() {
   ];
   return (
     <ThemeProvider initialTheme={initialTheme}>
-      <main className="min-h-screen pt-24 lg:pt-32 bg-white overflow-hidden">
+      <main
+        id="main-content"
+        className="min-h-screen pt-24 lg:pt-32 bg-white overflow-hidden"
+      >
         <div className="bg-[#70685B] h-[650px] lg:h-[750px] 2xl:h-[900px] w-full flex justify-center">
           <div className="w-full max-w-[1600px] relative h-full">
             <ImageSlideshow

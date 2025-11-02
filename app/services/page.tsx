@@ -20,7 +20,7 @@ export default function Services() {
 
   return (
     <ThemeProvider initialTheme={initialTheme}>
-      <main className="min-h-screen pt-24 lg:pt-32">
+      <main id="main-content" className="min-h-screen pt-24 lg:pt-32">
         <div className="w-full h-[960px] md:h-[850px] 2xl:h-[900px] justify-center relative flex items-center p-5">
           <div className="absolute w-full h-full bg-black/20 z-10"></div>
           <Image
@@ -32,9 +32,9 @@ export default function Services() {
           />
           <div className="flex w-full h-full flex-col lg:flex-row max-w-[1400px] mt-5 lg:mt-0 gap-10 lg:gap-0">
             <div className="flex flex-col lg:w-[50%] text-white justify-center z-10 md:ml-5 gap-5 lg:gap-2 lg:ml-20">
-              <h2 className="font-exotc350 text-6xl text-shadow-lg">
+              <h1 className="font-exotc350 text-6xl text-shadow-lg">
                 Services
-              </h2>
+              </h1>
               <p className="font-cocogoose lg:max-w-[80%] text-shadow-md">
                 Built for New York homeowners who expect quality, transparency,
                 and craftsmanship. Neat Services Inc. specializes in exterior
@@ -51,13 +51,13 @@ export default function Services() {
         <div className="bg-gradient-to-b from-[#333333] from-30% via-[#424242] via-40% to-[#DBDBDB] to-70% flex justify-center">
           <div className="w-full max-w-[1500px] p-5 md:p-10">
             <div className="flex flex-col text-white text-center gap-2">
-              <h1 className="text-6xl font-exotc350">Our services</h1>
+              <h2 className="text-6xl font-exotc350">Our services</h2>
               <p className="font-cocogoose">
                 Services That Help Your Home Shine
               </p>
             </div>
             <div className="flex flex-row gap-10 text-white items-center py-5 my-2 md:my-5 overflow-hidden">
-              <h5 className="font-exotc350 text-4xl">Exterior</h5>
+              <h3 className="font-exotc350 text-4xl">Exterior</h3>
               <Divider className="dark h-[1px] bg-white" />
             </div>
             <div className="flex flex-col gap-5 md:gap-0">
@@ -77,7 +77,7 @@ export default function Services() {
                   </CardBody>
                 </Card>
                 <div className="flex flex-col text-white w-full md:max-w-[50%] py-5 md:p-10 gap-2 justify-center">
-                  <h3 className="font-exotc350 text-4xl">Siding</h3>
+                  <h4 className="font-exotc350 text-4xl">Siding</h4>
                   <p className="font-cocogoose text-sm">
                     Custom siding replacement to improve aesthetics and energy
                     efficiency.
@@ -100,7 +100,7 @@ export default function Services() {
                   </CardBody>
                 </Card>
                 <div className="flex flex-col text-white w-full md:max-w-[50%] py-5 md:p-10 gap-2 justify-center">
-                  <h3 className="font-exotc350 text-4xl">Roof</h3>
+                  <h4 className="font-exotc350 text-4xl">Roof</h4>
                   <p className="font-cocogoose text-sm">
                     Roof installation and replacement with warranty, durable
                     materials, and maximum protection.
@@ -123,7 +123,7 @@ export default function Services() {
                   </CardBody>
                 </Card>
                 <div className="flex flex-col text-white w-full md:max-w-[50%] p-5 md:p-10 gap-2 justify-center">
-                  <h3 className="font-exotc350 text-4xl">Window</h3>
+                  <h4 className="font-exotc350 text-4xl">Window</h4>
                   <p className="font-cocogoose text-sm">
                     Installation of modern, secure, and energy-efficient
                     windows.
@@ -132,7 +132,7 @@ export default function Services() {
               </div>
             </div>
             <div className="flex flex-row gap-10 text-whit items-center p-5 my-5 overflow-hidden">
-              <h5 className="font-exotc350 text-4xl">Interior</h5>
+              <h3 className="font-exotc350 text-4xl">Interior</h3>
               <Divider className="dark h-[1px] bg-white" />
             </div>
             <div className="flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-y-16 gap-12 md:gap-8 px-5">
@@ -198,9 +198,9 @@ export default function Services() {
                   <CardBody className="p-0 w-full lg:max-w-[500px] flex flex-row">
                     <div className="w-[50%] h-full relative">
                       <div className="absolute w-full items-center top-5 z-10">
-                        <h5 className="font-exotc350 text-4xl text-center text-black">
+                        <span className="font-exotc350 text-4xl text-center text-black block">
                           Before
-                        </h5>
+                        </span>
                       </div>
                       <Image
                         src="/api/image?key=before_2.jpg"
@@ -212,9 +212,9 @@ export default function Services() {
                     </div>
                     <div className="w-[50%] h-full relative">
                       <div className="absolute w-full items-center top-5">
-                        <h5 className="font-exotc350 text-4xl text-center text-black">
+                        <span className="font-exotc350 text-4xl text-center text-black block">
                           After
-                        </h5>
+                        </span>
                       </div>
                       <Image
                         src="/api/image?key=after_2.png"
@@ -233,9 +233,9 @@ export default function Services() {
                   <CardBody className="p-0 w-full lg:max-w-[500px] flex flex-row">
                     <div className="w-[50%] h-auto relative">
                       <div className="absolute w-full items-center top-5 z-10">
-                        <h5 className="font-exotc350 text-4xl text-center text-black">
+                        <span className="font-exotc350 text-4xl text-center text-black block">
                           Before
-                        </h5>
+                        </span>
                       </div>
                       <Image
                         src="/api/image?key=before_3.PNG"
@@ -247,9 +247,9 @@ export default function Services() {
                     </div>
                     <div className="w-[50%] max-h-[450px] h-full relative overflow-hidden">
                       <div className="absolute w-full items-center top-5 z-10">
-                        <h5 className="font-exotc350 text-4xl text-center text-black">
+                        <span className="font-exotc350 text-4xl text-center text-black block">
                           After
-                        </h5>
+                        </span>
                       </div>
                       <Image
                         src="/api/image?key=before_3.1.PNG"

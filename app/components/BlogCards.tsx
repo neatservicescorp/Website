@@ -30,7 +30,7 @@ export default function BlogCards({ entries }: BlogCardsProps) {
                 <h3 className="font-exotc350 text-4xl leading-8">
                   {entry.title}
                 </h3>
-                <p className="text-black/40 font-cocogoose text-sm">
+                <p className="text-gray-600 font-cocogoose text-sm">
                   {entry.date}
                 </p>
               </div>
@@ -39,12 +39,13 @@ export default function BlogCards({ entries }: BlogCardsProps) {
                   <p key={idx}>{text}</p>
                 ))}
               </ScrollShadow>
-              <div
+              <button
                 onClick={() => router.push(`/blog/${entry.key}`)}
-                className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline font-semibold"
+                className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline font-semibold bg-transparent border-none p-0"
+                aria-label={`Read full article: ${entry.title}`}
               >
                 <p>Read article</p>
-              </div>
+              </button>
             </div>
           </CardBody>
         </Card>

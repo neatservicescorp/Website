@@ -142,5 +142,12 @@ export default function GoogleMap({
     };
   }, []);
 
-  return <div id="map" style={{ height, width }} />;
+  return (
+    <div
+      id="map"
+      role="application"
+      aria-label="Interactive map showing Neat Services Inc location at Queens, NY"
+      style={{ height, width }}
+    />
+  );
 }

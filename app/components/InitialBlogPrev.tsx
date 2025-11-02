@@ -29,7 +29,7 @@ export default function InitialBlogPrev({ entry }: BlogPreviewProps) {
       <div className="w-full md:w-1/2 flex flex-col p-4 pb-7 items-start justify-center gap-5 relative h-[524px]">
         <div className="flex flex-col gap-1">
           <h2 className="font-exotc350 text-5xl">{entry.title}</h2>
-          <p className="text-black/40 font-cocogoose text-sm">{entry.date}</p>
+          <p className="text-gray-600 font-cocogoose text-sm">{entry.date}</p>
         </div>
         <ScrollShadow className="flex flex-col gap-2 text-justify text-sm 2xl:text-medium overflow-hidden h-[40%]">
           {entry.previewTexts.map((text, index) => (
@@ -38,12 +38,13 @@ export default function InitialBlogPrev({ entry }: BlogPreviewProps) {
             </p>
           ))}
         </ScrollShadow>
-        <div
+        <button
           onClick={() => router.push(`/blog/${entry.key}`)}
-          className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline font-semibold"
+          className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline font-semibold bg-transparent border-none p-0"
+          aria-label={`Read full article: ${entry.title}`}
         >
           <p>Read article</p>
-        </div>
+        </button>
       </div>
     </div>
   );

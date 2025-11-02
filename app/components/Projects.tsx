@@ -118,6 +118,7 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
           <Select
             name="type"
             size="lg"
+            aria-label="Filter projects by product type"
             classNames={{
               label: "text-black",
               trigger: "border-black rounded-md border-1",
@@ -138,6 +139,7 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
             name="location"
             size="lg"
             variant="bordered"
+            aria-label="Filter projects by location"
             classNames={{
               label: "text-black",
               trigger: "border-black rounded-md border-1",
@@ -172,47 +174,63 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
         <div className="flex flex-row w-full items-center max-w-[400px] py-4 text-black gap-3 font-cocogoose text-sm">
           <p>Explore the full gallery</p>
           <div className="flex flex-row min-w-[120px] font-cocogoose text-lg gap-1.5 items-center">
-            <Image
-              src="/icons/pagination_dec.svg"
-              alt="page_button"
-              width={50}
-              height={50}
-              className={`w-4 h-4 ${
-                currentPage === 1 ? "opacity-50" : "hover:cursor-pointer"
-              }`}
+            <button
               onClick={() => {
                 if (currentPage > 1) {
                   setCurrentPage(currentPage - 1);
                 }
               }}
-            />
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-              <p
-                key={page}
-                onClick={() => setCurrentPage(page)}
-                className={`${
-                  page === currentPage ? "font-black underline" : ""
-                } hover:cursor-pointer`}
-              >
-                {page}
-              </p>
-            ))}
-            <Image
-              src="/icons/pagination_dec.svg"
-              alt="page_button"
-              width={50}
-              height={50}
-              className={`w-4 h-4 rotate-180 ${
-                currentPage === totalPages
-                  ? "opacity-50"
+              disabled={currentPage === 1}
+              className={`bg-transparent border-none p-2 min-w-[44px] min-h-[44px] flex items-center justify-center ${
+                currentPage === 1
+                  ? "opacity-50 cursor-not-allowed"
                   : "hover:cursor-pointer"
               }`}
+              aria-label="Previous page"
+            >
+              <Image
+                src="/icons/pagination_dec.svg"
+                alt=""
+                width={50}
+                height={50}
+                className="w-6 h-6"
+              />
+            </button>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                onClick={() => setCurrentPage(page)}
+                className={`bg-transparent border-none p-2 min-w-[44px] min-h-[44px] flex items-center justify-center hover:cursor-pointer ${
+                  page === currentPage ? "font-black underline" : ""
+                }`}
+                aria-label={`Go to page ${page}`}
+                aria-current={page === currentPage ? "page" : undefined}
+              >
+                {page}
+              </button>
+            ))}
+            <button
               onClick={() => {
                 if (currentPage !== totalPages) {
                   setCurrentPage(currentPage + 1);
                 }
               }}
-            />
+              disabled={currentPage === totalPages}
+              className={`bg-transparent border-none p-2 min-w-[44px] min-h-[44px] flex items-center justify-center ${
+                currentPage === totalPages
+                  ? "opacity-50 cursor-not-allowed"
+                  : "hover:cursor-pointer"
+              }`}
+              aria-label="Next page"
+            >
+              <Image
+                src="/icons/pagination_dec.svg"
+                alt=""
+                width={50}
+                height={50}
+                className="w-6 h-6 rotate-180"
+              />
+            </button>
           </div>
         </div>
       </div>

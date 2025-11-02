@@ -28,50 +28,57 @@ export default function ProjectCard({ project }: Props) {
         priority
       />
 
-      <Card
-        classNames={{ base: "rounded-xl md:rounded-[35px]" }}
-        className="z-10 aspect-square w-[250px] lg:w-[300px] 2xl:w-[350px]"
+      <button
+        onClick={onOpen}
+        className="z-10 aspect-square w-[250px] lg:w-[300px] 2xl:w-[350px] bg-transparent border-none p-0 cursor-pointer hover:opacity-90 transition-opacity"
+        aria-label={`View ${project.type} project in ${project.location}`}
       >
-        <CardBody className="p-0 cursor-pointer" onClick={onOpen}>
-          <div className="w-full h-full relative">
-            <Image
-              src={project.image}
-              alt={`project_${project.type}_image`}
-              width={600}
-              height={600}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute font-cocogoose text-white text-sm bottom-0 w-full h-[20%] bg-gradient-to-t from-[#F64631] to-transparent flex items-center p-5 gap-8">
-              <div className="flex flex-row gap-1">
-                <Image
-                  src="/icons/tool_w.svg"
-                  alt="tool_icon"
-                  width={20}
-                  height={20}
-                  className="w-4 h-4"
-                />
-                <p>{project.type}</p>
-              </div>
-              <div className="flex flex-row gap-1 text-white">
-                <Image
-                  src="/icons/location.svg"
-                  alt="location_icon"
-                  width={20}
-                  height={20}
-                  className="w-4 h-4"
-                />
-                <p>{project.location}</p>
+        <Card
+          classNames={{ base: "rounded-xl md:rounded-[35px]" }}
+          className="w-full h-full"
+        >
+          <CardBody className="p-0">
+            <div className="w-full h-full relative">
+              <Image
+                src={project.image}
+                alt={`${project.type} project in ${project.location}`}
+                width={600}
+                height={600}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute font-cocogoose text-white text-sm bottom-0 w-full h-[20%] bg-gradient-to-t from-[#F64631] to-transparent flex items-center p-5 gap-8">
+                <div className="flex flex-row gap-1">
+                  <Image
+                    src="/icons/tool_w.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="w-4 h-4"
+                  />
+                  <p>{project.type}</p>
+                </div>
+                <div className="flex flex-row gap-1 text-white">
+                  <Image
+                    src="/icons/location.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="w-4 h-4"
+                  />
+                  <p>{project.location}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </CardBody>
-      </Card>
+          </CardBody>
+        </Card>
+      </button>
       <Modal
         isOpen={isOpen}
         onClose={onClose}
         size="xl"
         backdrop="blur"
         placement="center"
+        aria-label={`${project.type} project image from ${project.location}`}
       >
         <ModalContent>
           <ModalBody

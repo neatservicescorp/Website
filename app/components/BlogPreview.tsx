@@ -38,14 +38,15 @@ export default function BlogPreview() {
             <p className="font-cocogoose text-sm">
               {recentEntry.startContent.slice(0, 150)}...
             </p>
-            <div
+            <button
               onClick={() => router.push(`/blog/${recentEntry.key}`)}
-              className="absolute w-full h-[15px] bottom-0 flex items-end justify-end px-5 hover:cursor-pointer"
+              className="absolute bottom-0 right-5 bg-transparent border-none p-0 hover:cursor-pointer"
+              aria-label={`Read full article: ${recentEntry.title}`}
             >
               <p className="font-cocogoose text-lg hover:underline">
                 Read more ➤
               </p>
-            </div>
+            </button>
           </div>
         </CardFooter>
       </Card>
@@ -69,14 +70,15 @@ export default function BlogPreview() {
                 <p className="font-cocogoose text-xs md:text-sm">
                   {recentEntry.startContent.slice(0, 80)}...
                 </p>
-                <div
+                <button
                   onClick={() => router.push(`/blog/${recentEntry.key}`)}
-                  className="absolute w-full h-[15px] bottom-0 flex items-end justify-end px-5 hover:cursor-pointer"
+                  className="absolute bottom-0 right-5 bg-transparent border-none p-0 hover:cursor-pointer"
+                  aria-label={`Read full article: ${recentEntry.title}`}
                 >
                   <p className="font-cocogoose text-sm md:text-lg hover:underline">
                     Read more ➤
                   </p>
-                </div>
+                </button>
               </div>
             </div>
           </CardBody>
@@ -101,14 +103,15 @@ export default function BlogPreview() {
                   <p className="font-cocogoose text-xs md:text-sm">
                     {entry.startContent.slice(0, 80)}...
                   </p>
-                  <div
+                  <button
                     onClick={() => router.push(`/blog/${entry.key}`)}
-                    className="absolute w-full h-[15px] bottom-0 flex items-end justify-end px-5 hover:cursor-pointer"
+                    className="absolute bottom-0 right-5 bg-transparent border-none p-0 hover:cursor-pointer"
+                    aria-label={`Read full article: ${entry.title}`}
                   >
                     <p className="font-cocogoose text-sm md:text-lg hover:underline">
                       Read more ➤
                     </p>
-                  </div>
+                  </button>
                 </div>
               </div>
             </CardBody>

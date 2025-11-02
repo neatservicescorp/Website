@@ -71,15 +71,16 @@ function Slideshow({
                 : "No comment provided."}
             </p>
             {review.comment && review.comment.length > 300 && (
-              <span
-                className="absolute bottom-0 right-0 text-sm underline hover:cursor-pointer z-20"
+              <button
+                className="absolute bottom-0 right-0 text-sm underline hover:cursor-pointer z-20 bg-transparent border-none p-0"
                 onClick={() => {
                   setActiveReview(review);
                   setModalOpen(true);
                 }}
+                aria-label={`Read full review by ${review.reviewer.displayName}`}
               >
                 Read
-              </span>
+              </button>
             )}
           </div>
         </div>
@@ -89,6 +90,8 @@ function Slideshow({
         onOpenChange={setModalOpen}
         backdrop="blur"
         placement="center"
+        aria-labelledby="review-modal-title"
+        aria-describedby="review-modal-content"
       >
         <ModalContent className="max-h-[650px] overflow-y-auto">
           {activeReview && (
@@ -105,8 +108,11 @@ function Slideshow({
                     height={100}
                     className="w-24 h-24 rounded-full shadow-[0px_-1px_15px_-4px_rgba(0,_0,_0,_0.8)] mb-2"
                   />
-                  <span className="font-bold text-lg xl:text-xl text-black">
-                    {activeReview.reviewer.displayName}
+                  <span
+                    id="review-modal-title"
+                    className="font-bold text-lg xl:text-xl text-black"
+                  >
+                    Review by {activeReview.reviewer.displayName}
                   </span>
                   <p className="font-normal text-sm text-gray-400">
                     {new Date(activeReview.createTime).toLocaleDateString()}
@@ -116,7 +122,10 @@ function Slideshow({
                   </span>
                 </div>
               </ModalHeader>
-              <ModalBody className="pb-8 text-black font-cocogoose text-justify px-8">
+              <ModalBody
+                id="review-modal-content"
+                className="pb-8 text-black font-cocogoose text-justify px-8"
+              >
                 {activeReview.comment}
               </ModalBody>
             </>

@@ -9,7 +9,10 @@ export default async function ReviewsPage() {
 
   return (
     <ThemeProvider initialTheme={initialTheme}>
-      <main className="pt-24 lg:pt-32 flex flex-col items-center">
+      <main
+        id="main-content"
+        className="pt-24 lg:pt-32 flex flex-col items-center"
+      >
         <div className="overflow-hidden w-full flex justify-center">
           <Image
             src="/api/image?key=reviews_main.png"

@@ -81,3 +81,24 @@ textarea:focus-visible {
   outline-offset: 1px !important;
   box-shadow: 0 0 0 1px #f64631;
 }
+
+/* Skip link specific styles for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #f64631;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  z-index: 1000;
+  font-weight: 600;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 6px;
+  outline: 3px solid white;
+  outline-offset: 2px;
+}
