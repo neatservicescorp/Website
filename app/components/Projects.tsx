@@ -171,9 +171,9 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
       </div>
       <Divider className="bg-black/40" />
       <div className="flex w-full justify-end">
-        <div className="flex flex-row w-full items-center max-w-[400px] py-4 text-black gap-3 font-cocogoose text-sm">
+        <div className="flex flex-row w-full items-center max-w-[800px] py-4 text-black gap-3 font-cocogoose text-sm">
           <p>Explore the full gallery</p>
-          <div className="flex flex-row min-w-[120px] font-cocogoose text-lg gap-1.5 items-center">
+          <div className="flex flex-row md:min-w-[120px] font-cocogoose text-lg gap-1.5 items-center">
             <button
               onClick={() => {
                 if (currentPage > 1) {
@@ -181,7 +181,7 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
                 }
               }}
               disabled={currentPage === 1}
-              className={`bg-transparent border-none p-2 min-w-[44px] min-h-[44px] flex items-center justify-center ${
+              className={`bg-transparent border-none md:p-2 md:min-w-[44px] md:min-h-[44px] flex items-center justify-center ${
                 currentPage === 1
                   ? "opacity-50 cursor-not-allowed"
                   : "hover:cursor-pointer"
@@ -200,7 +200,7 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
               <button
                 key={page}
                 onClick={() => setCurrentPage(page)}
-                className={`bg-transparent border-none p-2 min-w-[44px] min-h-[44px] flex items-center justify-center hover:cursor-pointer ${
+                className={`bg-transparent border-none p-2 md:min-w-[44px] md:min-h-[44px] flex items-center justify-center hover:cursor-pointer ${
                   page === currentPage ? "font-black underline" : ""
                 }`}
                 aria-label={`Go to page ${page}`}

@@ -16,21 +16,21 @@ export const projectData: Project[] = [
     location: "Yonkers",
     type: "Siding",
   },
-  {
-    image: "/api/image?key=siding_statenisland_1.jpg",
-    location: "Staten Island",
-    type: "Siding",
-  },
+  // {
+  //   image: "/api/image?key=siding_statenisland_1.jpg",
+  //   location: "Staten Island",
+  //   type: "Siding",
+  // },
   {
     image: "/api/image?key=siding_queens_1.jpg",
     location: "Queens",
     type: "Siding",
   },
-  {
-    image: "/api/image?key=siding_queens_2.jpg",
-    location: "Queens",
-    type: "Siding",
-  },
+  // {
+  //   image: "/api/image?key=siding_queens_2.jpg",
+  //   location: "Queens",
+  //   type: "Siding",
+  // },
   {
     image: "/api/image?key=siding_queens_3.jpg",
     location: "Queens",
@@ -226,26 +226,26 @@ export const projectData: Project[] = [
     location: "Long Island",
     type: "Siding",
   },
-  {
-    image: "/api/image?key=projects/sd_staten_maria_1.jpg",
-    location: "Staten Island",
-    type: "Siding",
-  },
-  {
-    image: "/api/image?key=projects/sd_staten_sal_1.jpg",
-    location: "Staten Island",
-    type: "Siding",
-  },
-  {
-    image: "/api/image?key=projects/sd_yonk_gilberto_1.jpg",
-    location: "Yonkers",
-    type: "Siding",
-  },
-  {
-    image: "/api/image?key=projects/sd_yonk_angi_1.jpg",
-    location: "Yonkers",
-    type: "Siding",
-  },
+  // {
+  //   image: "/api/image?key=projects/sd_staten_maria_1.jpg",
+  //   location: "Staten Island",
+  //   type: "Siding",
+  // },
+  // {
+  //   image: "/api/image?key=projects/sd_staten_sal_1.jpg",
+  //   location: "Staten Island",
+  //   type: "Siding",
+  // },
+  // {
+  //   image: "/api/image?key=projects/sd_yonk_gilberto_1.jpg",
+  //   location: "Yonkers",
+  //   type: "Siding",
+  // },
+  // {
+  //   image: "/api/image?key=projects/sd_yonk_angi_1.jpg",
+  //   location: "Yonkers",
+  //   type: "Siding",
+  // },
   {
     image: "/api/image?key=projects/sd_yonk_jtorres.jpg",
     location: "Yonkers",
@@ -266,11 +266,11 @@ export const projectData: Project[] = [
     location: "Queens",
     type: "Siding",
   },
-  {
-    image: "/api/image?key=projects/sd_queens_fernando_1.PNG",
-    location: "Queens",
-    type: "Siding",
-  },
+  // {
+  //   image: "/api/image?key=projects/sd_queens_fernando_1.PNG",
+  //   location: "Queens",
+  //   type: "Siding",
+  // },
   {
     image: "/api/image?key=projects/sd_queens_amy_1.jpg",
     location: "Queens",
