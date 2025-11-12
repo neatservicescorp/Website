@@ -26,6 +26,7 @@ export default function Footer() {
           <div className="flex flex-col text-xl">
             <p className="h-5">Office Hours</p>
             <p>Every day, any hour, 24/7 schedule</p>
+            <p className="text-lg">+1 718-880-4080</p>
           </div>
           <div className="flex flex-col text-xl">
             <p>Follow us on social media</p>
