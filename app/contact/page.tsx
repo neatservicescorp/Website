@@ -1,8 +1,35 @@
+import type { Metadata } from "next";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { getThemeFromPath } from "../context/global";
 import MainForm from "../components/MainForm";
 import ImageSlideshow from "../components/ImageSlideshow";
 import GoogleMap from "../components/GoogleMap";
+
+export const metadata: Metadata = {
+  title: "Contact Us | Neat Services Corp - Queens, Brooklyn, NYC",
+  description:
+    "Contact Neat Services Corp for free estimates on roofing, siding, windows & home improvement in Queens, Brooklyn & NYC. Call 718-880-4080 or visit us at 8211 37th Ave, Jackson Heights, NY 11372. Available 24/7.",
+  keywords:
+    "contact roofing contractor Queens, siding contractor Brooklyn, home improvement contractor NYC, free estimate, Jackson Heights contractor",
+  openGraph: {
+    title: "Contact Neat Services Corp - Free Estimates 24/7",
+    description:
+      "Get in touch with Neat Services Corp for expert roofing, siding & home improvement services. Free estimates, 24/7 availability. Serving Queens, Brooklyn & NYC.",
+    url: "https://neatservicescorp.com/contact",
+    type: "website",
+    siteName: "Neat Services Corp",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Neat Services Corp - Free Estimates 24/7",
+    description:
+      "Get in touch with Neat Services Corp for expert roofing, siding & home improvement services. Free estimates, 24/7 availability.",
+  },
+  alternates: {
+    canonical: "https://neatservicescorp.com/contact",
+  },
+};
 
 export default function Contact() {
   const initialTheme = getThemeFromPath("/contact");

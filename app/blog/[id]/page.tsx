@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { addToast } from "@heroui/react";
 import Image from "next/image";
 import { BlogEntriesData } from "./blogEntries";
+import { ArticleStructuredData } from "@/app/components/StructuredData";
 
 type Props = {
   params: Promise<{
@@ -42,6 +43,13 @@ export default function Page({ params }: Props) {
 
   return (
     <ThemeProvider initialTheme={initialTheme}>
+      <ArticleStructuredData
+        title={blogEntry.title}
+        description={blogEntry.startContent}
+        imageUrl={blogEntry.imageUrl}
+        datePublished={blogEntry.date}
+        author={blogEntry.author}
+      />
       <main className="pt-24 lg:pt-32 flex justify-center bg-gray-100 text-black">
         <div className="max-w-[1400px] gap-5 w-full min-h-screen flex flex-col p-5 py-10">
           <div className="flex flex-col gap-3 font-cocogoose">

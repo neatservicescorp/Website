@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { getThemeFromPath } from "../context/global";
@@ -5,6 +6,32 @@ import ProjectsComponent from "../components/Projects";
 import { projectData } from "./data";
 import BlogPreview from "../components/BlogPreview";
 import MainForm from "../components/MainForm";
+
+export const metadata: Metadata = {
+  title: "Our Projects | Neat Services Corp - Roofing & Siding Portfolio",
+  description:
+    "View our portfolio of completed roofing, siding, window, and home improvement projects in Queens, Brooklyn & NYC. See 5-star results from Neat Services Corp's expert craftsmanship.",
+  keywords:
+    "roofing projects Queens, siding projects Brooklyn, home improvement portfolio NYC, before and after home renovation, contractor portfolio",
+  openGraph: {
+    title: "Neat Services Corp Projects - 5 Star Results",
+    description:
+      "View our portfolio of completed roofing, siding, and home improvement projects. See why homeowners across NYC trust Neat Services Corp.",
+    url: "https://neatservicescorp.com/projects",
+    type: "website",
+    siteName: "Neat Services Corp",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Neat Services Corp Projects - 5 Star Results",
+    description:
+      "View our portfolio of completed roofing, siding, and home improvement projects in NYC.",
+  },
+  alternates: {
+    canonical: "https://neatservicescorp.com/projects",
+  },
+};
 
 export default async function Projects() {
   const initialTheme = getThemeFromPath("/projects");

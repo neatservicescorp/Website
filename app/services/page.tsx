@@ -10,16 +10,58 @@ import {
   Divider,
 } from "@heroui/react";
 import RoofingMethod from "../components/RoofingMethod";
-import InteractiveMap from "../components/InteractiveMap";
 import MainForm from "../components/MainForm";
 import GoogleMap from "../components/GoogleMap";
+import { FAQStructuredData } from "../components/StructuredData";
 
 export default function Services() {
   const initialTheme = getThemeFromPath("/services");
-  const mapToken = process.env.NEXT_PUBLIC_MAP_TOKEN;
+
+  const faqs = [
+    {
+      question: "Can I finance my roofing or siding project?",
+      answer:
+        "Yes, we offer financing options for qualified customers. Ask us during your estimate and we'll walk you through it",
+    },
+    {
+      question: "What areas do you serve?",
+      answer:
+        "We proudly serve Queens, Brooklyn, Long Island, and the surrounding NYC areas. If you're located nearby and need roofing or siding work, don't hesitate to reach out!",
+    },
+    {
+      question: "Do you offer free estimates for roofing or siding work?",
+      answer:
+        "Yes, Neat Services Inc. offers free, no-obligation estimates for all roofing and siding projects. We'll visit your property, assess your needs, and give you a detailed quote with no hidden costs.",
+    },
+    {
+      question:
+        "I'm in Jackson Heights and want to revamp my home's exterior with new siding but feel overwhelmed by the choices. How can you help me choose the right siding for my home?",
+      answer:
+        "At Neat Services Inc., we understand that selecting new siding can be daunting. For our Jackson Heights customers, we offer personalized consultations where we discuss your aesthetic preferences, budget, and the specific needs of your home. We will guide you through our wide selection of materials, including stone veneer, shake, board and batten, and explain the benefits of each to help you make an informed decision that enhances your home's curb appeal and provides lasting value. We can also use our virtual design tools to help you visualize the final results.",
+    },
+    {
+      question:
+        "I'm interested in a new roof for my home, but I'm concerned about the disruption. How do you minimize inconvenience to homeowners during a roof replacement project?",
+      answer:
+        "At Neat Services Inc., we understand that a roof replacement can be disruptive. For our Jackson Heights clients, we strive to minimize inconvenience by carefully scheduling the project, efficiently managing debris removal, and maintaining clear communication throughout the process. We protect your landscaping and property, and work diligently to complete the project as quickly and smoothly as possible while adhering to our high-quality standards.",
+    },
+    {
+      question:
+        "I'm in Jackson Heights and need a new roof. What is the typical process like for a roof replacement with you?",
+      answer:
+        "For Jackson Heights roof replacements, our process starts with a consultation where we assess your needs and discuss material options. During the replacement, we prioritize protecting your property and ensuring efficient installation. Finally, we conduct a thorough cleanup and final inspection to ensure your complete satisfaction with your new roof.",
+    },
+    {
+      question:
+        "I live near Jackson Heights, and I'm worried about the upcoming winter. Do you offer roof inspections to identify potential problems before the bad weather hits?",
+      answer:
+        "Yes, we offer comprehensive roof inspections in the Jackson Heights area and nearby communities. We can check for vulnerabilities like damaged shingles, leaks, and poor insulation, and provide recommendations to prepare your roof for the winter months ahead.",
+    },
+  ];
 
   return (
     <ThemeProvider initialTheme={initialTheme}>
+      <FAQStructuredData faqs={faqs} />
       <main id="main-content" className="min-h-screen pt-24 lg:pt-32">
         <div className="w-full h-[960px] md:h-[850px] 2xl:h-[900px] justify-center relative flex items-center p-5">
           <div className="absolute w-full h-full bg-black/20 z-10"></div>
