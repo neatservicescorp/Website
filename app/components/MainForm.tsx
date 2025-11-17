@@ -16,6 +16,7 @@ import { useState } from "react";
 type FormData = {
   name: string;
   phone: string;
+  reason: string; // HoneyPot field
   email: string;
   service: string;
 };
@@ -24,13 +25,21 @@ export default function MainForm() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     phone: "",
+    reason: "",
     email: "",
     service: "",
   });
+  const [renderedAt] = useState(() => Date.now());
 
   const [opted, isOpted] = useState(false);
 
   const handleSubmit = async () => {
+    if (Date.now() - renderedAt < 2500) {
+      return;
+    }
+    if (formData.reason.length > 0) {
+      return;
+    }
     await fetch("/api/email", {
       method: "POST",
       cache: "no-cache",
@@ -42,8 +51,10 @@ export default function MainForm() {
       name: "",
       phone: "",
       email: "",
+      reason: "",
       service: "",
     });
+
     addToast({
       title: "We received your message!",
       description: "We'll get back to you as soon as possible.",
@@ -107,6 +118,19 @@ export default function MainForm() {
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
             }
+          />
+          {/* Honeypot input field for spam prevention */}
+          <Input
+            size="lg"
+            label="Reason"
+            value={formData.reason}
+            onChange={(e) =>
+              setFormData({ ...formData, reason: e.target.value })
+            }
+            className="hidden"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
           />
           <Select
             label="Service"
