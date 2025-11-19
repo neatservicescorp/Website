@@ -33,6 +33,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords:
       "roofing tips, siding maintenance, home improvement advice, home renovation, contractor tips, NYC home improvement",
     authors: [{ name: blogEntry.author }],
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+      },
+    },
     openGraph: {
       title: blogEntry.title,
       description,

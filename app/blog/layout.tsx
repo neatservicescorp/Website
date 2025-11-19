@@ -6,6 +6,14 @@ export const metadata: Metadata = {
     "Expert home improvement tips, roofing advice, siding maintenance guides, and home renovation insights from Neat Services Corp. Serving Queens, Brooklyn & NYC.",
   keywords:
     "roofing tips, siding maintenance, home improvement blog, home renovation advice, contractor blog NYC, roofing guides",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   openGraph: {
     title: "Neat Services Blog - Home Improvement Tips & Advice",
     description:
@@ -33,4 +41,3 @@ export default function BlogLayout({
 }) {
   return <>{children}</>;
 }
-

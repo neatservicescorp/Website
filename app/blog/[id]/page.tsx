@@ -1,13 +1,10 @@
-"use client";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import { getThemeFromPath } from "@/app/context/global";
-import React, { useEffect } from "react";
 import BlogEntryComponent from "./components";
-import { useRouter } from "next/navigation";
-import { addToast } from "@heroui/react";
 import Image from "next/image";
 import { BlogEntriesData } from "./blogEntries";
 import { ArticleStructuredData } from "@/app/components/StructuredData";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: Promise<{
@@ -15,31 +12,23 @@ type Props = {
   }>;
 };
 
-export default function Page({ params }: Props) {
-  const initialTheme = getThemeFromPath("/");
-  const router = useRouter();
+// Generate static params for all blog entries at build time
+export async function generateStaticParams() {
+  return BlogEntriesData.map((entry) => ({
+    id: entry.key,
+  }));
+}
 
-  const { id } = React.use(params);
-  const blogEntry = BlogEntriesData.find((entry) => entry.key === id)!;
+export default async function Page({ params }: Props) {
+  const { id } = await params;
+  const blogEntry = BlogEntriesData.find((entry) => entry.key === id);
 
-  useEffect(() => {
-    if (!blogEntry) {
-      addToast({
-        title: "Error",
-        color: "danger",
-        description: "Blog entry not found",
-      });
-      router.push("/blog");
-    }
-  }, [blogEntry, id]);
-
+  // Return 404 for invalid blog entries
   if (!blogEntry) {
-    return (
-      <div className="pt-24 lg:pt-32 min-h-[80vh] w-full flex justify-center items-center">
-        Blog entry not found. Redirecting to blog...
-      </div>
-    );
+    notFound();
   }
+
+  const initialTheme = getThemeFromPath("/");
 
   return (
     <ThemeProvider initialTheme={initialTheme}>
