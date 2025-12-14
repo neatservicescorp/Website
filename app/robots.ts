@@ -6,10 +6,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/test/"],
+        disallow: ["/api/"],
       },
     ],
     sitemap: "https://neatservicescorp.com/sitemap.xml",
   };
 }
-

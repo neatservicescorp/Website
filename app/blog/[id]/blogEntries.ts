@@ -28,6 +28,335 @@ export type BlogEntry = {
 
 export const BlogEntriesData: Array<BlogEntry> = [
   {
+    key: "winter-roofing-issues-week-dec-7-13-2025",
+    title: "Winter Roofing Issues to Catch Early",
+    author: "Neat Services Corp",
+    date: "December 13, 2025",
+    imageUrl: "/images/blog_dec_3.webp",
+    startContent:
+      "Short days, snow flurries, and freeze-thaw swings can expose every weak spot on your roof. The week of December 7-13 is when we see ice dams forming, loose flashing lifting, and shingles cracking under temperature swings. Catching these issues now prevents leaks, insulation damage, and emergency calls when the next storm hits.",
+    sections: [
+      {
+        title: "Top Winter Failures We See This Week",
+        contents: [
+          {
+            type: "list",
+            items: [
+              "Ice dams pushing meltwater under shingles and into attics",
+              "Wind-lifted ridge caps and flashing around chimneys",
+              "Brittle, cracked shingles from rapid freeze-thaw cycles",
+              "Clogged gutters forcing water over the fascia",
+              "Backed-up attic moisture from blocked vents",
+              "Loose fasteners on skylights and satellite mounts",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Attic Clues That Trouble Is Starting",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Your attic often tells the story before the ceiling does. A five-minute check with a flashlight can reveal moisture and heat loss long before stains reach drywall.",
+          },
+          {
+            type: "list",
+            items: [
+              "Frost on underside of roof deck after cold nights",
+              "Darkened insulation or damp batts near eaves",
+              "Rust on nails poking through sheathing",
+              "Musty odor or visible drip trails along rafters",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Quick Diagnostics You Can Do from the Ground",
+        contents: [
+          {
+            type: "list",
+            items: [
+              "Look for uneven snow melt lines—often a sign of heat loss",
+              "Check gutters for icicles or overflow stains",
+              "Scan ridge and eave lines for lifted shingle edges",
+              "Listen in the attic during wind for rattling or drips",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Preventive Moves Before the Next Snowfall",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Small steps lower the odds of mid-storm leaks. Think airflow, drainage, and secure edges so meltwater and wind have nowhere to exploit.",
+          },
+          {
+            type: "list",
+            items: [
+              "Add or clear soffit/ridge vent pathways to balance attic temps",
+              "Trim back branches that can scrape shingles when iced",
+              "Verify gutter outlets are open and extensions are connected",
+              "Re-secure any loose step flashing at walls or dormers",
+            ],
+          },
+        ],
+      },
+      {
+        title: "When to Call a Roofing Pro Immediately",
+        contents: [
+          {
+            type: "text",
+            content:
+              "If you see interior stains, hear dripping, or notice sagging insulation, act fast. The cost of waiting during winter multiplies as water travels and temperatures drop. A professional inspection can isolate the source, secure loose components, and protect your insulation and framing before repairs get expensive.",
+          },
+        ],
+      },
+      {
+        title: "Schedule a Fast Winter Check with Neat Services Corp",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Neat Services Corp handles winter roofing diagnostics across Queens, Brooklyn, the Bronx, and Yonkers. We clear ice dams safely, re-secure flashing, replace cracked shingles, and keep attic ventilation balanced so your roof survives the season. Book a visit now to prevent mid-storm emergencies.",
+          },
+        ],
+      },
+    ],
+    previewTexts: [
+      "Freeze-thaw swings during Dec 7-13 expose weak shingles, flashing, and clogged gutters—prime time for leaks and ice dams.",
+      "A quick winter check from Neat Services Corp secures flashing, vents, and shingles before storms turn small issues into big repairs.",
+    ],
+  },
+  {
+    key: "ice-dam-prevention-gutters-vents-dec-10-2025",
+    title: "Stop Ice Dams Before They Start: Gutters, Vents, and Flashing",
+    author: "Neat Services Corp",
+    date: "December 10, 2025",
+    imageUrl: "/images/blog_dec_2.webp",
+    startContent:
+      "Ice dams build quietly when attic heat melts snow and cold eaves refreeze it. The combination of clean gutters, balanced ventilation, and sealed flashing keeps meltwater moving. Mid-December is the moment to tune these details before back-to-back storms roll through.",
+    sections: [
+      {
+        title: "Essential Moves to Keep Water Flowing",
+        contents: [
+          {
+            type: "list",
+            items: [
+              "Clear gutters/downspouts so meltwater exits fast",
+              "Confirm baffles keep attic airflow unobstructed",
+              "Seal and re-caulk flashing at chimneys and valleys",
+              "Add heat cables only where design allows safe routing",
+            ],
+          },
+        ],
+      },
+      {
+        title: "What Balanced Ventilation Looks Like",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Soffit intake plus ridge or roof vents should move air evenly across the attic. If you see frost on sheathing, damp insulation, or uneven snow melt, airflow is likely off. Correcting this prevents condensation that feeds mold and ice dams alike.",
+          },
+        ],
+      },
+      {
+        title: "Common Mistakes That Create Ice Dams",
+        contents: [
+          {
+            type: "list",
+            items: [
+              "Blocking soffit vents with insulation baffles installed backwards",
+              "Exhausting bath fans into the attic instead of outdoors",
+              "Skipping drip edge or ice-and-water shield at eaves",
+              "Letting gutter guards clog and trap meltwater",
+            ],
+          },
+          {
+            type: "text",
+            content:
+              "These errors add heat and moisture exactly where ice dams form. A quick audit now saves you from ceiling stains mid-winter.",
+          },
+        ],
+      },
+      {
+        title: "Schedule Preventive Help with Neat Services Corp",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Our crews clean and flush gutters, tune attic ventilation, and reseal critical flashing so your roof stays dry and efficient. Serving Queens, Brooklyn, the Bronx, and Yonkers, Neat Services Corp keeps winter water moving in the right direction—away from your home.",
+          },
+        ],
+      },
+    ],
+    previewTexts: [
+      "Ice dams start with clogged gutters and unbalanced attic airflow. Mid-December is the time to fix both.",
+      "Neat Services Corp clears gutters, tunes vents, and seals flashing so meltwater drains safely all winter.",
+    ],
+  },
+
+  {
+    key: "quick-siding-repairs-dec-3-2025",
+    title: "Drafty Walls? Quick Siding Repairs Before Deep Winter",
+    author: "Neat Services Corp",
+    date: "December 3, 2025",
+    imageUrl: "/images/blog_dec_1.webp",
+    startContent:
+      "Early December is the last easy window to seal siding gaps before temperatures plunge. Fast fixes—resealing joints, swapping cracked panels, and tightening trim—block drafts and stop moisture from freezing inside your walls.",
+    sections: [
+      {
+        title: "High-Impact Fixes You Can Do Fast",
+        contents: [
+          {
+            type: "list",
+            items: [
+              "Replace cracked or bowed panels that collect water",
+              "Re-caulk seams at corners, windows, and utility penetrations",
+              "Secure loose J-channels and starter strips",
+              "Clear vegetation touching siding to stop wicking",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Interior Clues Your Siding Needs Attention",
+        contents: [
+          {
+            type: "text",
+            content:
+              "You don’t always need a ladder to know something’s off. Interior symptoms often show up first when cold air and moisture sneak past siding.",
+          },
+          {
+            type: "list",
+            items: [
+              "Cold spots near outlets on exterior walls",
+              "Peeling paint around window jambs or sills",
+              "Musty odor after rain along one wall section",
+              "Drafts you can feel at baseboards on windy days",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Why Timing Matters",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Once deep cold sets in, sealants cure slowly and materials become brittle. Addressing issues now means better adhesion, cleaner lines, and fewer callbacks. You also prevent freeze-expansion that can turn hairline gaps into costly repairs.",
+          },
+        ],
+      },
+      {
+        title: "Better Materials for Cold-Weather Touch-Ups",
+        contents: [
+          {
+            type: "list",
+            items: [
+              "Cold-weather sealants rated to cure below 40°F",
+              "PVC trim replacements that won’t swell with moisture",
+              "Backer rod to size joints before caulking for longer life",
+              "Stainless or coated fasteners to resist winter corrosion",
+            ],
+          },
+          {
+            type: "text",
+            content:
+              "Using the right materials now prevents rework in spring and keeps warranties intact.",
+          },
+        ],
+      },
+      {
+        title: "Call Neat Services Corp for Same-Week Repairs",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Need siding tightened up quickly? Neat Services Corp offers rapid repairs across Queens, Brooklyn, the Bronx, and Yonkers. We seal, replace, and reinforce vulnerable sections so your home stays warm, quiet, and dry all winter.",
+          },
+        ],
+      },
+    ],
+    previewTexts: [
+      "December’s early cold is the perfect time to seal siding gaps before materials get brittle.",
+      "Neat Services Corp delivers same-week siding repairs that block drafts and moisture before deep winter.",
+    ],
+  },
+  {
+    key: "late-november-siding-repair-priorities-2025",
+    title:
+      "Last Week of November: Siding Repair Priorities Before the First Freeze",
+    author: "Neat Services Corp",
+    date: "November 29, 2025",
+    imageUrl: "/images/blog_nov_4.webp",
+    startContent:
+      "The final week of November is your last warm-enough stretch to prep siding for winter. Tightening the exterior now prevents drafts, water intrusion, and swollen trim once freeze-thaw cycles begin.",
+    sections: [
+      {
+        title: "Checklist to Finish Before Temperatures Drop",
+        contents: [
+          {
+            type: "list",
+            items: [
+              "Swap any soft, rotten, or delaminating boards",
+              "Inspect window and door flashings for gaps",
+              "Touch up sealant at utility penetrations",
+              "Clean siding to reveal hidden cracks or nail pops",
+              "Confirm downspouts discharge away from foundation",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Why These Repairs Can’t Wait",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Moisture that gets behind siding in late fall can freeze, expand, and split panels. Addressing vulnerabilities before the first hard freeze protects sheathing, insulation, and interior finishes, keeping winter energy bills in check.",
+          },
+        ],
+      },
+      {
+        title: "Tools and Materials That Speed Things Up",
+        contents: [
+          {
+            type: "list",
+            items: [
+              "Low-temp exterior caulk for late-fall sealing",
+              "Moisture meter to check questionable trim before repainting",
+              "Flashlight and mirror for tight spots behind meter bases",
+              "Drip cap stock to refresh tired head flashings over windows",
+            ],
+          },
+          {
+            type: "text",
+            content:
+              "Having the right kit on hand turns a weekend scramble into a focused, high-quality repair session before the freeze.",
+          },
+        ],
+      },
+      {
+        title: "Book Neat Services Corp Before Winter Backlogs",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Neat Services Corp prioritizes late-November siding tune-ups in Queens, Brooklyn, the Bronx, and Yonkers. We repair, reseal, and reinforce exteriors so you enter winter with a tight envelope and fewer surprises.",
+          },
+        ],
+      },
+    ],
+    previewTexts: [
+      "Late November is the last easy window to reinforce siding before freeze-thaw damage sets in.",
+      "Neat Services Corp can repair and reseal your exterior now so winter storms don’t find a way in.",
+    ],
+  },
+  {
     key: "fast-estimates-roofing-siding-11-2025",
     title:
       "Why Fast Estimates Matter: The Hidden Cost of Waiting for Roofing & Siding Quotes",
