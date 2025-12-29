@@ -28,6 +28,195 @@ export type BlogEntry = {
 
 export const BlogEntriesData: Array<BlogEntry> = [
   {
+    key: "roofing-gift-protect-home-dec-24-2025",
+    title: "The Best Holiday Gift: A Leak-Free Roof",
+    author: "Neat Services Corp",
+    date: "December 24, 2025",
+    imageUrl: "/images/blog_entry_12_24.png",
+    startContent:
+      "This Christmas Eve, the best gift you can give your family is peace of mind. While holiday decorations go up, winter storms test every seam and shingle. A quick roof inspection now means no emergency calls during family gatherings, no ceiling stains interrupting celebrations, and a warm, dry home through New Year's.",
+    sections: [
+      {
+        title: "Pre-Holiday Roof Priorities",
+        contents: [
+          {
+            type: "list",
+            items: [
+              "Check flashing around chimneys before lighting holiday fires",
+              "Clear gutters of pine needles and debris from decorating",
+              "Inspect attic vents for blockages that trap holiday cooking moisture",
+              "Secure any loose shingles before winter wind picks up",
+              "Test attic insulation to keep heating costs manageable",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Why Christmas Week Matters for Your Roof",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Holiday gatherings mean more heat, humidity, and activity inside—all of which test your home's envelope. Cooking steam, guests, and cranked-up thermostats create attic condensation that can reveal weak points. Addressing these now prevents mid-celebration emergencies.",
+          },
+        ],
+      },
+      {
+        title: "Common Holiday-Season Roof Issues",
+        contents: [
+          {
+            type: "list",
+            items: [
+              "Ice dams forming as holiday lights warm roof edges unevenly",
+              "Chimney flashing leaks discovered when fireplace gets first heavy use",
+              "Overflowing gutters from holiday traffic stirring up debris",
+              "Attic frost from blocked vents meeting indoor humidity spikes",
+            ],
+          },
+        ],
+      },
+      {
+        title: "The Hidden Cost of Waiting Until January",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Many homeowners delay roof maintenance through the holidays, thinking they'll address it in the new year. But winter doesn't wait for your schedule. Every storm between now and January multiplies the damage from small vulnerabilities. A loose shingle becomes a torn section. A minor flashing gap turns into soaked insulation. Emergency repairs during peak winter cost more and take longer to schedule. Protecting your roof now means avoiding the January scramble when everyone else realizes they waited too long.",
+          },
+        ],
+      },
+      {
+        title: "What a Quick Pre-Holiday Inspection Reveals",
+        contents: [
+          {
+            type: "text",
+            content:
+              "A professional inspection takes less than an hour but uncovers issues invisible from the ground. We check shingle adhesion, test flashing seals, verify gutter flow, and assess attic ventilation. Most problems we find can be fixed the same day with basic materials and tools. The goal isn't a full roof replacement—it's targeted repairs that buy you peace of mind through the season's worst weather. Think of it as preventive maintenance that protects your biggest investment while your family enjoys the holidays.",
+          },
+        ],
+      },
+      {
+        title: "Give Your Home the Gift of Protection",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Neat Services Corp offers express holiday-week inspections and emergency repairs across Queens, Brooklyn, the Bronx, and Yonkers. We secure flashing, clear gutters, and fix vulnerable spots so your celebrations stay warm and worry-free. Schedule now and enjoy the season knowing your roof is ready for whatever winter brings.",
+          },
+        ],
+      },
+    ],
+    previewTexts: [
+      "This Christmas Eve, give your family the gift of a secure, leak-free roof ready for holiday storms and gatherings.",
+      "Neat Services Corp handles express holiday-week roof checks so celebrations stay dry and stress-free.",
+    ],
+  },
+  {
+    key: "siding-winter-ready-dec-16-2025",
+    title: "Wrap Your Home for Winter: Siding Prep",
+    author: "Neat Services Corp",
+    date: "December 16, 2025",
+    imageUrl: "/images/blog_entry_12_16.png",
+    startContent:
+      "Just like wrapping holiday gifts, your home's exterior needs secure sealing before winter's deep freeze. Mid-December is the perfect moment to close gaps, replace damaged panels, and weatherproof trim—think of it as gift-wrapping your house against harsh weather.",
+    sections: [
+      {
+        title: "Essential Siding Winterization Steps",
+        contents: [
+          {
+            type: "list",
+            items: [
+              "Seal cracks and gaps at corners and window trim",
+              "Replace cracked or loose panels that let cold air through",
+              "Caulk around outdoor outlets and utility penetrations",
+              "Secure J-channels and starter strips against wind uplift",
+              "Clear any ice buildup touching lower siding courses",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Holiday Season Siding Stress Points",
+        contents: [
+          {
+            type: "text",
+            content:
+              "December brings unique challenges to siding: outdoor holiday decorations create mounting stress, foot traffic around the foundation disturbs drainage, and heavy snow loads can push against lower panels. A quick check now prevents damage during the season's busiest weeks.",
+          },
+        ],
+      },
+      {
+        title: "Signs Your Siding Needs Pre-Winter Attention",
+        contents: [
+          {
+            type: "list",
+            items: [
+              "Visible gaps between panels or at corner posts",
+              "Frost forming on interior walls near windows",
+              "Loose or rattling panels in wind",
+              "Water stains or discoloration on panel edges",
+              "Higher heating bills from drafts penetrating walls",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Winter-Grade Materials That Last",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Cold-weather caulks, weather-resistant fasteners, and properly installed backer rods make repairs hold through freeze-thaw cycles. Using the right materials now means your siding stays sealed through spring thaw.",
+          },
+        ],
+      },
+      {
+        title: "How Proper Siding Sealing Cuts Energy Waste",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Every gap in your siding is a direct path for heated air to escape and cold air to infiltrate. Mid-December repairs aren't just about preventing water damage—they're about cutting the silent energy drain that inflates heating bills all winter. When we seal siding properly, we create a continuous thermal barrier that works with your insulation instead of fighting it. Homeowners often see noticeable comfort improvements within days as drafts disappear and hot spots even out. The money saved on heating often pays for the repair work before spring arrives.",
+          },
+        ],
+      },
+      {
+        title: "The Freeze-Thaw Cycle and Why Timing Matters",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Mid-December sits in a sweet spot for siding work: cold enough to reveal problems, but not so frozen that materials won't bond properly. Once January's deep freeze arrives, repair work becomes more challenging. Caulks take longer to cure, panels become brittle and prone to cracking during installation, and extreme cold limits the effectiveness of adhesives. Addressing siding issues now means repairs are done right, with materials that perform as designed. Waiting until late winter often means temporary patches that need redoing in spring.",
+          },
+        ],
+      },
+      {
+        title: "Beyond Aesthetics: Structural Protection",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Siding isn't just about curb appeal—it's your home's primary defense against the elements. When panels crack or gaps open, moisture reaches the house wrap, sheathing, and eventually the wall studs. Winter moisture that freezes inside wall cavities causes slow, expensive damage that may not surface until spring reveals mold, rot, or structural weakness. Securing siding now protects not just comfort and energy bills, but the integrity of your home's frame and the health of everyone inside.",
+          },
+        ],
+      },
+      {
+        title: "Quick Siding Fixes from Neat Services Corp",
+        contents: [
+          {
+            type: "text",
+            content:
+              "Neat Services Corp provides fast siding repairs and winterization across Queens, Brooklyn, the Bronx, and Yonkers. We seal, replace, and secure vulnerable sections so your home stays wrapped tight against winter weather. Book a pre-holiday inspection and enjoy a draft-free, energy-efficient season.",
+          },
+        ],
+      },
+    ],
+    previewTexts: [
+      "Mid-December siding prep is like gift-wrapping your home—seal gaps and secure panels before deep winter sets in.",
+      "Neat Services Corp delivers fast siding winterization so your home stays warm, dry, and protected through the holidays.",
+    ],
+  },
+  {
     key: "winter-roofing-issues-week-dec-7-13-2025",
     title: "Winter Roofing Issues to Catch Early",
     author: "Neat Services Corp",
