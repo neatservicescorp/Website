@@ -132,7 +132,7 @@ export const BlogEntriesData: Array<BlogEntry> = [
   },
   {
     key: "ice-dam-prevention-gutters-vents-dec-10-2025",
-    title: "Stop Ice Dams Before They Start: Gutters, Vents, and Flashing",
+    title: "Stop Ice Dams Before They Start",
     author: "Neat Services Corp",
     date: "December 10, 2025",
     imageUrl: "/images/blog_dec_2.webp",
@@ -201,7 +201,7 @@ export const BlogEntriesData: Array<BlogEntry> = [
 
   {
     key: "quick-siding-repairs-dec-3-2025",
-    title: "Drafty Walls? Quick Siding Repairs Before Deep Winter",
+    title: "Drafty Walls? Siding Repairs Before Deep Winter",
     author: "Neat Services Corp",
     date: "December 3, 2025",
     imageUrl: "/images/blog_dec_1.webp",

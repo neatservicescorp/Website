@@ -30,7 +30,7 @@ export default function ProjectCard({ project }: Props) {
 
       <button
         onClick={onOpen}
-        className="z-10 aspect-square w-[250px] lg:w-[300px] 2xl:w-[350px] bg-transparent border-none p-0 cursor-pointer hover:opacity-90 transition-opacity"
+        className="z-10 aspect-square w-full md:w-[250px] lg:w-[300px] 2xl:w-[350px] bg-transparent border-none p-0 cursor-pointer hover:opacity-90 transition-opacity"
         aria-label={`View ${project.type} project in ${project.location}`}
       >
         <Card

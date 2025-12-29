@@ -162,7 +162,7 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
       <div className="flex flex-wrap z-10 lg:py-12 gap-2 md:gap-6 xl:gap-x-6 xl:gap-y-16 py-5 min-h-[400px] justify-center">
         {visibleProjects.map((project, index) => (
           <div
-            className="aspect-video max-h-[180px] md:max-h-full md:aspect-auto flex justify-center"
+            className="max-h-[180px] md:max-h-full md:aspect-auto flex justify-center"
             key={index}
           >
             <ProjectCard project={project} />
