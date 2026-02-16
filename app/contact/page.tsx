@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "../components/ThemeProvider";
-import { getThemeFromPath } from "../context/global";
+import { getThemeFromPath } from "../lib/theme";
 import MainForm from "../components/MainForm";
 import ImageSlideshow from "../components/ImageSlideshow";
 import GoogleMap from "../components/GoogleMap";

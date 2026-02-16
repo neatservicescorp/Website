@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { ThemeProvider } from "../components/ThemeProvider";
-import { getThemeFromPath } from "../context/global";
+import { getThemeFromPath } from "../lib/theme";
 import {
   Accordion,
   AccordionItem,

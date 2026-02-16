@@ -1,8 +1,9 @@
 import { MetadataRoute } from "next";
-import { BlogEntriesData } from "./blog/[id]/blogEntries";
+import { getSortedPostsData } from "./lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://neatservicescorp.com";
+  const posts = getSortedPostsData();
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
@@ -45,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Dynamic blog pages
-  const blogPages: MetadataRoute.Sitemap = BlogEntriesData.map((entry) => ({
+  const blogPages: MetadataRoute.Sitemap = posts.map((entry) => ({
     url: `${baseUrl}/blog/${entry.key}`,
     lastModified: new Date(entry.date),
     changeFrequency: "monthly" as const,
@@ -54,4 +55,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...staticPages, ...blogPages];
 }
-

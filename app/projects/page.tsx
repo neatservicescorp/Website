@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ThemeProvider } from "../components/ThemeProvider";
-import { getThemeFromPath } from "../context/global";
+import { getThemeFromPath } from "../lib/theme";
 import ProjectsComponent from "../components/Projects";
 import { projectData } from "./data";
 import BlogPreview from "../components/BlogPreview";
 import MainForm from "../components/MainForm";
+import { getSortedPostsData } from "../lib/blog";
 
 export const metadata: Metadata = {
   title: "Our Projects | Neat Services Corp - Roofing & Siding Portfolio",
@@ -35,6 +36,7 @@ export const metadata: Metadata = {
 
 export default async function Projects() {
   const initialTheme = getThemeFromPath("/projects");
+  const entries = getSortedPostsData();
 
   return (
     <ThemeProvider initialTheme={initialTheme}>
@@ -74,7 +76,7 @@ export default async function Projects() {
               <h2 className="font-exotc350 text-6xl">Our blog</h2>
               <p className="font-cocogoose text-lg">Recent articles</p>
             </div>
-            <BlogPreview />
+            <BlogPreview entries={entries} />
           </div>
         </div>
       </main>

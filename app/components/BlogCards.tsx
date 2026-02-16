@@ -2,11 +2,11 @@
 import { Card, CardBody, CardHeader, ScrollShadow } from "@heroui/react";
 import Image from "next/image";
 import React from "react";
-import { BlogEntry } from "../blog/[id]/blogEntries";
+import { BlogPostPreview } from "../lib/blog";
 import { useRouter } from "next/navigation";
 
 type BlogCardsProps = {
-  entries: BlogEntry[];
+  entries: BlogPostPreview[];
 };
 
 export default function BlogCards({ entries }: BlogCardsProps) {
@@ -35,9 +35,7 @@ export default function BlogCards({ entries }: BlogCardsProps) {
                 </p>
               </div>
               <ScrollShadow className="h-[80%] mb-10 flex flex-col gap-2 text-sm font-cocogoose overflow-hidden text-justify">
-                {entry.previewTexts.map((text, idx) => (
-                  <p key={idx}>{text}</p>
-                ))}
+                <p>{entry.description}</p>
               </ScrollShadow>
               <button
                 onClick={() => router.push(`/blog/${entry.key}`)}

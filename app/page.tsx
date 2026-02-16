@@ -3,7 +3,7 @@ import Certifications from "./components/Certifications";
 import RoofingMethod from "./components/RoofingMethod";
 import ImageSlideshow from "./components/ImageSlideshow";
 import { ThemeProvider } from "./components/ThemeProvider";
-import { getThemeFromPath } from "./context/global";
+import { getThemeFromPath } from "./lib/theme";
 import MainServices from "./sections/MainServices";
 import MainFinalSection from "./sections/MainFinalSection";
 import Reviews from "./components/Reviews";

@@ -1,23 +1,13 @@
-import { getThemeFromPath } from "../context/global";
+import { getThemeFromPath } from "../lib/theme";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { Divider } from "@heroui/react";
 import InitialBlogPrev from "../components/InitialBlogPrev";
 import BlogCards from "../components/BlogCards";
-import { useMemo } from "react";
-import { BlogEntriesData } from "./[id]/blogEntries";
+import { getSortedPostsData } from "../lib/blog";
 
 export default function Blog() {
   const initialTheme = getThemeFromPath("/contact");
-  const entries = useMemo(
-    () =>
-      BlogEntriesData.sort((a, b) => {
-        const dateA = new Date(a.date);
-        const dateB = new Date(b.date);
-
-        return dateB.getTime() - dateA.getTime();
-      }),
-    []
-  );
+  const entries = getSortedPostsData();
 
   return (
     <ThemeProvider initialTheme={initialTheme}>
@@ -29,11 +19,11 @@ export default function Blog() {
           <h1 className="font-exotc350 text-4xl md:text-5xl xl:text-6xl py-10 text-center">
             Neat Services Blog
           </h1>
-          <InitialBlogPrev entry={entries[0]} />
+          {entries.length > 0 && <InitialBlogPrev entry={entries[0]} />}
           <Divider className="my-2" />
           <h2 className="my-4 font-exotc350 text-5xl">Latest posts</h2>
 
-          <BlogCards entries={entries.slice(1, 4)} />
+          {entries.length > 1 && <BlogCards entries={entries.slice(1, 4)} />}
         </div>
       </main>
     </ThemeProvider>

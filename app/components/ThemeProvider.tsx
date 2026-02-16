@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { useGlobalStore, Theme } from "@/app/context/global";
+import { useGlobalStore } from "@/app/context/global";
+import { Theme } from "@/app/lib/theme";
 
 export const ThemeProvider = ({
   children,

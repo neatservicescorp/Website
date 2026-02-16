@@ -3,7 +3,7 @@ import Image from "next/image";
 import Certifications from "../components/Certifications";
 import Reviews from "../components/Reviews";
 import { ThemeProvider } from "../components/ThemeProvider";
-import { getThemeFromPath } from "../context/global";
+import { getThemeFromPath } from "../lib/theme";
 
 export const metadata: Metadata = {
   title: "Customer Reviews | Neat Services Corp - 5 Star Rated Contractors",
