@@ -3,9 +3,13 @@ import { Button, Card, CardBody } from "@heroui/react";
 import FAQItem from "../components/FAQItem";
 import { useRouter } from "next/navigation";
 import ImageSlideshow from "../components/ImageSlideshow";
+import { useState } from "react";
 
 export default function MainFinalSection() {
   const router = useRouter();
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggle = (i: number) => setOpenIndex((prev) => (prev === i ? null : i));
 
   const slideImages = [
     "/api/image?key=team.jpeg",
@@ -24,22 +28,30 @@ export default function MainFinalSection() {
           <h3 className="font-exotc350 text-6xl">FAQS</h3>
           <p className="font-cocogoose text-medium">Your questions, answered</p>
         </div>
-        <div className="flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 gap-2 md:gap-5">
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-2 md:gap-5 p-0 md:items-start">
           <FAQItem
             title="Can I finance my roofing or siding project?"
-            content="Yes, we offer financing options for qualified customers. Ask us during your estimate, we’ll walk you through it"
+            content="Yes, we offer financing options for qualified customers. Ask us during your estimate, we'll walk you through it"
+            isOpen={openIndex === 0}
+            onToggle={() => toggle(0)}
           />
           <FAQItem
             title="What areas do you serve?"
-            content="We proudly serve Queens, Brooklyn, Long Island, and the surrounding NYC areas. If you’re located nearby and need roofing or siding work, don’t hesitate to reach out!"
+            content="We proudly serve Queens, Brooklyn, Long Island, and the surrounding NYC areas. If you're located nearby and need roofing or siding work, don't hesitate to reach out!"
+            isOpen={openIndex === 1}
+            onToggle={() => toggle(1)}
           />
           <FAQItem
             title="Do you offer free estimates for roofing or siding work?"
-            content="Yes, Neat Services Inc. offers free, no-obligation estimates for all roofing and siding projects. We’ll visit your property, assess your needs, and give you a detailed quote with no hidden costs."
+            content="Yes, Neat Services Inc. offers free, no-obligation estimates for all roofing and siding projects. We'll visit your property, assess your needs, and give you a detailed quote with no hidden costs."
+            isOpen={openIndex === 2}
+            onToggle={() => toggle(2)}
           />
           <FAQItem
             title="Do you offer siding installation or replacement services?"
             content="Yes, we absolutely offer siding installation and replacement services in Jackson Heights and the surrounding communities. We work with various siding materials, including vinyl, fiber cement, and wood, and can help you choose the best option to enhance your home's curb appeal and energy efficiency."
+            isOpen={openIndex === 3}
+            onToggle={() => toggle(3)}
           />
         </div>
         <Button
@@ -71,7 +83,7 @@ export default function MainFinalSection() {
           </Card>
           <div className="flex flex-col text-black gap-4 px-5 md:px-10 justify-center md:w-[50%]">
             <h3 className="font-exotc350 text-5xl leading-10 md:text-6xl md:leading-12">
-              More than a slogan, it’s our commitment
+              More than a slogan, it's our commitment
             </h3>
             <p className="font-cocogoose text-sm text-justify">
               At Neat Services, we believe that being neat is more than clean

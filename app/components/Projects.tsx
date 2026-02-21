@@ -1,5 +1,5 @@
 "use client";
-import { Divider, Select, SelectItem } from "@heroui/react";
+
 import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import Image from "next/image";
@@ -115,48 +115,32 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
       <div className="flex flex-col md:flex-row text-black w-full gap-5 lg:gap-12">
         <h3 className="font-exotc350 text-4xl lg:text-5xl">Filter by:</h3>
         <div className="flex flex-row gap-5">
-          <Select
+          <select
             name="type"
-            size="lg"
             aria-label="Filter projects by product type"
-            classNames={{
-              label: "text-black",
-              trigger: "border-black rounded-md border-1",
-              listbox: "font-cocogoose text-black",
-            }}
             onChange={handleFilter}
-            fullWidth
-            label="Product"
-            className="font-cocogoose w-[270px]"
-            variant="bordered"
+            className="font-cocogoose text-black border border-black rounded-md px-3 py-3 w-[270px] bg-white hover:cursor-pointer"
           >
-            <SelectItem key="Roofing">Roofing</SelectItem>
-            <SelectItem key="Siding">Siding</SelectItem>
-            <SelectItem key="Windows">Windows</SelectItem>
-            <SelectItem key="Other">Other</SelectItem>
-          </Select>
-          <Select
+            <option value="">Product</option>
+            <option value="Roofing">Roofing</option>
+            <option value="Siding">Siding</option>
+            <option value="Windows">Windows</option>
+            <option value="Other">Other</option>
+          </select>
+          <select
             name="location"
-            size="lg"
-            variant="bordered"
             aria-label="Filter projects by location"
-            classNames={{
-              label: "text-black",
-              trigger: "border-black rounded-md border-1",
-              listbox: "font-cocogoose text-black",
-            }}
             onChange={handleFilter}
-            label="Location"
-            fullWidth
-            className="font-cocogoose w-[270px]"
+            className="font-cocogoose text-black border border-black rounded-md px-3 py-3 w-[270px] bg-white hover:cursor-pointer"
           >
-            <SelectItem key="Brooklyn">Brooklyn</SelectItem>
-            <SelectItem key="Staten Island">Staten Island</SelectItem>
-            <SelectItem key="Long Island">Long Island</SelectItem>
-            <SelectItem key="Bronx">Bronx</SelectItem>
-            <SelectItem key="Queens">Queens</SelectItem>
-            <SelectItem key="Yonkers">Yonkers</SelectItem>
-          </Select>
+            <option value="">Location</option>
+            <option value="Brooklyn">Brooklyn</option>
+            <option value="Staten Island">Staten Island</option>
+            <option value="Long Island">Long Island</option>
+            <option value="Bronx">Bronx</option>
+            <option value="Queens">Queens</option>
+            <option value="Yonkers">Yonkers</option>
+          </select>
         </div>
       </div>
       <div className="flex flex-wrap z-10 lg:py-12 gap-2 md:gap-6 xl:gap-x-6 xl:gap-y-16 py-5 min-h-[400px] justify-center">
@@ -169,7 +153,7 @@ export default function ProjectsComponent({ projects }: ProjectsProps) {
           </div>
         ))}
       </div>
-      <Divider className="bg-black/40" />
+      <hr className="border-black/40" />
       <div className="flex w-full justify-end">
         <div className="flex flex-row w-full items-center max-w-[800px] py-4 text-black gap-3 font-cocogoose text-sm">
           <p>Explore the full gallery</p>

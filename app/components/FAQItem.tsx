@@ -1,37 +1,43 @@
-import { Accordion, AccordionItem } from "@heroui/react";
+"use client";
 import Image from "next/image";
-import React from "react";
+import { useRef } from "react";
 
 type Props = {
   title: string;
   content: string;
+  isOpen: boolean;
+  onToggle: () => void;
 };
 
-export default function FAQItem({ title, content }: Props) {
+export default function FAQItem({ title, content, isOpen, onToggle }: Props) {
+  const contentRef = useRef<HTMLDivElement>(null);
+
   return (
-    <Accordion variant="splitted">
-      <AccordionItem
-        title={title}
-        indicator={
-          <Image
-            src="/icons/cross.svg"
-            alt="expand_button"
-            width={50}
-            height={50}
-            className="w-7 h-7"
-          />
-        }
-        className="bg-transparent border-1 border-black text-black font-cocogoose text-sm p-3"
-        classNames={{
-          base: "content-center",
-          title: "text-black font-cocogoose",
-          trigger: "lg:gap-7 flex-row-reverse hover:cursor-pointer",
-          indicator: "text-black w-7 h-7 data-[open=true]:-rotate-45",
-          content: "px-5",
+    <div className="border border-black rounded-xl overflow-hidden self-start">
+      <button
+        onClick={onToggle}
+        className="w-full flex flex-row-reverse items-center gap-4 lg:gap-7 p-4 hover:cursor-pointer text-left bg-transparent"
+        aria-expanded={isOpen}
+      >
+        <span
+          className="flex-shrink-0 w-7 h-7 transition-transform duration-300"
+          style={{ transform: isOpen ? "rotate(-45deg)" : "rotate(0deg)" }}
+        >
+          <Image src="/icons/cross.svg" alt="toggle" width={28} height={28} className="w-7 h-7" />
+        </span>
+        <span className="flex-1 text-black font-cocogoose text-sm">{title}</span>
+      </button>
+
+      <div
+        ref={contentRef}
+        style={{
+          maxHeight: isOpen ? contentRef.current?.scrollHeight + "px" : "0px",
+          overflow: "hidden",
+          transition: "max-height 0.3s ease",
         }}
       >
-        {content}
-      </AccordionItem>
-    </Accordion>
+        <p className="px-5 pb-4 text-black font-cocogoose text-sm">{content}</p>
+      </div>
+    </div>
   );
 }

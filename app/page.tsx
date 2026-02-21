@@ -8,6 +8,7 @@ import MainServices from "./sections/MainServices";
 import MainFinalSection from "./sections/MainFinalSection";
 import Reviews from "./components/Reviews";
 import FinancingOpts from "./components/FinancingOpts";
+import RoofrEstimator from "./components/RoofrEstimator";
 
 export default function Home() {
   const initialTheme = getThemeFromPath("/");
@@ -69,6 +70,7 @@ export default function Home() {
             </div>
             <RoofingMethod />
             <FinancingOpts />
+            <RoofrEstimator />
           </div>
         </div>
         <div className="relative flex justify-center min-h-[700px]">
