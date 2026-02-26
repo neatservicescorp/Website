@@ -13,7 +13,7 @@ export default function FAQItem({ title, content, isOpen, onToggle }: Props) {
   const contentRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="border border-black rounded-xl overflow-hidden self-start">
+    <div className="border border-black rounded-xl overflow-hidden self-start w-full">
       <button
         onClick={onToggle}
         className="w-full flex flex-row-reverse items-center gap-4 lg:gap-7 p-4 hover:cursor-pointer text-left bg-transparent"
@@ -23,9 +23,17 @@ export default function FAQItem({ title, content, isOpen, onToggle }: Props) {
           className="flex-shrink-0 w-7 h-7 transition-transform duration-300"
           style={{ transform: isOpen ? "rotate(-45deg)" : "rotate(0deg)" }}
         >
-          <Image src="/icons/cross.svg" alt="toggle" width={28} height={28} className="w-7 h-7" />
+          <Image
+            src="/icons/cross.svg"
+            alt="toggle"
+            width={28}
+            height={28}
+            className="w-7 h-7"
+          />
         </span>
-        <span className="flex-1 text-black font-cocogoose text-sm">{title}</span>
+        <span className="flex-1 text-black font-cocogoose text-sm lg:text-base lg:font-semibold">
+          {title}
+        </span>
       </button>
 
       <div
@@ -36,7 +44,9 @@ export default function FAQItem({ title, content, isOpen, onToggle }: Props) {
           transition: "max-height 0.3s ease",
         }}
       >
-        <p className="px-5 pb-4 text-black font-cocogoose text-sm">{content}</p>
+        <p className="px-5 pb-4 text-black font-cocogoose text-sm lg:text-base">
+          {content}
+        </p>
       </div>
     </div>
   );

@@ -83,7 +83,7 @@ export default function MainFinalSection() {
           </Card>
           <div className="flex flex-col text-black gap-4 px-5 md:px-10 justify-center md:w-[50%]">
             <h3 className="font-exotc350 text-5xl leading-10 md:text-6xl md:leading-12">
-              More than a slogan, it's our commitment
+              More than a slogan, {"it's"} our commitment
             </h3>
             <p className="font-cocogoose text-sm text-justify">
               At Neat Services, we believe that being neat is more than clean
