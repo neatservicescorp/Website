@@ -8,9 +8,7 @@ import { ArticleStructuredData } from "@/app/components/StructuredData";
 import { notFound } from "next/navigation";
 
 type Props = {
-  params: Promise<{
-    id: string;
-  }>;
+  params: Promise<{ id: string }>;
 };
 
 // Generate static params for all blog entries at build time
@@ -58,6 +56,7 @@ export default async function Page({ params }: Props) {
               width={1500}
               height={1000}
               className="w-full h-auto rounded-[35px] lg:p-5"
+              priority
             />
             <BlogEntryComponent entry={blogEntry} />
             
@@ -72,6 +71,7 @@ export default async function Page({ params }: Props) {
       </ThemeProvider>
     );
   } catch (error) {
+    console.error("Error loading blog post:", error);
     notFound();
   }
 }

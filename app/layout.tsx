@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavBar, Footer } from "./components";
+import TopBar from "./components/NavBar/TopBar";
 import Providers from "./providers";
 import Messages from "./components/Messages";
 import GoogleAnalytics from "./components/GoogleAnalytics";
@@ -122,6 +123,7 @@ export default function RootLayout({
             Skip to main content
           </a>
           <Messages />
+          <TopBar />
           <NavBar />
           {children}
           <Footer />
