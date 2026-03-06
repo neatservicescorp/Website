@@ -14,7 +14,7 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`h-24 shadow-lg lg:h-32 absolute z-50 ${
+      className={`h-24 shadow-lg lg:h-32 fixed top-10 z-40 ${
         pageTheme === "light" ? "bg-[#E9E9E9]" : "bg-red-neat"
       } flex justify-center w-full`}
     >

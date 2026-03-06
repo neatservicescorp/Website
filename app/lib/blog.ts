@@ -114,18 +114,20 @@ export async function getPostData(id: string): Promise<BlogPost> {
     };
 
     const dateObj = new Date(matterData.date);
-    const formattedDate = dateObj.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-    });
+    const formattedDate = isNaN(dateObj.getTime())
+        ? String(matterData.date)
+        : dateObj.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+        });
 
     return {
         key: id,
         contentHtml,
         ...matterData,
         date: formattedDate,
-        rawDate: dateObj.toISOString(),
+        rawDate: isNaN(dateObj.getTime()) ? new Date().toISOString() : dateObj.toISOString(),
         tags: matterData.tags || [],
     };
 }
