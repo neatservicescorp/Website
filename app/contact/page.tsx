@@ -49,7 +49,7 @@ export default function Contact() {
     <ThemeProvider initialTheme={initialTheme}>
       <main
         id="main-content"
-        className="min-h-screen pt-[8.5rem] lg:pt-[10.5rem] bg-white overflow-hidden"
+        className="min-h-screen pt-[8rem] lg:pt-[10rem] bg-white overflow-hidden"
       >
         <div className="bg-[#70685B] h-[650px] lg:h-[750px] 2xl:h-[900px] w-full flex justify-center">
           <div className="w-full max-w-[1600px] relative h-full">
