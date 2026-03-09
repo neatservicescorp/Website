@@ -2,11 +2,7 @@
 import Image from "next/image";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { getThemeFromPath } from "../lib/theme";
-import {
-  Card,
-  CardBody,
-  Divider,
-} from "@heroui/react";
+import { Card, CardBody, Divider } from "@heroui/react";
 import FAQItem from "../components/FAQItem";
 import RoofingMethod from "../components/RoofingMethod";
 import MainForm from "../components/MainForm";
@@ -64,7 +60,7 @@ export default function Services() {
   return (
     <ThemeProvider initialTheme={initialTheme}>
       <FAQStructuredData faqs={faqs} />
-      <main id="main-content" className="min-h-screen pt-24 lg:pt-32">
+      <main id="main-content" className="min-h-screen pt-[8rem] lg:pt-[10rem]">
         <div className="w-full h-[960px] md:h-[850px] 2xl:h-[900px] justify-center relative flex items-center p-5">
           <div className="absolute w-full h-full bg-black/20 z-10"></div>
           <Image

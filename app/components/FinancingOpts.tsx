@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function FinancingOpts() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-5 w-full md:p-10 py-0 md:py-5 lg:h-[510px]">
+    <section className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-5 w-full md:p-10 py-0 md:py-5">
       <Card
         className="w-full md:w-1/2 h-full md:p-5 rounded-none bg-transparent"
         isBlurred
@@ -30,20 +30,23 @@ export default function FinancingOpts() {
           </div>
         </CardBody>
       </Card>
-      <Card className="w-full md:w-1/2" classNames={{ base: `rounded-[35px]` }}>
-        <CardBody className="p-0 py-2 md:py-5 lg:py-10">
+      <Card
+        className="w-full md:w-1/2 h-full"
+        classNames={{ base: `rounded-xl lg:rounded-[35px]` }}
+      >
+        <CardBody className="p-0">
           <button
             onClick={() =>
               window.open(
-                "https://retailservices.wellsfargo.com/ahapp/init-app?m=0024344285&l=en_US",
-                "_blank"
+                "https://app.momnt.com/widgets/?merchantId=9b9d9012-bfd8-45e9-8c43-f9d99bf664a1&widget=ConsumerLoanApplicationWizard",
+                "_blank",
               )
             }
             className="w-full h-full p-7 bg-white hover:cursor-pointer border-none"
             aria-label="Apply for Wells Fargo financing - opens in new window"
           >
             <Image
-              src="/images/finance.jpeg"
+              src="/images/momnt-financing.png"
               alt="Wells Fargo financing application"
               width={800}
               height={800}

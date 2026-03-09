@@ -1,13 +1,23 @@
 "use client";
 import Image from "next/image";
 import { sections } from "./sections";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 
 export default function MobileMenu() {
   const router = useRouter();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+
+  const handleEstimateClick = () => {
+    setOpen(false);
+    if (pathname === "/") {
+      document.getElementById("estimator")?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push("/#estimator");
+    }
+  };
 
   // Close on outside click
   useEffect(() => {
@@ -30,7 +40,7 @@ export default function MobileMenu() {
         <Image src="/icons/menu.svg" alt="menu_icon" width={40} height={40} />
       </button>
       {open && (
-        <div className="absolute right-0 mt-2 w-48 bg-neutral-900 rounded-xl shadow-lg z-50 overflow-hidden">
+        <div className="absolute right-0 mt-2 w-56 bg-neutral-900 rounded-xl shadow-lg z-50 overflow-hidden">
           {sections.map((section) => (
             <button
               key={section.title}

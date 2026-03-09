@@ -8,9 +8,7 @@ import { ArticleStructuredData } from "@/app/components/StructuredData";
 import { notFound } from "next/navigation";
 
 type Props = {
-  params: Promise<{
-    id: string;
-  }>;
+  params: Promise<{ id: string }>;
 };
 
 // Generate static params for all blog entries at build time
@@ -23,7 +21,7 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: Props) {
   const { id } = await params;
-  
+
   try {
     const blogEntry = await getPostData(id);
     const relatedPosts = getRelatedPosts(id, blogEntry.tags);
@@ -39,8 +37,8 @@ export default async function Page({ params }: Props) {
           datePublished={blogEntry.date}
           author={blogEntry.author}
         />
-        <main className="pt-24 lg:pt-32 flex justify-center bg-gray-100 text-black">
-          <div className="max-w-[1400px] gap-5 w-full min-h-screen flex flex-col p-5 py-10">
+        <main className="pt-22 lg:pt-30 flex justify-center bg-gray-100 text-black">
+          <div className="max-w-[1400px] gap-5 w-full min-h-screen flex flex-col p-5 py-15">
             <div className="flex flex-col gap-3 font-cocogoose">
               <h1 className="font-exotc350 text-4xl lg:text-6xl">
                 {blogEntry.title}
@@ -58,20 +56,22 @@ export default async function Page({ params }: Props) {
               width={1500}
               height={1000}
               className="w-full h-auto rounded-[35px] lg:p-5"
+              priority
             />
             <BlogEntryComponent entry={blogEntry} />
-            
+
             <div className="w-full flex flex-col gap-5 mt-10">
-                <h2 className="font-exotc350 text-3xl lg:text-5xl text-center">
-                    Related Posts
-                </h2>
-                <BlogCards entries={relatedPosts} />
+              <h2 className="font-exotc350 text-3xl lg:text-5xl text-center">
+                Related Posts
+              </h2>
+              <BlogCards entries={relatedPosts} />
             </div>
           </div>
         </main>
       </ThemeProvider>
     );
   } catch (error) {
+    console.error("Error loading blog post:", error);
     notFound();
   }
 }
