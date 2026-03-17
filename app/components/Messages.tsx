@@ -20,7 +20,7 @@ export default function Messages() {
   });
 
   const handleFormChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setContactData((prevData) => ({
@@ -69,7 +69,7 @@ export default function Messages() {
 
   return (
     <div className="fixed bottom-5 right-5 z-50">
-      <Popover placement="top-end">
+      <Popover placement="right">
         <PopoverTrigger>
           <Button
             isIconOnly

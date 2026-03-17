@@ -40,7 +40,7 @@ export default async function Projects() {
 
   return (
     <ThemeProvider initialTheme={initialTheme}>
-      <main id="main-content" className="pt-[8rem] lg:pt-[10rem]">
+      <main id="main-content" className="pt-[5.5rem] lg:pt-[7.5rem]">
         <div className="w-full h-[950px] md:h-[900px] 2xl:h-[900px] relative z-10 flex justify-center">
           <Image
             src="/api/image?key=home_bg.png"

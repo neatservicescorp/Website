@@ -60,7 +60,10 @@ export default function Services() {
   return (
     <ThemeProvider initialTheme={initialTheme}>
       <FAQStructuredData faqs={faqs} />
-      <main id="main-content" className="min-h-screen pt-[8rem] lg:pt-[10rem]">
+      <main
+        id="main-content"
+        className="min-h-screen pt-[5.5rem] lg:pt-[7.5rem]"
+      >
         <div className="w-full h-[960px] md:h-[850px] 2xl:h-[900px] justify-center relative flex items-center p-5">
           <div className="absolute w-full h-full bg-black/20 z-10"></div>
           <Image

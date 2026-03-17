@@ -13,7 +13,7 @@ export default function Blog() {
     <ThemeProvider initialTheme={initialTheme}>
       <main
         id="main-content"
-        className="min-h-screen flex justify-center pt-[8rem] lg:pt-[10rem] bg-white"
+        className="min-h-screen flex justify-center pt-[5.5rem] lg:pt-[7.5rem] bg-white"
       >
         <div className="w-full max-w-[1400px] p-5 z-10 flex flex-col text-black items-center">
           <h1 className="font-exotc350 text-4xl md:text-5xl xl:text-6xl py-10 text-center">
