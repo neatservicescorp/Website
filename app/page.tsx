@@ -24,7 +24,10 @@ export default function Home() {
 
   return (
     <ThemeProvider initialTheme={initialTheme}>
-      <main id="main-content" className="min-h-screen pt-[8rem] lg:pt-[10rem]">
+      <main
+        id="main-content"
+        className="min-h-screen pt-[5.5rem] lg:pt-[7.5rem]"
+      >
         <div className="relative flex justify-center top-0 w-full z-0 h-[1100px] md:h-[1000px] lg:h-[900px]">
           <ImageSlideshow
             images={backgroundImages}

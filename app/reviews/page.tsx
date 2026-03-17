@@ -38,7 +38,7 @@ export default async function ReviewsPage() {
     <ThemeProvider initialTheme={initialTheme}>
       <main
         id="main-content"
-        className="pt-[8rem] lg:pt-[10rem] flex flex-col items-center"
+        className="pt-[5.5rem] lg:pt-[7.5rem] flex flex-col items-center"
       >
         <div className="overflow-hidden w-full flex justify-center">
           <Image

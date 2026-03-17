@@ -8,7 +8,9 @@ export default function FloatingCTA() {
 
   const handleClick = () => {
     if (pathname === "/") {
-      document.getElementById("estimator")?.scrollIntoView({ behavior: "smooth" });
+      document
+        .getElementById("estimator")
+        ?.scrollIntoView({ behavior: "smooth" });
     } else {
       router.push("/#estimator");
     }
@@ -21,7 +23,7 @@ export default function FloatingCTA() {
       className="
         fixed z-30
         left-1/2 -translate-x-1/2
-        top-[96px] lg:top-[128px]
+        top-22 lg:top-30
         inline-flex items-center gap-2
         bg-red-neat text-white
         font-cocogoose font-semibold
@@ -37,7 +39,8 @@ export default function FloatingCTA() {
         animate-pulse-subtle
       "
       style={{
-        boxShadow: "0 6px 28px rgba(200, 30, 30, 0.45), 0 2px 8px rgba(0,0,0,0.22)",
+        boxShadow:
+          "0 6px 28px rgba(200, 30, 30, 0.45), 0 2px 8px rgba(0,0,0,0.22)",
       }}
     >
       <svg

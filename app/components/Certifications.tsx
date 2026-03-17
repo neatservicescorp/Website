@@ -50,7 +50,7 @@ export default function Certifications({
               className="w-32 md:ml-2 xl:w-52 xl:h-28"
             />
             <Image
-              src="/images/cert_gaf.png"
+              src="/images/cert_gaf_2.png"
               alt="cert_1"
               width={200}
               height={500}

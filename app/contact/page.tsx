@@ -34,7 +34,6 @@ export const metadata: Metadata = {
 export default function Contact() {
   const initialTheme = getThemeFromPath("/contact");
 
-  const mapToken = process.env.NEXT_PUBLIC_MAP_TOKEN;
   const slideImages = [
     "/api/image?key=team.jpeg",
     "/api/image?key=team_1.png",
@@ -49,7 +48,7 @@ export default function Contact() {
     <ThemeProvider initialTheme={initialTheme}>
       <main
         id="main-content"
-        className="min-h-screen pt-[8rem] lg:pt-[10rem] bg-white overflow-hidden"
+        className="min-h-screen pt-[5.5rem] lg:pt-[7.5rem] bg-white overflow-hidden"
       >
         <div className="bg-[#70685B] h-[650px] lg:h-[750px] 2xl:h-[900px] w-full flex justify-center">
           <div className="w-full max-w-[1600px] relative h-full">
