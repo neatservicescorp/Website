@@ -10,7 +10,6 @@ import {
   LocalBusinessStructuredData,
   OrganizationStructuredData,
 } from "./components/StructuredData";
-import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -128,14 +127,6 @@ export default function RootLayout({
           {children}
           <Footer />
         </Providers>
-
-        {/* GHL Chat Widget */}
-        <Script
-          src="https://widgets.leadconnectorhq.com/loader.js"
-          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="69ed1715cbb9f452702ac1d0"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );
