@@ -10,6 +10,7 @@ import {
   LocalBusinessStructuredData,
   OrganizationStructuredData,
 } from "./components/StructuredData";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,7 +82,7 @@ export const metadata: Metadata = {
     canonical: "https://neatservicescorp.com",
   },
   verification: {
-    google: "your-google-verification-code", // Replace with actual verification code
+    google: "your-google-verification-code",
     other: {
       "ahrefs-site-verification":
         "2acc26d9aa7b352de1586b358a776f2971d0327a63361c4be4cb52b45ccf6c08",
@@ -114,8 +115,7 @@ export default function RootLayout({
           async
         ></script>
         <Providers>
-          {/* Skip to main content link for accessibility */}
-          <a
+          
             href="#main-content"
             className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-red-neat focus:text-white focus:px-4 focus:py-2 focus:rounded focus:shadow-lg focus:no-underline"
             tabIndex={0}
@@ -128,6 +128,14 @@ export default function RootLayout({
           {children}
           <Footer />
         </Providers>
+
+        {/* GHL Chat Widget */}
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="69ed1715cbb9f452702ac1d0"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
