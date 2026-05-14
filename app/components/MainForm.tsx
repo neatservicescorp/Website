@@ -1,26 +1,29 @@
 "use client";
 
-import { Card, CardBody, CardHeader } from "@heroui/react";
-import Script from "next/script";
+import { useEffect } from "react";
 
 export default function MainForm() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://link.systemic-digital.net/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
-    <Card
-      classNames={{ base: "rounded-[35px]" }}
-      className="w-full h-full bg-[#F0F0F0] max-w-[500px] lg:max-w-full lg:max-h-[550px] 2xl:max-h-[560px]"
-    >
-      <CardHeader className="pb-1">
-        <div className="font-cocogoose text-xl 2xl:text-2xl text-black pt-6 w-full text-center">
-          <h2>Ready to get started?</h2>
-        </div>
-      </CardHeader>
-      <CardBody className="px-4 overflow-hidden">
+    <div className="w-full h-full bg-[#F0F0F0] max-w-[500px] lg:max-w-full rounded-[35px] overflow-hidden">
+      <div className="font-cocogoose text-xl 2xl:text-2xl text-black pt-6 w-full text-center pb-1">
+        <h2>Ready to get started?</h2>
+      </div>
+      <div className="px-4 pb-4">
         <iframe
           src="https://link.systemic-digital.net/widget/form/Dw3BQ1wxW9XI6Nt6aviD"
           style={{
             width: "100%",
-            height: "100%",
-            minHeight: "500px",
+            height: "654px",
             border: "none",
             borderRadius: "10px",
           }}
@@ -35,11 +38,7 @@ export default function MainForm() {
           data-form-id="Dw3BQ1wxW9XI6Nt6aviD"
           title="Website Form"
         />
-        <Script
-          src="https://link.systemic-digital.net/js/form_embed.js"
-          strategy="lazyOnload"
-        />
-      </CardBody>
-    </Card>
+      </div>
+    </div>
   );
 }
