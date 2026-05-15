@@ -120,7 +120,7 @@ export default function Services() {
                   </CardBody>
                 </Card>
                 <div className="flex flex-col text-white w-full md:max-w-[50%] py-5 md:p-10 gap-2 justify-center">
-                  <h4 className="font-exotc350 text-4xl">Siding</h4>
+                  <h4 id="siding" className="font-exotc350 text-4xl">Siding</h4>
                   <p className="font-cocogoose text-sm">
                     Custom siding replacement to improve aesthetics and energy
                     efficiency.
@@ -143,7 +143,7 @@ export default function Services() {
                   </CardBody>
                 </Card>
                 <div className="flex flex-col text-white w-full md:max-w-[50%] py-5 md:p-10 gap-2 justify-center">
-                  <h4 className="font-exotc350 text-4xl">Roof</h4>
+                  <h4 id="roof" className="font-exotc350 text-4xl">Roof</h4>
                   <p className="font-cocogoose text-sm">
                     Roof installation and replacement with warranty, durable
                     materials, and maximum protection.
@@ -166,7 +166,7 @@ export default function Services() {
                   </CardBody>
                 </Card>
                 <div className="flex flex-col text-white w-full md:max-w-[50%] p-5 md:p-10 gap-2 justify-center">
-                  <h4 className="font-exotc350 text-4xl">Window</h4>
+                  <h4 id="windows" className="font-exotc350 text-4xl">Window</h4>
                   <p className="font-cocogoose text-sm">
                     Installation of modern, secure, and energy-efficient
                     windows.
@@ -195,7 +195,7 @@ export default function Services() {
                   </CardBody>
                 </Card>
                 <div className="flex flex-col gap-3 text-white justify-center">
-                  <h4 className="text-5xl font-exotc350">Kitchen</h4>
+                  <h4 id="kitchen" className="text-5xl font-exotc350">Kitchen</h4>
                   <p className="font-cocogoose text-sm">
                     Custom kitchen design and installation with high-end
                     finishes.{" "}
@@ -218,7 +218,7 @@ export default function Services() {
                   </CardBody>
                 </Card>
                 <div className="flex flex-col gap-3 text-white justify-center">
-                  <h4 className="text-5xl font-exotc350">Bathrooms</h4>
+                  <h4 id="bathrooms" className="text-5xl font-exotc350">Bathrooms</h4>
                   <p className="font-cocogoose text-sm">
                     Functional and elegant bathroom renovations tailored to each
                     client.
