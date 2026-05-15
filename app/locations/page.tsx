@@ -129,7 +129,7 @@ export default function LocationsPage() {
         {/* CTA */}
         <section className="bg-[#F64631] py-14 px-5 text-center">
           <div className="max-w-2xl mx-auto">
-            <h2 className="font-exotc350 text-4xl text-white mb-3">Don't see your ZIP?</h2>
+            <h2 className="font-exotc350 text-4xl text-white mb-3">Don&apos;t see your ZIP?</h2>
             <p className="font-cocogoose text-white/80 mb-7">
               We sometimes serve neighboring areas — call us and we&apos;ll let you know.
             </p>
