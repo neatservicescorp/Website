@@ -37,12 +37,12 @@ export default function Reviews({ textColor = "white" }: ReviewsProps) {
           />
           <div className="flex-1">
             <iframe
-              className="lc_reviews_widget"
-              src="https://reputationhub.site/reputation/widgets/review_widget/mhUrdsAMJ0tSxrpg6Kt0"
-              frameBorder={0}
-              scrolling="no"
-              style={{ minWidth: "100%", width: "100%" }}
-            />
+  className="lc_reviews_widget"
+  src="https://reputationhub.site/reputation/widgets/review_widget/mhUrdsAMJ0tSxrpg6Kt0"
+  frameBorder={0}
+  scrolling="no"
+  style={{ minWidth: "100%", width: "100%", height: "800px" }}
+/>
           </div>
         </div>
       </div>
