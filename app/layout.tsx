@@ -122,7 +122,6 @@ export default function RootLayout({
           >
             Skip to main content
           </a>
-          <Messages />
           <NavBar />
           <FloatingCTA />
           {children}
