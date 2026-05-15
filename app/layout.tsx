@@ -114,7 +114,7 @@ export default function RootLayout({
           async
         ></script>
         <Providers>
-          
+        <a  
             href="#main-content"
             className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-red-neat focus:text-white focus:px-4 focus:py-2 focus:rounded focus:shadow-lg focus:no-underline"
             tabIndex={0}
