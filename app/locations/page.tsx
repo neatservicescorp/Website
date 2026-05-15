@@ -133,7 +133,7 @@ export default function LocationsPage() {
             <p className="font-cocogoose text-white/80 mb-7">
               We sometimes serve neighboring areas — call us and we'll let you know.
             </p>
-            
+            <a
               href="/contact"
               className="inline-block bg-white text-[#F64631] font-cocogoose font-bold px-8 py-3 rounded-xl hover:opacity-90 transition-opacity"
             >
