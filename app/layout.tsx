@@ -109,8 +109,9 @@ export default function RootLayout({
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
         <script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="QmffzcFrxk7kZ16YR7Vpsw"
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="69ed1715cbb9f452702ac1d0"
           async
         ></script>
         <Providers>
