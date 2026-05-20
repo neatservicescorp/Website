@@ -2,11 +2,9 @@
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { sections } from "./sections";
-
 export default function NavigationMenu() {
   const router = useRouter();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-
   return (
     <div className="flex-row gap-10 font-cocogoose text-black hidden lg:flex relative">
       {sections.map((section) => {
@@ -40,25 +38,43 @@ export default function NavigationMenu() {
             </p>
             {openDropdown === section.title && (
               <div className="absolute top-full left-0 w-64 z-50">
-              <div className="mt-2 bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100">
-              {section.children.map((child) => (
-            <button
-          key={child.redirect}
-          onClick={() => {
-            router.push(child.redirect);
-            setOpenDropdown(null);
-          }}
-          className="w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-0"
-        >
-          <p className="text-sm font-semibold text-black">{child.title}</p>
-          {child.subtitle && (
-            <p className="text-xs text-gray-500 mt-0.5">{child.subtitle}</p>
-          )}
-        </button>
-      ))}
-    </div>
-  </div>
-)}
+                <div className="mt-2 bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100">
+                  {section.children.map((child) => (
+                    <button
+                      key={child.redirect}
+                      onClick={() => {
+                        setOpenDropdown(null);
+                        const [path, hash] = child.redirect.split("#");
+                        if (hash && window.location.pathname === path) {
+                          const el = document.getElementById(hash);
+                          if (el) {
+                            const offset = 120;
+                            const top = el.getBoundingClientRect().top + window.scrollY - offset;
+                            window.scrollTo({ top, behavior: "smooth" });
+                          }
+                        } else {
+                          router.push(child.redirect);
+                          setTimeout(() => {
+                            const el = document.getElementById(hash);
+                            if (el) {
+                              const offset = 120;
+                              const top = el.getBoundingClientRect().top + window.scrollY - offset;
+                              window.scrollTo({ top, behavior: "smooth" });
+                            }
+                          }, 300);
+                        }
+                      }}
+                      className="w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-0"
+                    >
+                      <p className="text-sm font-semibold text-black">{child.title}</p>
+                      {child.subtitle && (
+                        <p className="text-xs text-gray-500 mt-0.5">{child.subtitle}</p>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         );
       })}
