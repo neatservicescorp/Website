@@ -39,24 +39,26 @@ export default function NavigationMenu() {
               </svg>
             </p>
             {openDropdown === section.title && (
-              <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl z-50 overflow-hidden border border-gray-100">
-                {section.children.map((child) => (
-                  <button
-                    key={child.redirect}
-                    onClick={() => {
-                      router.push(child.redirect);
-                      setOpenDropdown(null);
-                    }}
-                    className="w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-0"
-                  >
-                    <p className="text-sm font-semibold text-black">{child.title}</p>
-                    {child.subtitle && (
-                      <p className="text-xs text-gray-500 mt-0.5">{child.subtitle}</p>
-                    )}
-                  </button>
-                ))}
-              </div>
-            )}
+              <div className="absolute top-full left-0 w-64 z-50">
+              <div className="mt-2 bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100">
+              {section.children.map((child) => (
+            <button
+          key={child.redirect}
+          onClick={() => {
+            router.push(child.redirect);
+            setOpenDropdown(null);
+          }}
+          className="w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-0"
+        >
+          <p className="text-sm font-semibold text-black">{child.title}</p>
+          {child.subtitle && (
+            <p className="text-xs text-gray-500 mt-0.5">{child.subtitle}</p>
+          )}
+        </button>
+      ))}
+    </div>
+  </div>
+)}
           </div>
         );
       })}
