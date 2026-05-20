@@ -61,7 +61,7 @@ export default function NavigationMenu() {
                               const top = el.getBoundingClientRect().top + window.scrollY - offset;
                               window.scrollTo({ top, behavior: "smooth" });
                             }
-                          }, 300);
+                          }, 600);
                         }
                       }}
                       className="w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-0"
