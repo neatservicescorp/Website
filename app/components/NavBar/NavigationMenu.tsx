@@ -48,7 +48,7 @@ export default function NavigationMenu() {
                         if (hash && window.location.pathname === path) {
                           const el = document.getElementById(hash);
                           if (el) {
-                            const offset = path === "/services" ? 170 : 150;
+                            const offset = path === "/services" ? 180 : 150;
                             const top = el.getBoundingClientRect().top + window.scrollY - offset;
                             window.scrollTo({ top, behavior: "smooth" });
                           }
@@ -57,7 +57,7 @@ export default function NavigationMenu() {
                           setTimeout(() => {
                             const el = document.getElementById(hash);
                             if (el) {
-                              const offset = path === "/services" ? 170 : 150;
+                              const offset = path === "/services" ? 180 : 150;
                               const top = el.getBoundingClientRect().top + window.scrollY - offset;
                               window.scrollTo({ top, behavior: "smooth" });
                             }
