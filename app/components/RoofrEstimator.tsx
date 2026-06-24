@@ -16,7 +16,7 @@ export default function RoofrEstimator() {
           <iframe
             src="https://app.roofr.com/instant-estimator/8f483d33-580c-4dba-b0c1-f39134360c6c/NeatServicesInc"
             className="absolute inset-0 w-full md:h-full h-[800px]"
-            style={{ border: 0 }}
+            style={{ border: 0, height: "800px" }}
             title="Roofr Instant Estimator - Get your free roofing and siding estimate"
             loading="lazy"
             allow="geolocation"

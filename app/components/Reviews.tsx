@@ -8,7 +8,8 @@ type ReviewsProps = {
 export default function Reviews({ textColor = "white" }: ReviewsProps) {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://reputationhub.site/reputation/assets/review-widget.js";
+    script.src =
+      "https://reputationhub.site/reputation/assets/review-widget.js";
     script.type = "text/javascript";
     script.async = true;
     document.body.appendChild(script);
@@ -30,7 +31,7 @@ export default function Reviews({ textColor = "white" }: ReviewsProps) {
           className="lc_reviews_widget"
           src="https://reputationhub.site/reputation/widgets/review_widget/mhUrdsAMJ0tSxrpg6Kt0"
           frameBorder={0}
-          scrolling="no"
+          scrolling="yes"
           style={{ minWidth: "100%", width: "100%", height: "800px" }}
         />
       </div>
