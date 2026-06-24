@@ -46,7 +46,7 @@ export default function BlogPreview({ entries }: BlogPreviewProps) {
             className="self-end bg-transparent border-none p-0 hover:cursor-pointer"
             aria-label={`Read full article: ${recentEntry.title}`}
           >
-            <p className="font-cocogoose text-sm hover:underline">
+            <p className="font-cocogoose text-sm hover:underline text-black">
               Read more ➤
             </p>
           </button>
