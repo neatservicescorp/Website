@@ -3,20 +3,20 @@ import { Resend } from "resend";
 export async function sendContactEmail({
   name,
   email,
-  service,
+  message,
   phone,
 }: {
   name: string;
   email: string;
-  service: string;
+  message: string;
   phone: string;
 }) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   const { data, error } = await resend.emails.send({
     from: "Neat Services Website <noreply@neatservicescorp.com>",
-    to: ["neatservicescorp@gmail.com"],
+    to: ["mateof1223@gmail.com"],
     subject: `[WEBSITE] New contact received from ${name}`,
-    text: `From: ${name}\nEmail: ${email}\nService required: ${service}\nPhone: ${phone}`,
+    text: `From: ${name}\nEmail: ${email ?? "Not provided"}\nMessage: ${message}\nPhone: ${phone}`,
   });
 
   if (error) {
@@ -37,7 +37,7 @@ export async function sendChatEmail({
   const resend = new Resend(process.env.RESEND_API_KEY);
   const { data, error } = await resend.emails.send({
     from: "Neat Services Website <noreply@neatservicescorp.com>",
-    to: ["neatservicescorp@gmail.com"],
+    to: ["mateof1223@gmail.com"],
     subject: `[WEBSITE CHAT] New chat request received from ${email}`,
     text: `Someone wants to be contacted.\nEmail: ${email}\nMessage: ${message}`,
   });

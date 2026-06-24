@@ -58,7 +58,7 @@ export default function Contact() {
               className="object-cover lg:w-[65%] h-full"
             />
             <div className="absolute h-full top-0 right-0 w-0 lg:w-[40%] bg-gradient-to-l from-90% from-[#70685B] to-transparent"></div>
-            <div className="absolute top-0 p-10 px-7 lg:p-0 lg:right-5 xl:right-10 w-full max-w-full lg:max-w-[400px] xl:max-w-[450px] 2xl:max-w-[500px] flex h-full items-center justify-center">
+            <div className="absolute top-0 p-10 px-7 lg:p-0 lg:right-5 xl:right-10 w-full max-w-full lg:max-w-[400px] xl:max-w-[450px] 2xl:max-w-[500px] h-full flex self-center items-center justify-center">
               <MainForm />
             </div>
           </div>
