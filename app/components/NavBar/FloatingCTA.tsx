@@ -7,13 +7,7 @@ export default function FloatingCTA() {
   const pathname = usePathname();
 
   const handleClick = () => {
-    if (pathname === "/") {
-      document
-        .getElementById("estimator")
-        ?.scrollIntoView({ behavior: "smooth" });
-    } else {
-      router.push("/#estimator");
-    }
+    router.push("/contact");
   };
 
   return (
