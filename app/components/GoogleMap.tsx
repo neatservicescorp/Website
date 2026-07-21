@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useEffect } from "react";
@@ -5,15 +6,15 @@ import { useEffect } from "react";
 declare global {
   interface Window {
     initMap: (() => void) | undefined;
-    google?: {
+    google: {
       maps: {
-        Map: unknown;
-        Marker: unknown;
-        InfoWindow: unknown;
-        Size: unknown;
+        Map: any;
+        Marker: any;
+        InfoWindow: any;
+        Size: any;
         places: {
-          PlacesService: unknown;
-          PlacesServiceStatus: unknown;
+          PlacesService: any;
+          PlacesServiceStatus: any;
         };
       };
     };
@@ -33,6 +34,7 @@ export default function GoogleMap({
     const initializeMap = () => {
       const location = { lat: 40.7500213, lng: -73.8839082 }; // Example: Queens
       const mapElement = document.getElementById("map");
+      const google = window.google;
 
       if (!mapElement) return;
 
@@ -51,7 +53,7 @@ export default function GoogleMap({
         radius: 500,
       };
 
-      service.textSearch(request, (results, status) => {
+      service.textSearch(request, (results: any[], status: any) => {
         if (
           status === google.maps.places.PlacesServiceStatus.OK &&
           results?.[0]
@@ -106,6 +108,7 @@ export default function GoogleMap({
       });
     };
 
+    const google = window.google;
     // Check if Google Maps is already loaded
     if (typeof google !== "undefined" && google.maps) {
       initializeMap();
@@ -114,7 +117,7 @@ export default function GoogleMap({
 
     // Check if script is already being loaded
     const existingScript = document.querySelector(
-      'script[src*="maps.googleapis.com"]'
+      'script[src*="maps.googleapis.com"]',
     );
     if (existingScript) {
       // Script exists, wait for it to load

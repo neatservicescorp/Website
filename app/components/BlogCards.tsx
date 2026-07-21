@@ -1,9 +1,8 @@
 "use client";
 import { Card, CardBody, CardHeader, ScrollShadow } from "@heroui/react";
 import Image from "next/image";
-import React from "react";
-import { BlogPostPreview } from "../lib/blog";
 import { useRouter } from "next/navigation";
+import type { BlogPostPreview } from "../lib/blog";
 
 type BlogCardsProps = {
   entries: BlogPostPreview[];
@@ -14,7 +13,7 @@ export default function BlogCards({ entries }: BlogCardsProps) {
   return (
     <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap lg:flex-row justify-center mb-12 gap-8 p-5 lg:p-10 w-full">
       {entries.map((entry, index) => (
-        <Card key={index} className="h-[600px] w-full md:w-[40%] lg:w-1/3">
+        <Card key={entry.date} className="h-150 w-full md:w-[40%] lg:w-1/3">
           <CardHeader className="p-0 h-1/3">
             <Image
               className="w-full h-full object-cover"
@@ -38,6 +37,7 @@ export default function BlogCards({ entries }: BlogCardsProps) {
                 <p>{entry.description}</p>
               </ScrollShadow>
               <button
+                type="button"
                 onClick={() => router.push(`/blog/${entry.key}`)}
                 className="absolute bottom-2 right-5 z-10 font-cocogoose hover:cursor-pointer hover:underline font-semibold bg-transparent border-none p-0"
                 aria-label={`Read full article: ${entry.title}`}

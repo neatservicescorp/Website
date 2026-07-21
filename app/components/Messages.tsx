@@ -87,8 +87,8 @@ export default function Messages() {
             />
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-[350px]">
-          <div className="w-full max-w-[500px] p-3">
+        <PopoverContent className="w-87.5">
+          <div className="w-full max-w-125 p-3">
             <form
               onSubmit={handleChatSubmit}
               className="flex flex-col gap-5 font-cocogoose text-black"

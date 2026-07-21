@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { NavBar, Footer } from "./components";
-import FloatingCTA from "./components/NavBar/FloatingCTA";
-import Providers from "./providers";
-import Messages from "./components/Messages";
+import { Footer, NavBar } from "./components";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import Messages from "./components/Messages";
+import FloatingCTA from "./components/NavBar/FloatingCTA";
 import {
   LocalBusinessStructuredData,
   OrganizationStructuredData,
 } from "./components/StructuredData";
+import Providers from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -108,16 +108,10 @@ export default function RootLayout({
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
-        <script
-          src="https://widgets.leadconnectorhq.com/loader.js"
-          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="69ed1715cbb9f452702ac1d0"
-          async
-        ></script>
         <Providers>
-        <a  
+          <a
             href="#main-content"
-            className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-red-neat focus:text-white focus:px-4 focus:py-2 focus:rounded focus:shadow-lg focus:no-underline"
+            className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-100 focus:bg-red-neat focus:text-white focus:px-4 focus:py-2 focus:rounded focus:shadow-lg focus:no-underline"
             tabIndex={0}
           >
             Skip to main content
@@ -125,6 +119,7 @@ export default function RootLayout({
           <NavBar />
           <FloatingCTA />
           {children}
+          <Messages />
           <Footer />
         </Providers>
       </body>
