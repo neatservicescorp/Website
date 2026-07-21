@@ -1,13 +1,13 @@
-import MainForm from "./components/MainForm";
 import Certifications from "./components/Certifications";
-import RoofingMethod from "./components/RoofingMethod";
+import FinancingOpts from "./components/FinancingOpts";
 import ImageSlideshow from "./components/ImageSlideshow";
+import MainForm from "./components/MainForm";
+import Reviews from "./components/Reviews";
+import RoofingMethod from "./components/RoofingMethod";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { getThemeFromPath } from "./lib/theme";
-import MainServices from "./sections/MainServices";
 import MainFinalSection from "./sections/MainFinalSection";
-import Reviews from "./components/Reviews";
-import FinancingOpts from "./components/FinancingOpts";
+import MainServices from "./sections/MainServices";
 
 export default function Home() {
   const initialTheme = getThemeFromPath("/");
