@@ -3,71 +3,72 @@
 import { useEffect } from "react";
 
 declare global {
-  interface Window {
-    initMap: (() => void) | undefined;
-    google?: {
-      maps: {
-        Map: unknown;
-        Marker: unknown;
-        InfoWindow: unknown;
-        Size: unknown;
-        places: {
-          PlacesService: unknown;
-          PlacesServiceStatus: unknown;
-        };
-      };
-    };
-  }
+	interface Window {
+		initMap: (() => void) | undefined;
+		google: {
+			maps: {
+				Map: any;
+				Marker: any;
+				InfoWindow: any;
+				Size: any;
+				places: {
+					PlacesService: any;
+					PlacesServiceStatus: any;
+				};
+			};
+		};
+	}
 }
 
 type ComponentProps = {
-  width?: string;
-  height?: string;
+	width?: string;
+	height?: string;
 };
 
 export default function GoogleMap({
-  width = "100%",
-  height = "400px",
+	width = "100%",
+	height = "400px",
 }: ComponentProps) {
-  useEffect(() => {
-    const initializeMap = () => {
-      const location = { lat: 40.7500213, lng: -73.8839082 }; // Example: Queens
-      const mapElement = document.getElementById("map");
+	useEffect(() => {
+		const initializeMap = () => {
+			const location = { lat: 40.7500213, lng: -73.8839082 }; // Example: Queens
+			const mapElement = document.getElementById("map");
+			const google = window.google;
 
-      if (!mapElement) return;
+			if (!mapElement) return;
 
-      const map = new google.maps.Map(mapElement, {
-        zoom: 14,
-        center: location,
-      });
+			const map = new google.maps.Map(mapElement, {
+				zoom: 14,
+				center: location,
+			});
 
-      // Create Places service
-      const service = new google.maps.places.PlacesService(map);
+			// Create Places service
+			const service = new google.maps.places.PlacesService(map);
 
-      // Search for your business by name and location
-      const request = {
-        query: "Neat Services Inc",
-        location: location,
-        radius: 500,
-      };
+			// Search for your business by name and location
+			const request = {
+				query: "Neat Services Inc",
+				location: location,
+				radius: 500,
+			};
 
-      service.textSearch(request, (results, status) => {
-        if (
-          status === google.maps.places.PlacesServiceStatus.OK &&
-          results?.[0]
-        ) {
-          const place = results[0];
+			service.textSearch(request, (results: any[], status: any) => {
+				if (
+					status === google.maps.places.PlacesServiceStatus.OK &&
+					results?.[0]
+				) {
+					const place = results[0];
 
-          // Create marker at the business location
-          const marker = new google.maps.Marker({
-            position: place.geometry?.location,
-            map,
-            title: place.name,
-          });
+					// Create marker at the business location
+					const marker = new google.maps.Marker({
+						position: place.geometry?.location,
+						map,
+						title: place.name,
+					});
 
-          // Create info window with business details
-          const infoWindow = new google.maps.InfoWindow({
-            content: `
+					// Create info window with business details
+					const infoWindow = new google.maps.InfoWindow({
+						content: `
     <div style="
       max-width: 220px;
       color: #000;
@@ -85,69 +86,70 @@ export default function GoogleMap({
       </p>
     </div>
   `,
-            pixelOffset: new google.maps.Size(0, -10), // shifts bubble up
-          });
+						pixelOffset: new google.maps.Size(0, -10), // shifts bubble up
+					});
 
-          // Show info window when marker is clicked
-          marker.addListener("click", () => {
-            infoWindow.open(map, marker);
-          });
+					// Show info window when marker is clicked
+					marker.addListener("click", () => {
+						infoWindow.open(map, marker);
+					});
 
-          // Optionally show info window by default
-          infoWindow.open(map, marker);
-        } else {
-          // Fallback to regular marker if business not found
-          new google.maps.Marker({
-            position: location,
-            map,
-            title: "Neat Services Inc",
-          });
-        }
-      });
-    };
+					// Optionally show info window by default
+					infoWindow.open(map, marker);
+				} else {
+					// Fallback to regular marker if business not found
+					new google.maps.Marker({
+						position: location,
+						map,
+						title: "Neat Services Inc",
+					});
+				}
+			});
+		};
 
-    // Check if Google Maps is already loaded
-    if (typeof google !== "undefined" && google.maps) {
-      initializeMap();
-      return;
-    }
+		const google = window.google;
+		// Check if Google Maps is already loaded
+		if (typeof google !== "undefined" && google.maps) {
+			initializeMap();
+			return;
+		}
 
-    // Check if script is already being loaded
-    const existingScript = document.querySelector(
-      'script[src*="maps.googleapis.com"]'
-    );
-    if (existingScript) {
-      // Script exists, wait for it to load
-      const handleLoad = () => initializeMap();
-      existingScript.addEventListener("load", handleLoad);
-      return () => existingScript.removeEventListener("load", handleLoad);
-    }
+		// Check if script is already being loaded
+		const existingScript = document.querySelector(
+			'script[src*="maps.googleapis.com"]',
+		);
+		if (existingScript) {
+			// Script exists, wait for it to load
+			const handleLoad = () => initializeMap();
+			existingScript.addEventListener("load", handleLoad);
+			return () => existingScript.removeEventListener("load", handleLoad);
+		}
 
-    // Define initMap globally for Google callback
-    window.initMap = initializeMap;
+		// Define initMap globally for Google callback
+		window.initMap = initializeMap;
 
-    // Dynamically inject script
-    const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API}&libraries=places&callback=initMap`;
-    script.async = true;
-    script.defer = true;
-    document.head.appendChild(script);
+		// Dynamically inject script
+		const script = document.createElement("script");
+		script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API}&libraries=places&callback=initMap`;
+		script.async = true;
+		script.defer = true;
+		document.head.appendChild(script);
 
-    // Cleanup function
-    return () => {
-      // Clean up the global callback
-      if (window.initMap === initializeMap) {
-        window.initMap = undefined;
-      }
-    };
-  }, []);
+		// Cleanup function
+		return () => {
+			// Clean up the global callback
+			if (window.initMap === initializeMap) {
+				window.initMap = undefined;
+			}
+		};
+	}, []);
 
-  return (
-    <div
-      id="map"
-      role="application"
-      aria-label="Interactive map showing Neat Services Inc location at Queens, NY"
-      style={{ height, width }}
-    />
-  );
+	return (
+		<div
+			id="map"
+			role="application"
+			aria-label="Interactive map showing Neat Services Inc location at Queens, NY"
+			style={{ height, width }}
+		/>
+	);
 }
