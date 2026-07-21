@@ -1,66 +1,66 @@
 @import "tailwindcss";
-@plugin './hero.ts';
+@plugin "./hero.ts";
 
-@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@source "../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: "Cocogoose";
-  src: url("/fonts/Cocogoose.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Cocogoose";
+	src: url("/fonts/Cocogoose.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Exotc350";
-  src: url("/fonts/Exot.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Exotc350";
+	src: url("/fonts/Exot.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  scroll-behavior: smooth;
+	--background: #ffffff;
+	--foreground: #171717;
+	scroll-behavior: smooth;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-cocogoose: "Cocogoose", sans-serif;
-  --font-exotc350: "Exotc350", sans-serif;
-  --color-red-neat: #ff8475;
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
+	--font-cocogoose: "Cocogoose", sans-serif;
+	--font-exotc350: "Exotc350", sans-serif;
+	--color-red-neat: #ff8475;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Accessibility: Focus indicators for keyboard navigation */
-button:focus-visible,
+/* button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 [tabindex]:focus-visible,
 [role="button"]:focus-visible {
-  outline: 3px solid #f64631 !important;
-  outline-offset: 2px !important;
-  border-radius: 4px;
-}
+	outline: 3px solid #f64631 !important;
+	outline-offset: 2px !important;
+	border-radius: 4px;
+} */
 
 /* Remove outline on mouse/touch focus */
 button:focus:not(:focus-visible),
@@ -70,35 +70,35 @@ select:focus:not(:focus-visible),
 textarea:focus:not(:focus-visible),
 [tabindex]:focus:not(:focus-visible),
 [role="button"]:focus:not(:focus-visible) {
-  outline: none;
+	outline: none;
 }
 
 /* Enhanced focus for form elements */
-input:focus-visible,
+/* input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid #f64631 !important;
-  outline-offset: 1px !important;
-  box-shadow: 0 0 0 1px #f64631;
-}
+	outline: 3px solid #f64631 !important;
+	outline-offset: 1px !important;
+	box-shadow: 0 0 0 1px #f64631;
+} */
 
 /* Skip link specific styles for accessibility */
 .skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #f64631;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  z-index: 1000;
-  font-weight: 600;
-  transition: top 0.3s;
+	position: absolute;
+	top: -40px;
+	left: 6px;
+	background: #f64631;
+	color: white;
+	padding: 8px 16px;
+	border-radius: 4px;
+	text-decoration: none;
+	z-index: 1000;
+	font-weight: 600;
+	transition: top 0.3s;
 }
 
 .skip-link:focus {
-  top: 6px;
-  outline: 3px solid white;
-  outline-offset: 2px;
+	top: 6px;
+	outline: 3px solid white;
+	outline-offset: 2px;
 }
