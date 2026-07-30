@@ -10,6 +10,7 @@ export const getThemeFromPath = (pathname: string): Theme => {
         "/reviews": "dark",
         "/contact": "dark",
         "/blog": "light",
+        "/finance": "light",
     };
 
     return themeMap[pathname] || "light";

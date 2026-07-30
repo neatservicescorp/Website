@@ -32,5 +32,6 @@ export const sections: MenuSection[] = [
   { title: "Projects", redirect: "/projects" },
   { title: "Reviews", redirect: "/reviews" },
   { title: "Blog", redirect: "/blog" },
+  { title: "Finance", redirect: "/finance" },
   { title: "Contact", redirect: "/contact" },
 ];

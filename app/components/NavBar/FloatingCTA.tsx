@@ -50,7 +50,7 @@ export default function FloatingCTA() {
           clipRule="evenodd"
         />
       </svg>
-      Get a Free Instant Estimate
+      Get a Free Estimate
     </button>
   );
 }
