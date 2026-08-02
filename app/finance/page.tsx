@@ -1,19 +1,18 @@
-
 import type { Metadata } from "next";
+import FinanceFAQ from "../components/FinanceFAQ";
+import FinancingOpts from "../components/FinancingOpts";
+import { FAQStructuredData } from "../components/StructuredData";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { getThemeFromPath } from "../lib/theme";
-import FinancingOpts from "../components/FinancingOpts";
-import FinanceFAQ from "../components/FinanceFAQ";
-import { FAQStructuredData } from "../components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Financing | Wells Fargo Home Improvement Financing - Neat Services Corp",
+  title: "Financing | MOMNT Home Improvement Financing - Neat Services Corp",
   description:
-    "Finance your roofing, siding, windows & exterior remodeling project with Neat Services Inc. Affordable monthly payments through Wells Fargo for qualified homeowners across Queens, Brooklyn, Long Island & the NYC metro area.",
+    "Finance your roofing, siding, windows & exterior remodeling project with Neat Services Inc. Affordable monthly payments through MOMNT for qualified homeowners across Queens, Brooklyn, Long Island & the NYC metro area.",
   keywords:
-    "roof financing Queens NY, home improvement financing NYC, Wells Fargo home improvement financing, roof replacement financing Long Island, siding financing Brooklyn, window financing Nassau County, roof loan New York, exterior remodeling financing, roofing contractor financing",
+    "roof financing Queens NY, home improvement financing NYC, MOMNT home improvement financing, roof replacement financing Long Island, siding financing Brooklyn, window financing Nassau County, roof loan New York, exterior remodeling financing, roofing contractor financing",
   openGraph: {
-    title: "Wells Fargo Home Improvement Financing - Neat Services Corp",
+    title: "MOMNT Home Improvement Financing - Neat Services Corp",
     description:
       "Affordable monthly payments for roofing, siding, windows & exterior remodeling. Serving Queens, Brooklyn, Long Island, Westchester & the NYC metro area.",
     url: "https://neatservicescorp.com/finance",
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wells Fargo Home Improvement Financing - Neat Services Corp",
+    title: "MOMNT Home Improvement Financing - Neat Services Corp",
     description:
       "Affordable monthly payments for roofing, siding, windows & exterior remodeling in NYC.",
   },
@@ -80,7 +79,7 @@ const faqs = [
   {
     question: "Can I finance a roof replacement?",
     answer:
-      "Yes. Qualified homeowners can finance roofing and exterior remodeling projects through financing offered by Wells Fargo.",
+      "Yes. Qualified homeowners can finance roofing and exterior remodeling projects through financing offered by MOMNT.",
   },
   {
     question: "How long does the application take?",
@@ -107,16 +106,16 @@ export default function FinancePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black to-[#1a1a1a]" />
           <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center gap-5">
             <p className="font-cocogoose text-sm text-red-neat uppercase tracking-widest">
-              Wells Fargo Home Improvement Financing
+              MOMNT Home Improvement Financing
             </p>
             <h1 className="font-exotc350 text-5xl md:text-6xl">
               Finance Your Next Home Improvement Project
             </h1>
             <p className="font-cocogoose text-white/70 text-base max-w-xl">
-              Neat Services Inc. proudly offers financing through Wells Fargo
-              to help homeowners complete roofing, siding, window, and
-              exterior remodeling projects with affordable monthly payments —
-              no need to pay the full cost upfront.
+              Neat Services Inc. proudly offers financing through MOMNT to help
+              homeowners complete roofing, siding, window, and exterior
+              remodeling projects with affordable monthly payments — no need to
+              pay the full cost upfront.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-2">
               <a
@@ -124,7 +123,7 @@ export default function FinancePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-red-neat text-white font-cocogoose font-bold px-8 py-3 rounded-xl hover:opacity-90 transition-opacity"
-                aria-label="Apply for Wells Fargo financing - opens in new window"
+                aria-label="Apply for MOMNT financing - opens in new window"
               >
                 Apply for Financing
               </a>
@@ -212,9 +211,7 @@ export default function FinancePage() {
                       />
                     </svg>
                   </div>
-                  <p className="font-cocogoose text-sm text-white">
-                    {reason}
-                  </p>
+                  <p className="font-cocogoose text-sm text-white">{reason}</p>
                 </div>
               ))}
             </div>
@@ -229,8 +226,8 @@ export default function FinancePage() {
               Areas We Serve
             </h2>
             <p className="font-cocogoose text-gray-500 mt-2 mb-8">
-              Financing available for qualified homeowners across the NYC
-              metro area
+              Financing available for qualified homeowners across the NYC metro
+              area
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {areasServed.map((area) => (
@@ -268,8 +265,8 @@ export default function FinancePage() {
             </h2>
             <p className="font-cocogoose text-white/80 mb-7">
               Contact Neat Services Inc. today to schedule your free estimate
-              and learn more about Wells Fargo financing options available
-              for qualified homeowners.
+              and learn more about MOMNT financing options available for
+              qualified homeowners.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -283,7 +280,7 @@ export default function FinancePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-black text-white font-cocogoose font-bold px-8 py-3 rounded-xl hover:opacity-90 transition-opacity"
-                aria-label="Apply for Wells Fargo financing - opens in new window"
+                aria-label="Apply for MOMNT financing - opens in new window"
               >
                 Apply for Financing
               </a>

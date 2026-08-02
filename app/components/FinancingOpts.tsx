@@ -42,12 +42,13 @@ export default function FinancingOpts() {
                 "_blank",
               )
             }
+            type="button"
             className="w-full h-full p-7 bg-white hover:cursor-pointer border-none"
-            aria-label="Apply for Wells Fargo financing - opens in new window"
+            aria-label="Apply for MOMNT financing - opens in new window"
           >
             <Image
               src="/images/momnt-financing.png"
-              alt="Wells Fargo financing application"
+              alt="MOMNT financing application"
               width={800}
               height={800}
               className="w-full h-full"
