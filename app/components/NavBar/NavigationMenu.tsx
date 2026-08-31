@@ -68,7 +68,7 @@ export default function NavigationMenu() {
                     >
                       <p className="text-sm font-semibold text-black">{child.title}</p>
                       {child.subtitle && (
-                        <p className="text-xs text-gray-500 mt-0.5">{child.subtitle}</p>
+                        <p className="text-xs text-gray-600 mt-0.5">{child.subtitle}</p>
                       )}
                     </button>
                   ))}

@@ -43,9 +43,9 @@ export default async function Page({ params }: Props) {
               <h1 className="font-exotc350 text-4xl lg:text-6xl">
                 {blogEntry.title}
               </h1>
-              <div className="flex flex-col text-gray-400 gap-1">
+              <div className="flex flex-col text-gray-600 gap-1">
                 <p className="text-xs">{blogEntry.author}</p>
-                <p className="text-gray-500 lg:text-base text-sm font-semibold">
+                <p className="text-gray-700 lg:text-base text-sm font-semibold">
                   {blogEntry.date}
                 </p>
               </div>

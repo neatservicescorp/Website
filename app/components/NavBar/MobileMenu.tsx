@@ -89,7 +89,7 @@ export default function MobileMenu() {
                       >
                         {child.title}
                         {child.subtitle && (
-                          <span className="block text-white/40 text-[10px]">{child.subtitle}</span>
+                          <span className="block text-white/70 text-[10px]">{child.subtitle}</span>
                         )}
                       </button>
                     ))}

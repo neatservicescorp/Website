@@ -34,6 +34,7 @@
   --font-cocogoose: "Cocogoose", sans-serif;
   --font-exotc350: "Exotc350", sans-serif;
   --color-red-neat: #ff8475;
+  --color-red-brand: #cc3524;
 }
 
 @media (prefers-color-scheme: dark) {

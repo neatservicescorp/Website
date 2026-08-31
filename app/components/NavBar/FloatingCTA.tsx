@@ -19,7 +19,7 @@ export default function FloatingCTA() {
         left-1/2 -translate-x-1/2
         top-22 lg:top-30
         inline-flex items-center gap-2
-        bg-red-neat text-white
+        bg-red-brand text-white
         font-cocogoose font-semibold
         text-[13px] lg:text-[14px]
         px-6 py-2.5

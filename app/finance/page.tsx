@@ -122,7 +122,7 @@ export default function FinancePage() {
                 href={MOMNT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-red-neat text-white font-cocogoose font-bold px-8 py-3 rounded-xl hover:opacity-90 transition-opacity"
+                className="bg-red-brand text-white font-cocogoose font-bold px-8 py-3 rounded-xl hover:opacity-90 transition-opacity"
                 aria-label="Apply for MOMNT financing - opens in new window"
               >
                 Apply for Financing
@@ -144,7 +144,7 @@ export default function FinancePage() {
               <h2 className="font-exotc350 text-4xl md:text-5xl text-black">
                 Projects Eligible for Financing
               </h2>
-              <p className="font-cocogoose text-gray-500 mt-2">
+              <p className="font-cocogoose text-gray-600 mt-2">
                 From a single repair to a complete exterior renovation
               </p>
             </div>
@@ -225,7 +225,7 @@ export default function FinancePage() {
             <h2 className="font-exotc350 text-4xl md:text-5xl text-black">
               Areas We Serve
             </h2>
-            <p className="font-cocogoose text-gray-500 mt-2 mb-8">
+            <p className="font-cocogoose text-gray-600 mt-2 mb-8">
               Financing available for qualified homeowners across the NYC metro
               area
             </p>
@@ -249,7 +249,7 @@ export default function FinancePage() {
               <h2 className="font-exotc350 text-4xl md:text-5xl text-black">
                 Frequently Asked Questions
               </h2>
-              <p className="font-cocogoose text-gray-500 mt-2">
+              <p className="font-cocogoose text-gray-600 mt-2">
                 Your financing questions, answered
               </p>
             </div>
@@ -258,12 +258,12 @@ export default function FinancePage() {
         </section>
 
         {/* Final CTA */}
-        <section className="bg-red-neat py-16 px-5 text-center">
+        <section className="bg-red-brand py-16 px-5 text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="font-exotc350 text-4xl text-white mb-3">
               Ready to start your home improvement project?
             </h2>
-            <p className="font-cocogoose text-white/80 mb-7">
+            <p className="font-cocogoose text-white mb-7">
               Contact Neat Services Inc. today to schedule your free estimate
               and learn more about MOMNT financing options available for
               qualified homeowners.
@@ -271,7 +271,7 @@ export default function FinancePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-block bg-white text-red-neat font-cocogoose font-bold px-8 py-3 rounded-xl hover:opacity-90 transition-opacity"
+                className="inline-block bg-white text-red-brand font-cocogoose font-bold px-8 py-3 rounded-xl hover:opacity-90 transition-opacity"
               >
                 Get a Free Estimate
               </a>

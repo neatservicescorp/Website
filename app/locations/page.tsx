@@ -91,7 +91,7 @@ export default function LocationsPage() {
                 <div className="flex items-center gap-4 mb-6">
                   <h2 className="font-exotc350 text-3xl text-white">{borough.name}</h2>
                   <div className="flex-1 h-px bg-white/10" />
-                  <span className="font-cocogoose text-xs text-white/40">
+                  <span className="font-cocogoose text-xs text-white/70">
                     {borough.locations.length} {borough.locations.length === 1 ? "city" : "cities"}
                   </span>
                 </div>
@@ -102,7 +102,7 @@ export default function LocationsPage() {
                       className="relative bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-red-500/40 hover:bg-white/8 transition-all"
                     >
                       {loc.note && (
-                        <span className="absolute -top-2 right-4 bg-[#F64631] text-white text-[10px] font-cocogoose uppercase px-2.5 py-0.5 rounded-full">
+                        <span className="absolute -top-2 right-4 bg-red-brand text-white text-[10px] font-cocogoose uppercase px-2.5 py-0.5 rounded-full">
                           {loc.note}
                         </span>
                       )}
@@ -115,7 +115,7 @@ export default function LocationsPage() {
                         </div>
                         <div>
                           <h3 className="font-cocogoose text-white font-bold text-base">{loc.name}</h3>
-                          <p className="font-cocogoose text-white/40 text-xs">ZIP {loc.zip}</p>
+                          <p className="font-cocogoose text-white/70 text-xs">ZIP {loc.zip}</p>
                         </div>
                       </div>
                     </div>
@@ -127,15 +127,15 @@ export default function LocationsPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-[#F64631] py-14 px-5 text-center">
+        <section className="bg-red-brand py-14 px-5 text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="font-exotc350 text-4xl text-white mb-3">Don&apos;t see your ZIP?</h2>
-            <p className="font-cocogoose text-white/80 mb-7">
+            <p className="font-cocogoose text-white mb-7">
               We sometimes serve neighboring areas — call us and we&apos;ll let you know.
             </p>
             <a
               href="/contact"
-              className="inline-block bg-white text-[#F64631] font-cocogoose font-bold px-8 py-3 rounded-xl hover:opacity-90 transition-opacity"
+              className="inline-block bg-white text-red-brand font-cocogoose font-bold px-8 py-3 rounded-xl hover:opacity-90 transition-opacity"
             >
               Get a Free Estimate
             </a>

@@ -238,7 +238,7 @@ export default function Services() {
                   classNames={{ base: "rounded-[35px]" }}
                   className="aspect-auto h-[300px] md:h-auto"
                 >
-                  <CardBody className="p-0 w-full lg:max-w-[500px] flex flex-row">
+                  <CardBody className="p-0 w-full lg:max-w-[500px] flex flex-row overflow-hidden">
                     <div className="w-[50%] h-full relative">
                       <div className="absolute w-full items-center top-5 z-10">
                         <span className="font-exotc350 text-4xl text-center text-black block">
@@ -273,7 +273,7 @@ export default function Services() {
                   classNames={{ base: "rounded-[35px]" }}
                   className="aspect-auto h-[300px] md:h-auto"
                 >
-                  <CardBody className="p-0 w-full lg:max-w-[500px] flex flex-row">
+                  <CardBody className="p-0 w-full lg:max-w-[500px] flex flex-row overflow-hidden">
                     <div className="w-[50%] h-auto relative">
                       <div className="absolute w-full items-center top-5 z-10">
                         <span className="font-exotc350 text-4xl text-center text-black block">

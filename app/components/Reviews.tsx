@@ -30,6 +30,7 @@ export default function Reviews({ textColor = "white" }: ReviewsProps) {
         <iframe
           className="lc_reviews_widget"
           src="https://reputationhub.site/reputation/widgets/review_widget/mhUrdsAMJ0tSxrpg6Kt0"
+          title="Customer reviews widget"
           frameBorder={0}
           scrolling="yes"
           style={{ minWidth: "100%", width: "100%", height: "800px" }}
